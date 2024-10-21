@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_9" directorySegmentName="seg_0" id="9C5F29E6-9641-CC6D-7B3A-E784C3195A8F">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_17" directorySegmentName="seg_0" id="792B001D-C1FC-FFFB-706B-91BA5ED0BFFF">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-16 09:21:44 UTC</createdTime>
+<createdTime>2024-10-21 08:31:35 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <identifying>true</identifying>
-<optionalSource>false</optionalSource>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>6C133255-B112-D007-2B8F-EAF7BB4480B2</sourceEntity>
+<sourceEntity>7FF81F97-2382-FB94-21A9-79242E36F5BA</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>2B3EA989-C60B-9C19-A4D5-3ACB282D2835</targetEntity>
 <transferable>true</transferable>

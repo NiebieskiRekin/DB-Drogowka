@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6ECAA175-081C-8758-FE5D-161D74DFFFBD" name="Kierowca">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4E4AF224-C80E-461A-A013-24F8C35197B4" name="Rola w zdarzeniu">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:16:35 UTC</createdTime>
+<createdTime>2024-10-21 08:29:09 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
@@ -14,30 +14,29 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>Kierowcy</preferredAbbreviation>
-<shortName>KR</shortName>
+<preferredAbbreviation>Role w zdarzeniu</preferredAbbreviation>
+<shortName>RZ</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="uprawnienia" id="2AEA6021-13F5-1E35-49C5-178ADAAF1021">
+<Attribute name="Funkcja" id="F38B987E-2154-1A63-8030-7381A8220881">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:44:34 UTC</createdTime>
+<createdTime>2024-10-21 08:40:21 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="x pojazd" id="F96DD1D4-1566-E9A2-63DF-ADA8801DAAE9">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:44:41 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0128F85F-CE4A-AF10-8AD2-3ACC01694F7F" name="Rola w zdarzeniu PK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 09:01:36 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
 </Entity>

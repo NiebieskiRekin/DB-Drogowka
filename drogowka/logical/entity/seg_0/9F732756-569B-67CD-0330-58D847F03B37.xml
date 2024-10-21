@@ -94,28 +94,6 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="x właściciel" id="D861FCD0-64AB-BFFD-5B80-293A75743887">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:23:00 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="x ubezpieczenie" id="7127B9B1-AA45-C77C-89E5-C8A7DBA0D2F8">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:23:07 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="badanie_techniczne" id="6EA3357A-0F23-F141-8417-32A489D5DFDB">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:35:18 UTC</createdTime>

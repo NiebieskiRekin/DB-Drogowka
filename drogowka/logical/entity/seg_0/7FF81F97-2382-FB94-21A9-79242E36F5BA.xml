@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7FF81F97-2382-FB94-21A9-79242E36F5BA" name="Zdarzenie">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7FF81F97-2382-FB94-21A9-79242E36F5BA" name="Interwencja">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:10:55 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
@@ -14,20 +14,9 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>Zdarzenia</preferredAbbreviation>
-<shortName>ZD</shortName>
+<preferredAbbreviation>Interwencje</preferredAbbreviation>
+<shortName>IN</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="x poszkodowani" id="BD323661-A8F6-DE2B-C859-93CE5F1AA711">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:27:38 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="data_zdarzenia" id="B9C90142-2D23-6175-FFDE-F0BCF4A5471B">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:24:39 UTC</createdTime>
@@ -39,75 +28,9 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="miejsce" id="6595BBBA-B5AC-8258-6C3D-8D447EDE7248">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:24:46 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="x wykroczenie" id="0504D080-6A23-8717-7830-03A035E28988">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:24:50 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="opis" id="7AD26D10-B630-9451-27B8-DC8C2C73D4FF">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:25:04 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="punkty_karne" id="F91D248F-9B9D-7CC0-FD9A-F3DCAFD19256">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:25:14 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="x mandat" id="55BF5CBD-8FD8-C7CA-02BA-4DDDE8D77162">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:25:23 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="x funkcjonariusz" id="9CD9CE74-CE3F-D675-6117-66F0105C3CC7">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:25:43 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="x szkodnik" id="4FC3D8D6-24C5-0B60-348C-B8410AA3E698">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:40:52 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
