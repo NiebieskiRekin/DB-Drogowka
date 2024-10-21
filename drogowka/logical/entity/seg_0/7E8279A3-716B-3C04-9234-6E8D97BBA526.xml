@@ -24,9 +24,36 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_waznosci" id="8076D868-7F03-E51E-F8FD-B78FC2C50106">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-15 20:34:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="typ" id="9C1D8B6F-978B-69DA-0473-6557B5C58849">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-15 20:34:12 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="firma" id="B91F3CE1-7219-2102-8B7D-9D7ED9EAD2E7">
 <createdBy>niebieskirekin</createdBy>
@@ -36,30 +63,25 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="data_waznosci" id="8076D868-7F03-E51E-F8FD-B78FC2C50106">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:34:07 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="zakres" id="9C1D8B6F-978B-69DA-0473-6557B5C58849">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:34:12 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1CE15D05-2B8B-3216-FB26-B07C6A8BF4F0" name="Ubezpieczenie PK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 09:45:18 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4016083D-8ABE-1D7E-80CD-ABE2A60990A6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

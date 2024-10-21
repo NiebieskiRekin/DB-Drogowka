@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_16" directorySegmentName="seg_0" id="2767EE57-A214-F027-D1A5-FD13B3B43FDE">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Funkcjonariusz-Interwencja" directorySegmentName="seg_0" id="2767EE57-A214-F027-D1A5-FD13B3B43FDE">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-21 09:05:46 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
@@ -7,6 +7,8 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <identifying>true</identifying>
+<nameOnSource>bierze udzial</nameOnSource>
+<nameOnTarget>prowadzona przez</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

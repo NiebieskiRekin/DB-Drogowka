@@ -1,12 +1,15 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_15" directorySegmentName="seg_0" id="E467FD33-DF68-4C41-4A1B-5D4988D07836">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Obywatel-PrawoJazdy" directorySegmentName="seg_0" id="E467FD33-DF68-4C41-4A1B-5D4988D07836">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-17 12:25:08 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
+<sourcePk>B9FEBF9E-F43F-D5F3-6544-76623FD0C2C5</sourcePk>
 <identifying>false</identifying>
+<nameOnSource>Posiada</nameOnSource>
+<nameOnTarget>jest przypisane</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

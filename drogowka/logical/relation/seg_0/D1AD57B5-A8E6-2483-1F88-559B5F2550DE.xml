@@ -1,12 +1,15 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_21" directorySegmentName="seg_0" id="D1AD57B5-A8E6-2483-1F88-559B5F2550DE">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Obywatel-UczestnikZdarzenia" directorySegmentName="seg_0" id="D1AD57B5-A8E6-2483-1F88-559B5F2550DE">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-21 08:40:51 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
+<sourcePk>B9FEBF9E-F43F-D5F3-6544-76623FD0C2C5</sourcePk>
 <identifying>true</identifying>
+<nameOnSource>pełni</nameOnSource>
+<nameOnTarget>jest pełniona przez</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

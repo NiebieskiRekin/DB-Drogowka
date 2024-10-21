@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7FF81F97-2382-FB94-21A9-79242E36F5BA" name="Interwencja">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7FF81F97-2382-FB94-21A9-79242E36F5BA" name="Zdarzenie">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:10:55 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
@@ -14,8 +14,8 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>Interwencje</preferredAbbreviation>
-<shortName>IN</shortName>
+<preferredAbbreviation>Zdarzenia</preferredAbbreviation>
+<shortName>ZD</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="data_zdarzenia" id="B9C90142-2D23-6175-FFDE-F0BCF4A5471B">
 <createdBy>niebieskirekin</createdBy>
@@ -24,8 +24,9 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="opis" id="7AD26D10-B630-9451-27B8-DC8C2C73D4FF">
@@ -36,8 +37,24 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="miejsce" id="A48240E6-7F2C-224D-B932-F42F77B6D112">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 10:07:12 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>128,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

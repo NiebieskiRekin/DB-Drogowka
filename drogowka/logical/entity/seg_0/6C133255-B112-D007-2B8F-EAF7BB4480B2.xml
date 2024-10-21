@@ -17,15 +17,29 @@
 <preferredAbbreviation>Wykroczenia</preferredAbbreviation>
 <shortName>WK</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="rodzaj" id="03F9381C-B619-44F2-A3CE-593B386D7100">
+<Attribute name="nazwa" id="03F9381C-B619-44F2-A3CE-593B386D7100">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:36:26 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="punkty_karne" id="F90C387B-DD6A-8925-B586-CCCB8D1FA5C9">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-15 20:38:47 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="stawka_minimalna" id="989425E4-89A6-13B8-8009-6097E62ABA68">
@@ -35,9 +49,11 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="stawka_maksymalna" id="67EB51B5-3707-9B85-226E-12ED1BEDE170">
 <createdBy>niebieskirekin</createdBy>
@@ -46,20 +62,11 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="punkty_karne" id="F90C387B-DD6A-8925-B586-CCCB8D1FA5C9">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:38:47 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ustawa" id="829ABB70-95F1-63BC-8696-D60B996B6F69">
 <createdBy>niebieskirekin</createdBy>
@@ -69,8 +76,11 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

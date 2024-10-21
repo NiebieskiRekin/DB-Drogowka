@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DD4844FC-959E-7CCE-DD3C-2A97E48A9A29" name="Interwencja">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="77B13605-7523-4393-7BA9-D4D36F169525" name="Pouczenie">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 09:02:14 UTC</createdTime>
+<createdTime>2024-10-21 09:21:46 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
@@ -11,9 +11,8 @@
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
 <growthPercent>0</growthPercent>
 <growthType>Year</growthType>
+<hierarchicalParent>07AD6340-FF57-C74C-DD74-0872FB39665A</hierarchicalParent>
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>Interwencje</preferredAbbreviation>
-<shortName>IN</shortName>
 </Entity>

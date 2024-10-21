@@ -1,19 +1,21 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_23" directorySegmentName="seg_0" id="71F88F21-D8F9-CCC5-1D3F-782EB5915FFA">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="UczestnikZdarzenia-FormaWymiaruKary" directorySegmentName="seg_0" id="51BBDD2B-C95B-399A-9EDC-06CCC18690D2">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 09:01:41 UTC</createdTime>
+<createdTime>2024-10-21 09:18:58 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <sourcePk>0128F85F-CE4A-AF10-8AD2-3ACC01694F7F</sourcePk>
 <identifying>true</identifying>
+<nameOnSource>został ukarany</nameOnSource>
+<nameOnTarget>stanowi karę dla</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>4E4AF224-C80E-461A-A013-24F8C35197B4</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>2B3EA989-C60B-9C19-A4D5-3ACB282D2835</targetEntity>
+<targetEntity>07AD6340-FF57-C74C-DD74-0872FB39665A</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

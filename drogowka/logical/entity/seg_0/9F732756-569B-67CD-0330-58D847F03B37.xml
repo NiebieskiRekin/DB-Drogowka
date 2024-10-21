@@ -17,28 +17,6 @@
 <preferredAbbreviation>Pojazdy</preferredAbbreviation>
 <shortName>PO</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Marka" id="310D20EA-AD60-6F97-F1AE-FE9B2AF6CA8B">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:21:11 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Model" id="135B9055-9448-308B-2CF8-087E8A84EF76">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:21:17 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="VIN" id="9C6AD83E-A93D-C3EE-65A5-31F9A930410E">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:21:35 UTC</createdTime>
@@ -46,9 +24,11 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>17</dataTypeSize>
+<ownDataTypeParameters>17,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nr_rejestracyjny" id="89AB7735-C029-5638-D362-E5DB3F28C27C">
 <createdBy>niebieskirekin</createdBy>
@@ -57,9 +37,49 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="badanie_techniczne" id="6EA3357A-0F23-F141-8417-32A489D5DFDB">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-15 20:35:18 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Marka" id="310D20EA-AD60-6F97-F1AE-FE9B2AF6CA8B">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-15 20:21:11 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Model" id="135B9055-9448-308B-2CF8-087E8A84EF76">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-15 20:21:17 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="rok_produkcji" id="1DFFFEBE-3520-B8BA-C4AF-FE156BC5C821">
 <createdBy>niebieskirekin</createdBy>
@@ -68,9 +88,23 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="czy_zarekwirowany" id="56FDCCFB-30A7-D3F9-BB86-B4469B17E2D2">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 09:29:22 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="typ_silnika" id="BF5E2BA2-7A03-E565-CC8B-D3CA807643B5">
 <createdBy>niebieskirekin</createdBy>
@@ -80,8 +114,24 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="czy_poszukiwane" id="01918505-5AF4-51B7-747A-34030A574F6B">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 10:10:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="kolor" id="2468724B-33A5-A057-803E-E5181A2F804F">
 <createdBy>niebieskirekin</createdBy>
@@ -91,19 +141,41 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="badanie_techniczne" id="6EA3357A-0F23-F141-8417-32A489D5DFDB">
+<Attribute name="nr_polisy" id="92866A83-BF92-1F27-6783-9B518B74462A">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:35:18 UTC</createdTime>
+<createdTime>2024-10-21 09:47:43 UTC</createdTime>
+<generatorID>81F458D8-F067-12E8-5C5B-4FFB33B17309</generatorID>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<referedAttribute>4016083D-8ABE-1D7E-80CD-ABE2A60990A6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="85DF4049-4220-1E50-D2E0-65258C45AC04" name="Pojazd PK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 09:45:45 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9C6AD83E-A93D-C3EE-65A5-31F9A930410E</attributeRef>
+<attributeRef>89AB7735-C029-5638-D362-E5DB3F28C27C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
