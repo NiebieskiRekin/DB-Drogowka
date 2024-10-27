@@ -17,7 +17,7 @@
 <preferredAbbreviation>Formy wymiaru kary</preferredAbbreviation>
 <shortName>FWK</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Funkcja" id="6188D62F-AE03-BE8B-2578-6F7CFA61E000">
+<Attribute name="Rola" id="6188D62F-AE03-BE8B-2578-6F7CFA61E000">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-21 09:28:16 UTC</createdTime>
 <generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
@@ -26,10 +26,11 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <referedAttribute>F38B987E-2154-1A63-8030-7381A8220881</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>16</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>16,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="PESEL" id="4B93A0A3-A7E5-84B8-33F1-62BAEA5D293E">
 <createdBy>niebieskirekin</createdBy>
@@ -40,9 +41,83 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <referedAttribute>A3AA4ADE-D0E0-2B16-8317-86E2E83A9B70</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PESEL1" id="887F7838-8E0E-1358-B4EB-08003D70A12A">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:00 UTC</createdTime>
+<generatorID>68F07933-5D92-A0AF-B71E-B3C83C611454</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>CFCB6FC0-BAFF-01AC-1C99-8D698A74CDA2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="miejsce" id="45E3A130-F663-CC0A-8987-212BCA307A61">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>68F07933-5D92-A0AF-B71E-B3C83C611454</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>C7C37AE0-C52B-EC60-720B-DE81BCC9F4AE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_zdarzenia" id="56C1ABF8-6881-6038-42DC-2B7B8B946B41">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>68F07933-5D92-A0AF-B71E-B3C83C611454</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>E155824B-A280-A2FB-69DB-7CE4D26132A6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="miejsce1" id="2273E662-43EB-D5A8-EBFE-CAB7EB904245">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>4EF1FCEB-8BBB-3436-71EA-C0BD130E29EB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_zdarzenia1" id="F7166451-175D-C30D-9806-38D84D8582DB">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>96BE2141-A5B0-1C2C-4F6B-239F78EA4394</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -58,6 +133,11 @@
 <usedAttributes>
 <attributeRef>6188D62F-AE03-BE8B-2578-6F7CFA61E000</attributeRef>
 <attributeRef>4B93A0A3-A7E5-84B8-33F1-62BAEA5D293E</attributeRef>
+<attributeRef>2273E662-43EB-D5A8-EBFE-CAB7EB904245</attributeRef>
+<attributeRef>F7166451-175D-C30D-9806-38D84D8582DB</attributeRef>
+<attributeRef>887F7838-8E0E-1358-B4EB-08003D70A12A</attributeRef>
+<attributeRef>45E3A130-F663-CC0A-8987-212BCA307A61</attributeRef>
+<attributeRef>56C1ABF8-6881-6038-42DC-2B7B8B946B41</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

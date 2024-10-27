@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Obywatel-Pojazd" directorySegmentName="seg_0" id="DBF84AD5-74B5-0BDD-4EC6-DB45EFBB20BF">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Osoba-Pojazd" directorySegmentName="seg_0" id="DBF84AD5-74B5-0BDD-4EC6-DB45EFBB20BF">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-17 12:24:31 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>

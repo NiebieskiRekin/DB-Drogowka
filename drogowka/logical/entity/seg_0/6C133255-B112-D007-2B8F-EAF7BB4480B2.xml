@@ -83,4 +83,18 @@
 <ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A2B85437-D08E-361C-1BCF-691B24FF0DA8" name="Wykroczenie PK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-24 13:48:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>03F9381C-B619-44F2-A3CE-593B386D7100</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

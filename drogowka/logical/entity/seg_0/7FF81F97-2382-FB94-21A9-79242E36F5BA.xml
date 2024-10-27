@@ -29,6 +29,19 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="miejsce" id="A48240E6-7F2C-224D-B932-F42F77B6D112">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 10:07:12 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>128,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="opis" id="7AD26D10-B630-9451-27B8-DC8C2C73D4FF">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:25:04 UTC</createdTime>
@@ -43,18 +56,20 @@
 <dataTypeSize>64</dataTypeSize>
 <ownDataTypeParameters>64,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="miejsce" id="A48240E6-7F2C-224D-B932-F42F77B6D112">
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3C671654-EE8F-1332-CBFE-9A8D2CE054EA" name="Zdarzenie PK">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 10:07:12 UTC</createdTime>
+<createdTime>2024-10-27 21:58:33 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>128</dataTypeSize>
-<ownDataTypeParameters>128,,</ownDataTypeParameters>
-</Attribute>
-</attributes>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A48240E6-7F2C-224D-B932-F42F77B6D112</attributeRef>
+<attributeRef>B9C90142-2D23-6175-FFDE-F0BCF4A5471B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

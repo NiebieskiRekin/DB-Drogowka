@@ -95,6 +95,21 @@
 <dataTypeSize>128 CHAR</dataTypeSize>
 <ownDataTypeParameters>128 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="nazwa" id="744950A2-5DE8-0A47-FD6A-9F7410C4F7F0">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-24 13:48:09 UTC</createdTime>
+<generatorID>02854789-934E-F35D-712C-D9BE9B711F93</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>03F9381C-B619-44F2-A3CE-593B386D7100</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="4A78C98C-3A74-758E-67C7-56CA4B4A20C4" name="Mandat PK">
@@ -106,7 +121,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>60C1AB20-DDA1-F58A-0D8B-A0C1C37B801B</attributeRef>
+<attributeRef>744950A2-5DE8-0A47-FD6A-9F7410C4F7F0</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

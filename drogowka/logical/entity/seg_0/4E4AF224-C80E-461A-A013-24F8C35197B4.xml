@@ -17,7 +17,7 @@
 <preferredAbbreviation>Uczestnicy Zdarzenia</preferredAbbreviation>
 <shortName>UZ</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Funkcja" id="F38B987E-2154-1A63-8030-7381A8220881">
+<Attribute name="Rola" id="F38B987E-2154-1A63-8030-7381A8220881">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-21 08:40:21 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
@@ -39,9 +39,39 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <referedAttribute>E3A6336F-DB5E-CB58-B595-8665C2E7920A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="miejsce" id="4EF1FCEB-8BBB-3436-71EA-C0BD130E29EB">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>0C84CB6E-90EE-BBD1-FCBF-9F8DC9C1CC85</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>A48240E6-7F2C-224D-B932-F42F77B6D112</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_zdarzenia" id="96BE2141-A5B0-1C2C-4F6B-239F78EA4394">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>0C84CB6E-90EE-BBD1-FCBF-9F8DC9C1CC85</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>B9C90142-2D23-6175-FFDE-F0BCF4A5471B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -57,6 +87,8 @@
 <usedAttributes>
 <attributeRef>F38B987E-2154-1A63-8030-7381A8220881</attributeRef>
 <attributeRef>A3AA4ADE-D0E0-2B16-8317-86E2E83A9B70</attributeRef>
+<attributeRef>4EF1FCEB-8BBB-3436-71EA-C0BD130E29EB</attributeRef>
+<attributeRef>96BE2141-A5B0-1C2C-4F6B-239F78EA4394</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

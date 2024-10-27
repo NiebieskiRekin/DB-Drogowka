@@ -16,4 +16,66 @@
 <normalForm>Third</normalForm>
 <preferredAbbreviation>Interwencje</preferredAbbreviation>
 <shortName>IN</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PESEL" id="CFCB6FC0-BAFF-01AC-1C99-8D698A74CDA2">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:52:42 UTC</createdTime>
+<generatorID>2767EE57-A214-F027-D1A5-FD13B3B43FDE</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>E3A6336F-DB5E-CB58-B595-8665C2E7920A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="miejsce" id="C7C37AE0-C52B-EC60-720B-DE81BCC9F4AE">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>A2A7F395-E7BF-88D2-311C-F0A6A2A7467F</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>A48240E6-7F2C-224D-B932-F42F77B6D112</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_zdarzenia" id="E155824B-A280-A2FB-69DB-7CE4D26132A6">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:58:35 UTC</createdTime>
+<generatorID>A2A7F395-E7BF-88D2-311C-F0A6A2A7467F</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>B9C90142-2D23-6175-FFDE-F0BCF4A5471B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="107A4818-BC97-66D6-12E0-991F60A84226" name="Interwencja PK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-27 21:52:42 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CFCB6FC0-BAFF-01AC-1C99-8D698A74CDA2</attributeRef>
+<attributeRef>C7C37AE0-C52B-EC60-720B-DE81BCC9F4AE</attributeRef>
+<attributeRef>E155824B-A280-A2FB-69DB-7CE4D26132A6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

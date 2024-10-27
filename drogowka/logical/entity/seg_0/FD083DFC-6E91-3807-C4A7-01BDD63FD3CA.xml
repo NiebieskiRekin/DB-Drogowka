@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FD083DFC-6E91-3807-C4A7-01BDD63FD3CA" name="Obywatel">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FD083DFC-6E91-3807-C4A7-01BDD63FD3CA" name="Osoba">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:12:42 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
@@ -14,8 +14,8 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<preferredAbbreviation>Obywatele</preferredAbbreviation>
-<shortName>OB</shortName>
+<preferredAbbreviation>Osoby</preferredAbbreviation>
+<shortName>OS</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="PESEL" id="E3A6336F-DB5E-CB58-B595-8665C2E7920A">
 <createdBy>niebieskirekin</createdBy>
