@@ -69,6 +69,36 @@
 <dataTypeSize>32</dataTypeSize>
 <ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="VIN" id="7035283C-662D-5818-3BF7-9E2872D211C3">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-28 11:42:50 UTC</createdTime>
+<generatorID>81F458D8-F067-12E8-5C5B-4FFB33B17309</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>9C6AD83E-A93D-C3EE-65A5-31F9A930410E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>17</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_rejestracyjny" id="8FED400B-FA29-E291-199E-29CBA42BBA6A">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-28 11:42:50 UTC</createdTime>
+<generatorID>81F458D8-F067-12E8-5C5B-4FFB33B17309</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>89AB7735-C029-5638-D362-E5DB3F28C27C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="1CE15D05-2B8B-3216-FB26-B07C6A8BF4F0" name="Ubezpieczenie PK">

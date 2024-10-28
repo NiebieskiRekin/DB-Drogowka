@@ -7,7 +7,7 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <sourcePk>B9FEBF9E-F43F-D5F3-6544-76623FD0C2C5</sourcePk>
-<identifying>false</identifying>
+<identifying>true</identifying>
 <nameOnSource>Posiada</nameOnSource>
 <nameOnTarget>jest przypisane</nameOnTarget>
 <optionalSource>true</optionalSource>

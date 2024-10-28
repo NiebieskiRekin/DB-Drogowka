@@ -67,7 +67,23 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>11</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="78F6D8B5-A36C-82E2-3921-096B744E7E45" name="Prawo jazdy PK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-28 11:23:22 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>50548ED9-473D-1C53-1B9D-8063B13A5D91</attributeRef>
+<attributeRef>719496E0-970E-F76F-F73F-5A2D8499DBC4</attributeRef>
+<attributeRef>BD6C68CA-AF88-529A-7639-6166BB5395E7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

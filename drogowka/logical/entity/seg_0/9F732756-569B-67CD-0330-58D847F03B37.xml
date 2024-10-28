@@ -147,21 +147,6 @@
 <dataTypeSize>32</dataTypeSize>
 <ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nr_polisy" id="92866A83-BF92-1F27-6783-9B518B74462A">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 09:47:43 UTC</createdTime>
-<generatorID>81F458D8-F067-12E8-5C5B-4FFB33B17309</generatorID>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<referedAttribute>4016083D-8ABE-1D7E-80CD-ABE2A60990A6</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="85DF4049-4220-1E50-D2E0-65258C45AC04" name="Pojazd PK">
