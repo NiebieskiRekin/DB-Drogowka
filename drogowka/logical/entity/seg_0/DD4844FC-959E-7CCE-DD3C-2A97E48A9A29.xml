@@ -45,7 +45,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>128</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>128,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="data_zdarzenia" id="E155824B-A280-A2FB-69DB-7CE4D26132A6">
 <createdBy>niebieskirekin</createdBy>
@@ -59,6 +59,18 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_i_czas_interwencji" id="3C97D69E-ECE2-05A2-5701-51922A347B22">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-28 11:59:53 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

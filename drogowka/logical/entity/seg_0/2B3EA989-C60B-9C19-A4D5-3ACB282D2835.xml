@@ -108,7 +108,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>64</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -122,6 +122,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>744950A2-5DE8-0A47-FD6A-9F7410C4F7F0</attributeRef>
+<attributeRef>60C1AB20-DDA1-F58A-0D8B-A0C1C37B801B</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -7,7 +7,7 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <sourcePk>A2B85437-D08E-361C-1BCF-691B24FF0DA8</sourcePk>
-<identifying>true</identifying>
+<identifying>false</identifying>
 <nameOnSource>jest podstawą wystawienia</nameOnSource>
 <nameOnTarget>wystawione na podstawie</nameOnTarget>
 <optionalSource>true</optionalSource>

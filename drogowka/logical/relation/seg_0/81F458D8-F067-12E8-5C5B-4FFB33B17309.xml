@@ -12,7 +12,7 @@
 <nameOnSource>jest przypisane</nameOnSource>
 <nameOnTarget>posiada</nameOnTarget>
 <optionalSource>false</optionalSource>
-<optionalTarget>false</optionalTarget>
+<optionalTarget>true</optionalTarget>
 <sourceCardinality>*</sourceCardinality>
 <sourceEntity>7E8279A3-716B-3C04-9234-6E8D97BBA526</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
