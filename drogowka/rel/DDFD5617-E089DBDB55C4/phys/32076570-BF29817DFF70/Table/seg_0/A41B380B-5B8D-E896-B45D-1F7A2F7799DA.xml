@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="aresztowania" directorySegmentName="seg_0" id="A41B380B-5B8D-E896-B45D-1F7A2F7799DA">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DO_KIEDY" id="0DEFAB24-8D65-49F5-E10D-7C0C6856078C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_uczestnika" id="3D65DBFF-4B3B-F15E-30CF-C6E90C62B42B">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_interwencji" id="8E3FCB2B-C192-8FE9-4019-F0C2AFED53EC">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="od_kiedy" id="B0DD6A56-98DA-E8CB-7DEE-D68FBDFF3774">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CZY_W_ZAWIESZENIU" id="D60BABE9-29B8-9A0D-892A-B945B386ED0C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="aresztowania_formy_wymiaru_kary_FK" id="FD19B048-166F-1C0F-1EA5-8E0D4B09883C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 21:24:58 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="aresztowania_PK" id="37D5F2EA-A2C0-7A33-423C-3136BEF1766E">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

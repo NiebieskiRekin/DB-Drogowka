@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6968136-C49B-6282-A0AA-DE25D6E17246" name="Osoby_Pojazdy">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>41856C37-FE75-2847-71D0-5C82E58CE7CC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PESEL" id="07AE0215-CB7E-A2C9-B116-9B50CA11C6EC">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>A8A9D06F-9300-2291-4F07-DD2AF56095C0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>7459477B-A792-DCBC-258F-C708DE981C94</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FDDA4D57-BCF0-254B-6B75-FC0A5F6C964F" referredColumn="AAD22BFF-E555-9D83-AFAD-6212428CC5C3"/>
+</associations>
+</Column>
+<Column name="VIN" id="F8D27BC9-2463-832C-5F18-26EEE387CC1E">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>2D2E477F-4B79-7E48-611C-C26F26C1735F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>6B5C1637-244E-80D3-C009-B80B74F61D9D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4833F64D-7690-4B7E-1B85-9840C1FCFC4D" referredColumn="4547ED74-1F4F-0952-9149-9F6EC735D5A7"/>
+</associations>
+</Column>
+<Column name="NR_REJESTRACYJNY" id="497D0C21-857D-E347-F74B-8C1187165E95">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>07BED863-CD99-AC73-BACA-090771A13365</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>86AA73FA-EA96-3043-4C74-59B2FA926FC6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="49BCF602-B431-8BCA-625E-97D6F26A6A29" name="Osoby_Pojazdy_PK">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>08B852B7-0DC9-69C1-5565-5FC13AA2EFAC</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07AE0215-CB7E-A2C9-B116-9B50CA11C6EC"/>
+<colUsage columnID="F8D27BC9-2463-832C-5F18-26EEE387CC1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F397A16B-A033-3EA3-1B79-D70556216691" name="Osoby_Pojazdy_OSOBY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07AE0215-CB7E-A2C9-B116-9B50CA11C6EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C637E684-D6E0-5024-2A64-DD3717D37DC0" name="Osoby_Pojazdy_POJAZDY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8D27BC9-2463-832C-5F18-26EEE387CC1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

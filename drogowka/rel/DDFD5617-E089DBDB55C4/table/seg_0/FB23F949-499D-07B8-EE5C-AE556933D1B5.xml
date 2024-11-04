@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FB23F949-499D-07B8-EE5C-AE556933D1B5" name="wykroczenia">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>BF5590A7-0C04-3A39-B365-E098E1FA5F26</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nazwa" id="5DF72428-E014-E0AA-3BAF-C5BF38F17293">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>AE558879-A8A3-18D1-6411-9806931784AB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9D1337FC-3212-C949-A5DC-13690C54BECE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="punkty_karne" id="C24F43C6-E3F2-1BDE-B29B-91CB2E28269B">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>A19975FF-0B9F-247E-1C8B-8766F9D6B8F1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>628715FE-432C-4E4C-3C37-3314CE8E2A18</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>15</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="stawka_minimalna" id="74D72243-CF6D-FF05-5075-D9D96AC69691">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>48D1172C-9D04-82FE-28AA-E9251A21AB32</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>E6C2BA09-17EF-E8B2-7648-0CBDA1DA3A8E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stawka_maksymalna" id="0189A5EE-8B5B-5517-8049-A266A7884A78">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>BC667A12-D1F1-DE15-D91D-5836078EEADA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>E6C2BA09-17EF-E8B2-7648-0CBDA1DA3A8E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ustawa" id="4CEC71A6-9AD2-241C-941F-74573F4B8ED0">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>82EEBD20-F988-AE5E-8985-F4FEB7A2F1EB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7389D3E6-C97A-130C-78F4-70CD82545A95</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="689FB95F-1DD9-2443-AD61-178BAA639EB8" name="wykroczenia_PK">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>63187EFC-BE04-0837-B3BB-007CF612E29F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DF72428-E014-E0AA-3BAF-C5BF38F17293"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

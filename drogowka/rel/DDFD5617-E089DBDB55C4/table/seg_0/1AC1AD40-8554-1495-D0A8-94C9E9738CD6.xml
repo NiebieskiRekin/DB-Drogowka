@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1AC1AD40-8554-1495-D0A8-94C9E9738CD6" name="interwencje">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>EAD955E3-9C1D-32FA-E992-063D4C19183B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_interwencji" id="C7814B06-736B-D004-3C70-729FFA0D4FE2">
+<sourceDDLFile>b.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>743BF7C7-86D1-E09A-EDCC-7B05DB8F1AC1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>628715FE-432C-4E4C-3C37-3314CE8E2A18</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_i_czas_interwencji" id="983B33C4-B34C-172D-351F-F5B16725DD16">
+<sourceDDLFile>b.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>65784084-355A-ABD2-F8EA-E2A19C710C51</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>ACDFD035-18B9-C6D8-F4AB-910311C4E548</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="funkcjonariusz" id="5CF03201-C33D-3F22-1C93-DC546E7E5944">
+<sourceDDLFile>b.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>2AC17AF4-075A-F06C-AF60-F0ADDDB5B55F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>7459477B-A792-DCBC-258F-C708DE981C94</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="512FF7FA-5AA6-C347-6C87-44F6619007CE" referredColumn="E02E21BB-D2AA-261E-A4AD-4ED0D27469E9"/>
+</associations>
+</Column>
+<Column name="zdarzenie" id="01F8B5E1-B774-7C7D-AEFE-9C2763CA5854">
+<sourceDDLFile>b.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>9DE119C6-C5A2-5536-1643-45BA0DAC1FE0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>628715FE-432C-4E4C-3C37-3314CE8E2A18</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="420E7388-068D-EDC6-FF48-984ED9684046" referredColumn="B2B66218-36A1-7506-F7AE-AEDE9FEAA86B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2655D2CC-8755-C9F2-A169-E60CF978D856" name="interwencje_PK">
+<sourceDDLFile>b.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>C2B6E303-2019-E640-C3CB-6ED38CFEEF46</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7814B06-736B-D004-3C70-729FFA0D4FE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4281ECA-F03E-319F-CF54-E0A28D786881" name="INDEX_1v2">
+<sourceDDLFile>b.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>55AF325D-82D2-3632-068A-CE9B2B897962</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5CF03201-C33D-3F22-1C93-DC546E7E5944"/>
+<colUsage columnID="01F8B5E1-B774-7C7D-AEFE-9C2763CA5854"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04146862-19D8-0369-0173-974C015B5DD0" name="interwencje_zdarzenia_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01F8B5E1-B774-7C7D-AEFE-9C2763CA5854"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6E2DB3C-728B-1E18-4150-A9717713544A" name="interwencje_Funkcjonariusze_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 21:24:58 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5CF03201-C33D-3F22-1C93-DC546E7E5944"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

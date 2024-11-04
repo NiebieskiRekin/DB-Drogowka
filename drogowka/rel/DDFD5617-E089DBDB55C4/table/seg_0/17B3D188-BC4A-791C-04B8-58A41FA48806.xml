@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="17B3D188-BC4A-791C-04B8-58A41FA48806" name="Funkcjonariusze">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>93AA8324-2EEA-6FDC-C88D-DF43C47D6107</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_odznaki" id="FEFE77B8-50A1-905E-DD4C-4136C8C3C57A">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>9F140FF2-F15D-D1EB-F89A-AAB7535B784E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9A404918-B60B-707A-BECD-7775A9138089</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stopien" id="688C9B70-FCD9-14C6-CC12-724DDABC97D1">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>FBDD9868-C7BB-1BC8-332E-542781DBBB10</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7389D3E6-C97A-130C-78F4-70CD82545A95</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pesel" id="E02E21BB-D2AA-261E-A4AD-4ED0D27469E9">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>33DABE67-FA7F-791B-7754-64005BE4C111</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>7459477B-A792-DCBC-258F-C708DE981C94</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1543F279-355B-A8DE-F9AD-E2B9F54A53AD" referredColumn="AAD22BFF-E555-9D83-AFAD-6212428CC5C3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6B834346-1EA9-51F9-1190-BC51C2026555" name="Funkcjonariusze_PK">
+<sourceDDLFile>c.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 21:24:58 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>380FCCA2-D505-1842-D090-7DE394E946B9</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E02E21BB-D2AA-261E-A4AD-4ED0D27469E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD1803A0-B2E2-870A-F671-FF94BBB5BA50" name="Funkcjonariusze_OSOBY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E02E21BB-D2AA-261E-A4AD-4ED0D27469E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

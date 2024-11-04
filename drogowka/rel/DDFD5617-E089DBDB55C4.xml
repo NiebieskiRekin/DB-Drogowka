@@ -3,6 +3,23 @@
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:07:43 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
+<shouldBeOpen>true</shouldBeOpen>
 <selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>a.sql</fileName>
+<pathName>/home/niebieskirekin/Dokumenty/Studia/semestr_5/DB/proj</pathName>
+<dbType>9</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>b.sql</fileName>
+<pathName>/home/niebieskirekin/Dokumenty/Studia/semestr_5/DB/proj</pathName>
+<dbType>9</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>c.sql</fileName>
+<pathName>/home/niebieskirekin/Dokumenty/Studia/semestr_5/DB/proj</pathName>
+<dbType>9</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
 </relationalModel>

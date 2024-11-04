@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="formy_wymiaru_kary" directorySegmentName="seg_0" id="BC5E7539-8BC8-86EC-F5E3-E00DB29B3666">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="primary_key" id="1EC8BE0D-5F33-E21B-D32D-7689834655DD">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_interwencji" id="3FF5330D-73E0-7F18-BF91-CDE78ED272DC">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_uczestnika" id="7BCB5B16-FCD7-D327-8BF1-7A6920D13AD7">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="typ" id="B79CD524-57C3-C9C4-284A-4BC59E5F4E21">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="formy_wymiaru_kary_uczestnicy_zdarzen_FK" id="4DD757B4-E6CD-49A3-6B2B-696053E83E30">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 21:24:58 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="formy_wymiaru_kary_interwencje_FK" id="C5B80263-B993-5C1E-70E0-F1B66FF53D1A">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:58:07 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="formy_wymiaru_kary_PK" id="1CB34A6E-1826-14A2-7792-400E34D21AD6">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 21:24:58 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

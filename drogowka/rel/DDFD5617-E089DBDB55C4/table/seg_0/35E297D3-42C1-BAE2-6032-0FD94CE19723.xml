@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="35E297D3-42C1-BAE2-6032-0FD94CE19723" name="prawa_jazdy">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>E959C9DA-A07A-22A4-2628-81A7006B9AA4</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kategoria" id="261F34EA-BC59-153D-CCD6-DDA60DA82E7F">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>DECF51A8-466F-11EB-3D6A-4DEB895D4601</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7A23B837-EA4D-0F07-7F55-D71F8A16642F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="od_kiedy" id="5F254409-E932-1938-C3B1-FD5E69262614">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>76F1C7DF-8AC6-4EB6-DDDC-91374EECE221</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>E4C1E2DD-B9D4-D2B4-C413-D733D519C512</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="do_kiedy" id="2969AC9F-6BF0-94DA-5FC3-EC50FE7494E1">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>B2B9C75F-811A-E73E-2582-2846944098D9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>E4C1E2DD-B9D4-D2B4-C413-D733D519C512</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PESEL" id="1976DEC8-8F9F-FE0C-371D-1DA379B4BFDB">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>FB8F3BC4-ED42-78FD-9AE2-EEFECD5C4B2A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>7459477B-A792-DCBC-258F-C708DE981C94</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="347D0313-1FC7-A571-F398-1553BB2ACAE0" referredColumn="AAD22BFF-E555-9D83-AFAD-6212428CC5C3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A675C472-4031-0F22-93C7-5A2F44D38206" name="prawa_jazdy_PK">
+<sourceDDLFile>a.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<importedID>BF025512-CE8C-E116-8E7B-51C81B6461F8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="261F34EA-BC59-153D-CCD6-DDA60DA82E7F"/>
+<colUsage columnID="5F254409-E932-1938-C3B1-FD5E69262614"/>
+<colUsage columnID="1976DEC8-8F9F-FE0C-371D-1DA379B4BFDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CBB288F2-B94A-9CAB-32BF-C2E9D278BB51" name="prawa_jazdy_OSOBY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-03 20:50:15 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1976DEC8-8F9F-FE0C-371D-1DA379B4BFDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
