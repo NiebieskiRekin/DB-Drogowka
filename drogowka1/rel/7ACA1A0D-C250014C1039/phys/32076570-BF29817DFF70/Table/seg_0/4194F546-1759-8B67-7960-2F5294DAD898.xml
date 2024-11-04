@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="POJAZDY" directorySegmentName="seg_0" id="4194F546-1759-8B67-7960-2F5294DAD898">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NR_REJESTRACYJNY" id="117A51B5-74CA-D45A-A10D-20A3515FDA5C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MODEL" id="3B8C9632-73DC-F2E7-EA58-3581CF29B40C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CZY_POSZUKIWANE" id="3C8260D8-EEF9-88F7-BE12-48D391BFCC0D">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<defaultValue>(0)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="KOLOR" id="4432860D-02EB-C6B8-8EF2-B83B3B2806E6">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ROK_PRODUKCJI" id="6ECF0ADD-2427-4110-BBA5-BD51496ADF43">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BADANIE_TECHNICZNE" id="713F7817-CF30-BD0E-ACA5-09BCAA5DC1A3">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CZY_ZAREKWIROWANY" id="B9649299-853B-08B7-7F06-DD742D627F10">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<defaultValue>(0)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="MARKA" id="C87A1B9B-041B-4839-4968-14F6F6171C28">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VIN" id="FD5F9A59-42F7-D577-A5F3-B55F24718FEB">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="POJAZDY_PK" id="FF178035-AF10-C4EF-37AB-E0D82D665258">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="D3B732F6-A1FD-77ED-0908-B4838FF36C3C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<nameChanged>true</nameChanged>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

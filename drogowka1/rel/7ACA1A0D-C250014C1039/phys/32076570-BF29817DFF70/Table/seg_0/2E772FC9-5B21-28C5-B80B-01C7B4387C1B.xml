@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="role_zdarzenia" directorySegmentName="seg_0" id="2E772FC9-5B21-28C5-B80B-01C7B4387C1B">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="rola" id="3D8234B1-9210-3702-BF78-14B3B277EC09">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="role_zdarzenia_PK" id="ED9044EF-F720-E32C-FEB1-4355C7B0CE01">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

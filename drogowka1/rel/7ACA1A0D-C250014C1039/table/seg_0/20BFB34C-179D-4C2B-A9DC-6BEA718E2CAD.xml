@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="20BFB34C-179D-4C2B-A9DC-6BEA718E2CAD" name="prawa_jazdy">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>96B903D3-7EFF-AC8D-A798-916472670231</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="kategoria" id="7A9A158F-E53F-C8C6-9788-7514140F19C5">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>AA65736C-9E6E-99A5-94A8-BC433D11F1F1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6991FA34-87A2-1FA7-50E7-CA786E93E8A1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="od_kiedy" id="47DDA34B-F893-42D5-104A-0FFF2CC8384A">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>94D3CE49-430E-0547-7920-E29E86FA2C3A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>13FD36E6-F514-7436-D40C-1D386BD86AB7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="do_kiedy" id="8C9638F9-44D6-1249-49B9-8927CE27FB6A">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>D279982C-6CF6-A77D-01DA-6EE63B45508B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>13FD36E6-F514-7436-D40C-1D386BD86AB7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PESEL" id="FC3ADA5D-4E79-DBF8-1C3C-6EF43AFF0E28">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>EF0D546C-CAD1-E6A5-3980-83169B78B188</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>56C62861-F86B-30FC-CA61-C1ACB6B660A4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1ED6454E-89BD-EC40-1035-4E2E4D53B525" referredColumn="E1D831B9-C2A3-F680-4529-5879FCD7DFA3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EED18C9C-3121-11FF-B641-49C699BD833F" name="prawa_jazdy_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>0DBC235D-949A-E455-719B-80D9DE9E2ED8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A9A158F-E53F-C8C6-9788-7514140F19C5"/>
+<colUsage columnID="47DDA34B-F893-42D5-104A-0FFF2CC8384A"/>
+<colUsage columnID="FC3ADA5D-4E79-DBF8-1C3C-6EF43AFF0E28"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36503C5D-DF4A-6FFC-986D-4F4A6A21DFA6" name="prawa_jazdy_OSOBY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC3ADA5D-4E79-DBF8-1C3C-6EF43AFF0E28"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="drogowka1" id="4BE3B5C4-211C-5EB0-1B02-17E1B65FD660" version="3.5">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:45:28 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4BE3B5C4-211C-5EB0-1B02-17E1B65FD660</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="5396F46A-88ED-E101-3043-0DF81CC459EA">
+<designStoragePath>/diagram-relacji</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>
