@@ -18,9 +18,9 @@
 <preferredAbbreviation>Aresztowania</preferredAbbreviation>
 <shortName>AR</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="do_kiedy" id="C6AB03A1-F6A6-17DC-14C6-9A8E7CF0DB69">
+<Attribute name="od_kiedy" id="F2D6530C-1DAB-361B-A109-B8BA7C6F8B65">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:26:49 UTC</createdTime>
+<createdTime>2024-10-15 20:26:54 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
@@ -30,9 +30,9 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="od_kiedy" id="F2D6530C-1DAB-361B-A109-B8BA7C6F8B65">
+<Attribute name="do_kiedy" id="C6AB03A1-F6A6-17DC-14C6-9A8E7CF0DB69">
 <createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-15 20:26:54 UTC</createdTime>
+<createdTime>2024-10-15 20:26:49 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
@@ -50,7 +50,6 @@
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT006</logicalDatatype>

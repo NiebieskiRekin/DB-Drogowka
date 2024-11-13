@@ -56,6 +56,19 @@
 <dataTypeSize>64</dataTypeSize>
 <ownDataTypeParameters>64,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="czy_poszukiwana" id="3ACEF7EC-011A-E8AC-EED2-2CFD85087DFE">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-10-21 10:09:55 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="nr_telefonu" id="2EAFC6E8-5416-B63E-52D8-40B629C1F53C">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-15 20:28:43 UTC</createdTime>
@@ -69,20 +82,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>16</dataTypeSize>
 <ownDataTypeParameters>16,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="czy_poszukiwana" id="3ACEF7EC-011A-E8AC-EED2-2CFD85087DFE">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 10:09:55 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nr_dowodu_osobistego" id="526496E0-E336-8B40-BB49-8968894704CC">
 <createdBy>niebieskirekin</createdBy>
