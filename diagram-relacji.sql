@@ -16,7 +16,6 @@ CREATE TABLE UBEZPIECZENIA (
     TYP CHAR(2) NOT NULL CHECK ( TYP IN ( 'OC', 'AC' ) ),
     FIRMA VARCHAR(32) NULL,
     VIN_POJAZDU CHAR(17),
-    NR_REJESTRACYJNY_POJAZDU VARCHAR(8),
     PRIMARY KEY (NR_POLISY),
     FOREIGN KEY (VIN_POJAZDU) REFERENCES POJAZDY (VIN)
 );
@@ -28,7 +27,7 @@ CREATE TABLE OSOBY(
 	nr_telefonu varchar(16) NULL,
 	czy_poszukiwana char(1) DEFAULT (0) NOT NULL CHECK ( czy_poszukiwana IN ( 'N', 'T' )),
 	nr_dowodu_osobistego char(9) NULL,
-	data_urodzenia DATE NOT NULL
+	data_urodzenia DATE NULL
 );
 
 CREATE TABLE Osoby_Pojazdy(
@@ -53,17 +52,18 @@ CREATE TABLE Funkcjonariusze(
 
 CREATE TABLE zdarzenia(
 	id_zdarzenia integer PRIMARY KEY,
-	data_zdarzenia DATE,
-	miejsce varchar(128),
+	data_zdarzenia DATE NOT NULL,
+	wysokosc_geograficzna NUMBER(8,6) NOT NULL,
+	szerokosc_geograficzna NUMBER(8,6) NOT NULL,
 	opis varchar(128) NULL,
-	UNIQUE(data_zdarzenia,miejsce)
+	UNIQUE(data_zdarzenia,wysokosc_geograficzna, szerokosc_geograficzna)
 );
 
 CREATE TABLE interwencje(
 	id_interwencji integer PRIMARY KEY,
 	data_i_czas_interwencji timestamp NOT NULL,
-	funkcjonariusz char(11) REFERENCES Funkcjonariusze(pesel),
-	zdarzenie integer REFERENCES zdarzenia(id_zdarzenia),
+	funkcjonariusz char(11)  NOT NULL REFERENCES Funkcjonariusze(pesel),
+	zdarzenie integer  NOT NULL REFERENCES zdarzenia(id_zdarzenia),
 	UNIQUE(funkcjonariusz,zdarzenie)
 );
 
@@ -73,17 +73,17 @@ CREATE TABLE role_zdarzenia(
 
 CREATE TABLE uczestnicy_zdarzen(
 	id_uczestnika integer PRIMARY KEY,
-	rola varchar(32) REFERENCES role_zdarzenia(rola),
-	pesel_uczestnika char(11) REFERENCES osoby(pesel),
-	zdarzenie integer REFERENCES zdarzenia(id_zdarzenia),
+	rola varchar(32) NOT NULL REFERENCES role_zdarzenia(rola),
+	pesel_uczestnika char(11) NOT NULL REFERENCES osoby(pesel),
+	zdarzenie integer NOT NULL REFERENCES zdarzenia(id_zdarzenia),
 	UNIQUE(rola,pesel_uczestnika,zdarzenie)
 );
 
 CREATE TABLE wykroczenia(
 	nazwa varchar(128) PRIMARY KEY,
 	punkty_karne integer NOT NULL CHECK(punkty_karne BETWEEN 0 AND 15),
-	stawka_minimalna NUMBER NOT NULL,
-	stawka_maksymalna NUMBER NOT NULL,
+	stawka_minimalna NUMBER NOT NULL CHECK(stawka_minimalna>=0),
+	stawka_maksymalna NUMBER NOT NULL CHECK(stawka_maksymalna<=6000),
 	ustawa varchar(32) NULL
 );
 
