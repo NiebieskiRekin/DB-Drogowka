@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="OSOBY" directorySegmentName="seg_0" id="D8A9AC5C-A8BB-D609-F21F-78C39E7DB7B3">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <logging>YES</logging>
 <partitionedRowMovement>DISABLE</partitionedRowMovement>
@@ -10,46 +10,46 @@
 <rejectLimit></rejectLimit>
 <columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
 <ColumnProxy name="data_urodzenia" id="6B9396A5-97B1-0A0A-C649-271F40860EF3">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="nr_telefonu" id="781313D5-75CF-6477-7A5F-B2FBD1C7E501">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="czy_poszukiwana" id="7E085560-E0CB-43B7-60B6-71D1B534615A">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <defaultValue>(0)</defaultValue>
 </ColumnProxy>
 <ColumnProxy name="nazwisko" id="B425348E-A00A-2DCF-3C03-1E0AC1FF4148">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="nr_dowodu_osobistego" id="C310B406-10CB-D5C5-31CD-1995347F4637">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="PESEL" id="E1D831B9-C2A3-F680-4529-5879FCD7DFA3">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="imie" id="F024DD8F-FE4C-EF66-169B-E1F79C073FCE">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OSOBY_PK" id="E0DA1F10-91B9-76A1-C7FC-F501BF4CE0F6">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <indexSort>SORTED</indexSort>
 </PrimaryKey>

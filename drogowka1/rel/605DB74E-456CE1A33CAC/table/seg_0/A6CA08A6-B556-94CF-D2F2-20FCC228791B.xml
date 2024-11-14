@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6CA08A6-B556-94CF-D2F2-20FCC228791B" name="Osoby_Pojazdy">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>698794DE-9222-83C6-CA22-E4577D80D8D0</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PESEL" id="734E2DA2-2A8E-8B7B-1F64-5557A3BD9241">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>6A33C1C7-5775-21BD-9906-28F106FB1215</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>56C62861-F86B-30FC-CA61-C1ACB6B660A4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="74D8B43A-2735-BAE5-79C8-2946F0CCE92C" referredColumn="B04D77EE-61C4-7A30-9F2E-C6B1AB188ED8"/>
+</associations>
+</Column>
+<Column name="VIN" id="74CEF064-5393-93B1-E38B-E044D18F3A3C">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>1D689531-691B-16C7-5532-9E03DA23D1A8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>ADD534D7-9564-6075-0305-3A1ADB3882E9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32F13973-7A8D-0528-4FC4-B8A320DDD909" referredColumn="BC86DBF7-6272-E51E-86DA-48BFEE307E8D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="89EDCB42-5A83-C7B1-91BB-AC24E35D9F0C" name="Osoby_Pojazdy_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>661EC29B-1642-80E4-A354-118D798A2773</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="734E2DA2-2A8E-8B7B-1F64-5557A3BD9241"/>
+<colUsage columnID="74CEF064-5393-93B1-E38B-E044D18F3A3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="495A07E6-5A31-8ADB-83E8-77398AEE99EB" name="Osoby_Pojazdy_OSOBY_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="734E2DA2-2A8E-8B7B-1F64-5557A3BD9241"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A85E0460-0CCF-39F7-78EA-17047DB82F11" name="Osoby_Pojazdy_POJAZDY_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74CEF064-5393-93B1-E38B-E044D18F3A3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

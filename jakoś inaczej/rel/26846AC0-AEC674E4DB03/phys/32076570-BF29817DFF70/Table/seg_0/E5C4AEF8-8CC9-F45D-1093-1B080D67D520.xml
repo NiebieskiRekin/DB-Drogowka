@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="interwencje" directorySegmentName="seg_0" id="E5C4AEF8-8CC9-F45D-1093-1B080D67D520">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="zdarzenie" id="0400AF46-4784-C103-5C01-A62B48223CFF">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data_i_czas_interwencji" id="480EED95-56F7-5D36-A7A6-CE018E2C3A86">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_interwencji" id="65A22924-C3B2-FF13-B689-1D7FAD0AD951">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="funkcjonariusz" id="C7C84B1A-DFE5-7E73-6557-407655CC82BB">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="interwencje_zdarzenia_FK" id="4902E959-E4A1-DD10-F25E-A74F4A01F7B6">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="interwencje_Funkcjonariusze_FK" id="68519E68-4372-82E9-B832-0F87646B0BE2">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="interwencje_PK" id="75C0FB3C-25FA-5489-131A-A9E428FAB800">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="2F29FB0D-C8DD-42E7-0102-AB5EE2EFA9D2">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

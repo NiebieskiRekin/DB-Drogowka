@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B9D0C24E-36D6-8433-CF28-1F6F10164104" name="wykroczenia">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>945965F8-099E-1120-076A-882B908EEDD5</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nazwa" id="23D085BF-5812-0C39-FD11-C7D94296701E">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>084F5570-6D29-F32B-0530-B95D283D178F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>30130D0C-9A49-101F-3F64-9EA887783B4F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="punkty_karne" id="F5FCD389-AC6B-6A74-4BDA-E6ACE99E001C">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>56BBE983-C714-7ADD-B6E6-310BEFAC5E83</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>6DA3E59D-A46A-5FFB-549E-0D7802245C0A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>15</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="stawka_minimalna" id="0DF98D44-14D0-E502-44D2-779A2F7F5D37">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>0FDBE996-23C5-850D-0BA1-D422CF376305</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>0BCAC52D-7C1A-2D5B-F689-356C53AA379B</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_minimalna&gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stawka_maksymalna" id="01F0F674-805C-662D-19CF-C532D391AB48">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>8989E100-E9BF-7A20-AEFA-BC6ADDBCC3DE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>0BCAC52D-7C1A-2D5B-F689-356C53AA379B</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_maksymalna&lt;=6000"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ustawa" id="79E19970-6BD2-B995-7645-1BA8F7033CFF">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>16664550-6532-308D-643A-16B1741CFE34</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>3A19A832-18D8-16D4-9265-FCA05F39FE6F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BD63312E-36CC-54D1-ECC6-7FAEAEBC5E2D" name="wykroczenia_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>C89A2097-1271-88DB-128F-FC726330733B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23D085BF-5812-0C39-FD11-C7D94296701E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

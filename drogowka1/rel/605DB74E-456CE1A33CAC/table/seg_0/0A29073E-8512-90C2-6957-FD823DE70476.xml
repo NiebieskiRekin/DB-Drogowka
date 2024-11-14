@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A29073E-8512-90C2-6957-FD823DE70476" name="formy_wymiaru_kary">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>666D16B2-963B-D48C-BA3C-3E5A57ACC210</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_uczestnika" id="FC4CD96F-44EA-CFFF-E919-7A8811785D4A">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>2F812CDA-E12E-E6D7-B9AA-7607801B8FC0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>6DA3E59D-A46A-5FFB-549E-0D7802245C0A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F0709AAC-D8A4-7927-7B96-0E2DDD5040A0" referredColumn="61C5FC30-DDEC-0C07-F973-5E1408D38375"/>
+</associations>
+</Column>
+<Column name="id_interwencji" id="304D3698-E9E1-7E7C-B6A0-2E4B9DBCA9F5">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>6B49841A-04F1-3647-3A34-BF994489954A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>6DA3E59D-A46A-5FFB-549E-0D7802245C0A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DDC23EB4-D68E-5307-A748-153E47DFFFBD" referredColumn="4CE30CA7-039E-02A8-A204-67B65929C1C1"/>
+</associations>
+</Column>
+<Column name="typ" id="433967D9-85A7-A0C6-DD65-96359E1C53A8">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>BBE05600-C442-265D-3B25-85C62DDC248C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>34521B16-D00B-642E-89CF-BBC36DDBEDA7</domain>
+<listOfValues>
+<valueDef value="a" description=""/>
+<valueDef value="m" description=""/>
+<valueDef value="p" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EB08FE2D-20CE-9C36-41AF-C4F3BE058FC1" name="formy_wymiaru_kary_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>E4C840A1-AEE4-540D-B15D-C950A1D45EC8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC4CD96F-44EA-CFFF-E919-7A8811785D4A"/>
+<colUsage columnID="304D3698-E9E1-7E7C-B6A0-2E4B9DBCA9F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="44D1BC74-90A4-E201-88A8-6A671A2AFB18" name="formy_wymiaru_kary_interwencje_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="304D3698-E9E1-7E7C-B6A0-2E4B9DBCA9F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="989720A0-D692-CB84-FE1A-B6D8300EB3F8" name="formy_wymiaru_kary_uczestnicy_zdarzen_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC4CD96F-44EA-CFFF-E919-7A8811785D4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

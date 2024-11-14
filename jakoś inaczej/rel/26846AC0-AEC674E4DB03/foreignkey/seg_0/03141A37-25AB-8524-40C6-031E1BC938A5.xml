@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="03141A37-25AB-8524-40C6-031E1BC938A5" containerWithKeyObject="E5C4AEF8-8CC9-F45D-1093-1B080D67D520" localFKIndex="68519E68-4372-82E9-B832-0F87646B0BE2" name="interwencje_Funkcjonariusze_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>4426136D-2ABF-01BE-A8BC-4E0004841CE5</importedID>
+<referredTableLongName>Funkcjonariusze</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7CAEED34-84A8-5695-2413-C109DED892E6</referredTableID>
+<keyObject>90B730BE-F496-94B7-67A0-66E0055844E8</keyObject>
+<referredKeyID>90B730BE-F496-94B7-67A0-66E0055844E8</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>pesel</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

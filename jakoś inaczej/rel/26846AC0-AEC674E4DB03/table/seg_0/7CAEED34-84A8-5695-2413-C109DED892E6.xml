@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7CAEED34-84A8-5695-2413-C109DED892E6" name="Funkcjonariusze">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>5888D8DC-F36F-C344-C5E5-43DAA5EC2A73</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_odznaki" id="596B4CAE-C3D7-40F0-7E79-60D6ADB17969">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>BB4D3FD6-B663-F522-88E6-9EFF9ABF6EC4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>14FEE9F4-B547-D73B-36C1-695C2CA82D00</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stopien" id="ECB16A87-12D2-F404-73B4-826A3D5C92ED">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>BEEB4D08-3B9A-6452-4BAD-603EF1CFF78A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4F778705-FABB-AA94-83FA-813683DE5540</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pesel" id="A6C2968E-3F38-9350-0400-0131385667EF">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>214DE8D8-1E3A-950F-C6BF-ECD0AFBDE403</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>ED9A224D-A8C7-4CA9-492B-8B487B870376</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E8C71BD7-43E0-2216-D567-7B5F49F603FD" referredColumn="D225477D-1DAF-B992-EE1B-52BFEB920444"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="90B730BE-F496-94B7-67A0-66E0055844E8" name="Funkcjonariusze_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>E6EC0D7E-A267-F47A-7380-013DD12B7B01</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6C2968E-3F38-9350-0400-0131385667EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB8AF2D2-9577-8B1A-DDB4-3FA18FEB09EC" name="Funkcjonariusze_OSOBY_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6C2968E-3F38-9350-0400-0131385667EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

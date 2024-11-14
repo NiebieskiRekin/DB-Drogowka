@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="02B3F50A-DA0D-83BF-E06D-FA26D7366C9B" containerWithKeyObject="645B6DE2-589C-ABCF-D046-07AFDA2DD961" localFKIndex="C026C22C-E804-40AF-1717-42A76EE0A8FF" name="formy_wymiaru_kary_uczestnicy_zdarzen_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>D30FB851-CD85-D49B-6DD4-E5C67158098A</importedID>
+<referredTableLongName>uczestnicy_zdarzen</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>308BFB52-5DAC-3FE3-71C5-8C2FAD518AA7</referredTableID>
+<keyObject>BAC72FDD-48E3-3C16-ED1D-84F28E882A13</keyObject>
+<referredKeyID>BAC72FDD-48E3-3C16-ED1D-84F28E882A13</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_uczestnika</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="692D5736-208C-C531-6FCC-B334B67BD987" name="aresztowania">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>5C0D92C6-4DD4-27C2-5A0E-80A0C19CD0A8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_uczestnika" id="380B0407-DE1E-87B2-210C-22DC32ABD071">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>A9EE050F-5CC3-9A76-4472-5350D1D58F26</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>6DA3E59D-A46A-5FFB-549E-0D7802245C0A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C3C10DD-2707-6536-DDF6-511A4B5B779A" referredColumn="FC4CD96F-44EA-CFFF-E919-7A8811785D4A"/>
+</associations>
+</Column>
+<Column name="id_interwencji" id="F1764061-1D32-DC5B-3604-EBB7425EE0E1">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>B19B846F-7E8D-FC1F-6072-A67B64DDC3B6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>6DA3E59D-A46A-5FFB-549E-0D7802245C0A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C3C10DD-2707-6536-DDF6-511A4B5B779A" referredColumn="304D3698-E9E1-7E7C-B6A0-2E4B9DBCA9F5"/>
+</associations>
+</Column>
+<Column name="od_kiedy" id="154714F3-AFC4-D412-EA68-ADB2461D003C">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>8E0B10BF-4A0B-C715-A7F3-F3948820BB71</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>13FD36E6-F514-7436-D40C-1D386BD86AB7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DO_KIEDY" id="76AFD2E4-0E92-6C2C-F1A4-CA0D884712E7">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>64D731E0-6721-DE4A-0C42-4D39ABB9962A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>13FD36E6-F514-7436-D40C-1D386BD86AB7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CZY_W_ZAWIESZENIU" id="42C1D4B7-EFFE-1FFB-E25F-A64E546BA326">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>502FFE5A-3F03-45E3-7EAB-F68C0CBFF9B3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>34521B16-D00B-642E-89CF-BBC36DDBEDA7</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F264ABA3-A864-CEC5-C44A-1329075E00DF" name="aresztowania_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>7E6FAB7F-6451-1CFD-F28A-ECDD82FDCCC7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="380B0407-DE1E-87B2-210C-22DC32ABD071"/>
+<colUsage columnID="F1764061-1D32-DC5B-3604-EBB7425EE0E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B70F68F-9B32-EAAC-1D1E-8843D0B36A46" name="aresztowania_formy_wymiaru_kary_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:19:20 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="380B0407-DE1E-87B2-210C-22DC32ABD071"/>
+<colUsage columnID="F1764061-1D32-DC5B-3604-EBB7425EE0E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

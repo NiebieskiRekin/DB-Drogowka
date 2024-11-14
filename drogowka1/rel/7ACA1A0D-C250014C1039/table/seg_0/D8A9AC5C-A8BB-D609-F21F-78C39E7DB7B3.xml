@@ -95,6 +95,7 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>DD324431-E2EC-E428-2C0E-CBB86F14DC21</importedID>
+<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <domain>13FD36E6-F514-7436-D40C-1D386BD86AB7</domain>

@@ -39,7 +39,6 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>F30B19CE-AD33-7B8F-AF25-26650EE1A7B2</importedID>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <domain>56C62861-F86B-30FC-CA61-C1ACB6B660A4</domain>
@@ -55,7 +54,6 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>49EE660C-4155-8ADF-676C-2525CE47504C</importedID>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <domain>6DA3E59D-A46A-5FFB-549E-0D7802245C0A</domain>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="interwencje" directorySegmentName="seg_0" id="40CB2CF0-3AE2-93C4-2C9F-E0056C20E5F2">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <logging>YES</logging>
 <partitionedRowMovement>DISABLE</partitionedRowMovement>
@@ -10,50 +10,50 @@
 <rejectLimit></rejectLimit>
 <columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
 <ColumnProxy name="id_interwencji" id="0B350636-CDEB-22D8-4CB0-7BC6E016A611">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="zdarzenie" id="0D69E815-489F-3EAC-D389-67A8E0CCEB75">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="funkcjonariusz" id="B7C360BD-840E-3F82-5928-244FEEE5A0C7">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="data_i_czas_interwencji" id="D00E0628-40E5-2C7D-B7B5-AAB4C701D8DE">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
 <foreignKeys>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="interwencje_zdarzenia_FK" id="8983503D-37FA-A4C7-74D6-0DBEBB6403A8">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ForeignKey>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="interwencje_Funkcjonariusze_FK" id="CA32B5AD-612E-A4FF-8E1D-5D3C1ECB91A8">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ForeignKey>
 </foreignKeys>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="interwencje_PK" id="9E7D6913-5114-373E-5A85-C3241DA7C1F9">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <indexSort>SORTED</indexSort>
 </PrimaryKey>
 </primaryKeys>
 <uniqueKeys>
 <UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="10433280-6A40-4A40-FC6C-C9F752CEA311">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <indexSort>SORTED</indexSort>
 </UniqueKey>

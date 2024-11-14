@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="zdarzenia" directorySegmentName="seg_0" id="D125FE14-FC62-9EB8-268F-F4DE76FCCC21">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_zdarzenia" id="2C107495-CC3F-3610-7D5E-2A76F568254D">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="opis" id="34A7E8BB-81BE-F633-C4BE-E8D5CECE7956">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data_zdarzenia" id="7A29B4EF-A200-1856-624C-F63479A556D4">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="miejsce" id="A4176C00-655B-CF50-2E80-E135820A14C2">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="zdarzenia_PK" id="817BA491-06BB-36D8-B956-6911F861143B">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="67CCE596-4BF8-091D-CE40-16FBACE62012">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<nameChanged>true</nameChanged>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

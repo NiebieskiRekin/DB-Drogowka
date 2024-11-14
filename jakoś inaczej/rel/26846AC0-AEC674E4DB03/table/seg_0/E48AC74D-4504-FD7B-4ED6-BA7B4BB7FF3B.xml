@@ -1,0 +1,196 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E48AC74D-4504-FD7B-4ED6-BA7B4BB7FF3B" name="mandaty">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>D01B56E7-5D39-33EB-1D74-B83EFA85E92B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_serii" id="3ACA2840-D3DD-3912-A881-437067A794F7">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>207B50A4-99C7-9EC0-B83C-45EADC1D798E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>14FEE9F4-B547-D73B-36C1-695C2CA82D00</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kwota" id="50757F20-73B1-92C3-87B5-FDF8940578ED">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>DE0A4CA2-ABEC-9D85-3ABB-B2CEBDA4ECE3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8DA7A0AC-47C4-A4D7-FBC9-8A8F53D45952</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>6000</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="punkty_karne" id="A8592789-7992-DCFC-B6D3-5E8AE1D0170F">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>24159A8D-D43B-47BE-5E7F-59684C452CB6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DAFD738B-CF54-C6F8-63E3-A2F4E19FA029</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="czy_przyjeto" id="F9F01AD3-B5FB-1D08-2AEA-42C676890CF9">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>D4B0C8FA-7552-E940-FCA4-EAE180A25F96</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>45065824-7245-9E92-54E1-35CE0F8B69C7</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="czy_oplacone" id="684C7075-B5AF-BEB0-7728-FF774E2CE04F">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>CDDB129E-D075-CA97-1A82-37EF7FFDF2BA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>45065824-7245-9E92-54E1-35CE0F8B69C7</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="opis" id="D07F3C7A-B1C5-DBFC-FD37-532D6B5D2FB8">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>CAEA3653-2174-BF88-D8DF-77C357FD233D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>CEA3C02B-9AAC-4502-BA21-EB6CAFA7FD54</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="wykroczenie" id="AB8BEE4C-5CD0-428C-CF30-B85D534BC637">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>5EEC058F-4812-DFF2-92F6-AD5461499BD2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>CEA3C02B-9AAC-4502-BA21-EB6CAFA7FD54</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="38A7E147-B79E-FA4A-E7E6-2E4FFC6D8AAA" referredColumn="9E9E8C42-D270-0B4D-1C94-CDB48E1B64C6"/>
+</associations>
+</Column>
+<Column name="id_uczestnika" id="E3452CC1-C3E3-87C0-3E08-E571D851B0E1">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>9423F565-D237-97C4-E452-488128B280B9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DAFD738B-CF54-C6F8-63E3-A2F4E19FA029</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E62CEA2-14B4-E3DF-AA5E-4DF60D9F7024" referredColumn="E22A9352-A154-93F4-E6D5-763B566685B6"/>
+</associations>
+</Column>
+<Column name="id_interwencji" id="5CFE5C98-28B0-87D6-474C-5168924A1317">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>E660822C-5A5A-57F9-A618-7BBA219CD381</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DAFD738B-CF54-C6F8-63E3-A2F4E19FA029</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E62CEA2-14B4-E3DF-AA5E-4DF60D9F7024" referredColumn="19B7791F-DA71-145E-8A1F-52ADA69586CD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="99CE85CD-E747-A9C1-61CF-AB45E2A34254" name="mandaty_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>E8331512-EE47-C440-9109-A690B8E31BA2</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3452CC1-C3E3-87C0-3E08-E571D851B0E1"/>
+<colUsage columnID="5CFE5C98-28B0-87D6-474C-5168924A1317"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3FCBD796-91C1-2BB1-5B57-E0E1BFE0F2D2" name="INDEX_1v1">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>62938F69-201D-66BD-8E14-48E5BBD3EFD4</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3ACA2840-D3DD-3912-A881-437067A794F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F7F3803-3503-36FA-5EE3-00A4491EF8A7" name="mandaty_formy_wymiaru_kary_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3452CC1-C3E3-87C0-3E08-E571D851B0E1"/>
+<colUsage columnID="5CFE5C98-28B0-87D6-474C-5168924A1317"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31BEB156-5FF2-EE1E-4B3E-3C35FD89A4AF" name="mandaty_wykroczenia_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB8BEE4C-5CD0-428C-CF30-B85D534BC637"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

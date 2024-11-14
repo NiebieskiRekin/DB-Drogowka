@@ -27,23 +27,33 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>A8D735D0-97B2-D333-CC9B-0D814AC8ED00</importedID>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <domain>13FD36E6-F514-7436-D40C-1D386BD86AB7</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="miejsce" id="CF75CA63-CC19-5666-79F7-2892A8EE5ACD">
+<Column name="wysokosc_geograficzna" id="791B4ABB-2EEB-78EF-BE81-8FAE494F1F78">
 <sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:18:38 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
-<importedID>C250FAD8-2CEA-64A0-F822-5BB9CABC75A5</importedID>
-<nullsAllowed>true</nullsAllowed>
+<importedID>3B277AD7-7E1D-6D7F-FFB4-B4A8101955B6</importedID>
 <use>0</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<domain>30130D0C-9A49-101F-3F64-9EA887783B4F</domain>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>38B211B1-467F-25C9-37FE-8694C968D35D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="szerokosc_geograficzna" id="C8F5C5A2-9B4A-1CDD-D852-D16071F46134">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:18:38 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>8BC2EE49-2D2D-43EF-8D16-DF5D338B46FE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>38B211B1-467F-25C9-37FE-8694C968D35D</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -53,6 +63,19 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>19E6AD20-DBED-5474-999B-9EBD486C2EC2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>30130D0C-9A49-101F-3F64-9EA887783B4F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="miejsce" id="CF75CA63-CC19-5666-79F7-2892A8EE5ACD">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>C250FAD8-2CEA-64A0-F822-5BB9CABC75A5</importedID>
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -86,6 +109,20 @@
 <indexColumnUsage>
 <colUsage columnID="FA17BA0C-CF0E-74BF-E3C2-D5E41DE11CB0"/>
 <colUsage columnID="CF75CA63-CC19-5666-79F7-2892A8EE5ACD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38711DB2-1777-A00B-5948-7C94608FFBD0" name="INDEX_1v3">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:18:38 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
+<importedID>06756D95-98CF-F936-1889-A88D1ED3D5BD</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA17BA0C-CF0E-74BF-E3C2-D5E41DE11CB0"/>
+<colUsage columnID="791B4ABB-2EEB-78EF-BE81-8FAE494F1F78"/>
+<colUsage columnID="C8F5C5A2-9B4A-1CDD-D852-D16071F46134"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

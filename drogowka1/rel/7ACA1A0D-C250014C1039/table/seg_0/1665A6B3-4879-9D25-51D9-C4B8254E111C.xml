@@ -159,7 +159,7 @@
 <colUsage columnID="BE89CE63-F3FF-8A58-4018-9FCF7A0AD45E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="032795CA-4ADE-5348-7D36-ED926E0BFD4F" name="INDEX_1v1">
+<ind_PK_UK id="032795CA-4ADE-5348-7D36-ED926E0BFD4F" name="INDEX_1v5">
 <sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>

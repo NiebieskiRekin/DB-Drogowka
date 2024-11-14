@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="jakoś inaczej" id="3A9903E1-E921-0235-3AE9-CC8584C6C52E" version="3.5">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 11:59:45 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>3A9903E1-E921-0235-3AE9-CC8584C6C52E</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="504847F2-86D1-64F9-E0D4-C72F87FBB7E4">
+<designStoragePath>C:\diagram-relacji</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

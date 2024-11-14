@@ -27,7 +27,6 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>FD42A3B9-D758-02F3-F6D1-90AA9755DCDD</importedID>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <domain>3A19A832-18D8-16D4-9265-FCA05F39FE6F</domain>
@@ -43,7 +42,6 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>96F012E5-C397-2498-B0A0-39DC0F8FB8D4</importedID>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <domain>56C62861-F86B-30FC-CA61-C1ACB6B660A4</domain>
@@ -59,7 +57,6 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>95A9C170-17D8-BD7F-7849-F317B948FEFF</importedID>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <domain>6DA3E59D-A46A-5FFB-549E-0D7802245C0A</domain>
@@ -84,7 +81,7 @@
 <colUsage columnID="0710DD08-0D84-41E5-B45E-1A8BBC4A9174"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="890BDACA-0C9D-9207-24ED-CB541858042A" name="INDEX_1v3">
+<ind_PK_UK id="890BDACA-0C9D-9207-24ED-CB541858042A" name="INDEX_1v2">
 <sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>

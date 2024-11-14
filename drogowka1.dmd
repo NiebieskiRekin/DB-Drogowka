@@ -9,5 +9,11 @@
 <designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="5396F46A-88ED-E101-3043-0DF81CC459EA">
 <designStoragePath>/diagram-relacji</designStoragePath>
 </designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="E31C6BD1-62FB-56A7-D65B-05AFFFF5C29B">
+<designStoragePath>C:\diagram-relacji</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="7572B6F6-4375-522E-DC9B-E340857C15B8">
+<designStoragePath>C:\diagram-relacji</designStoragePath>
+</designDescr>
 </usedDesignStorageDescriptors>
 </OSDM_Design>

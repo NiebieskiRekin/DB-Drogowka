@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="uczestnicy_zdarzen" directorySegmentName="seg_0" id="9B54847B-5C4B-D4EE-8791-6E59B03927A2">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <logging>YES</logging>
 <partitionedRowMovement>DISABLE</partitionedRowMovement>
@@ -10,55 +10,55 @@
 <rejectLimit></rejectLimit>
 <columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
 <ColumnProxy name="zdarzenie" id="0586B02E-E3CD-7955-3EB6-C7197B756BDC">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="id_uczestnika" id="0710DD08-0D84-41E5-B45E-1A8BBC4A9174">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="rola" id="1B223E53-E6D1-22CF-FE73-8075D4ACB329">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="pesel_uczestnika" id="9ADB9ADF-1D1C-B646-D53A-1CA9709FE6F4">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
 <foreignKeys>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="uczestnicy_zdarzen_zdarzenia_FK" id="595CC7B0-98CD-EBAB-FE98-AE3A2966FBF3">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ForeignKey>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="uczestnicy_zdarzen_role_zdarzenia_FK" id="9956CB48-38E8-0091-DCB5-37E077279032">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ForeignKey>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="uczestnicy_zdarzen_OSOBY_FK" id="F396A87E-D9D4-BCFF-E8B7-06929D5505F1">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ForeignKey>
 </foreignKeys>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="uczestnicy_zdarzen_PK" id="727F1012-82E8-0D17-0277-3B845150E5EF">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <indexSort>SORTED</indexSort>
 </PrimaryKey>
 </primaryKeys>
 <uniqueKeys>
 <UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="890BDACA-0C9D-9207-24ED-CB541858042A">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <nameChanged>true</nameChanged>
 <indexSort>SORTED</indexSort>

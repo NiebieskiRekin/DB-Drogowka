@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<StorageDesignOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g" name="Oracle Database 11g" id="67DFC309-9FA1-37F1-E2AE-34415A25E3A9" siteID="32076570-2523-435C-2E92-BF29817DFF70" siteName="Oracle Database 11g" siteType="9">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:45:58 UTC</createdTime>
-<ownerDesignName>Untitled_1</ownerDesignName>
+<StorageDesignOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g" name="Oracle Database 11g" id="8BF7A0DD-12D2-4F95-7DAC-420F6991DEF1" siteID="32076570-2523-435C-2E92-BF29817DFF70" siteName="Oracle Database 11g" siteType="9">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
+<ownerDesignName>drogowka1</ownerDesignName>
 </StorageDesignOraclev11g>

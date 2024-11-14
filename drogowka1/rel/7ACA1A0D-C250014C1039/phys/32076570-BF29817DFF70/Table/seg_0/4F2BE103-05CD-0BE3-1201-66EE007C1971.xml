@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="wykroczenia" directorySegmentName="seg_0" id="4F2BE103-05CD-0BE3-1201-66EE007C1971">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <logging>YES</logging>
 <partitionedRowMovement>DISABLE</partitionedRowMovement>
@@ -10,35 +10,35 @@
 <rejectLimit></rejectLimit>
 <columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
 <ColumnProxy name="stawka_maksymalna" id="211A9CAC-EA4C-FE08-4B78-AE593EE91D82">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="stawka_minimalna" id="695EC59B-88EF-91FD-64C8-04D25C990C45">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="punkty_karne" id="822DF976-3B43-F313-77D5-1A67984E6355">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="ustawa" id="D6BFA573-6377-56A7-63CD-E3484EDF4B18">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 <ColumnProxy name="nazwa" id="E0F477FA-4B30-C289-1219-32137E9F3C67">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="wykroczenia_PK" id="434E8F74-8F20-F1AD-587C-03D69CAF0B28">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-11-04 12:46:00 UTC</createdTime>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:51 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <indexSort>SORTED</indexSort>
 </PrimaryKey>

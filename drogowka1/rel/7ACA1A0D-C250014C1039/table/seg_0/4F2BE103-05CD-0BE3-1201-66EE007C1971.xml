@@ -46,9 +46,13 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>360ABC5D-B7A1-3F65-2A88-ECE62B0F0BED</importedID>
+<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>0BCAC52D-7C1A-2D5B-F689-356C53AA379B</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_minimalna&gt;=0"/>
+</checkConstraint>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -58,9 +62,13 @@
 <createdTime>2024-11-04 12:46:00 UTC</createdTime>
 <ownerDesignName>drogowka1</ownerDesignName>
 <importedID>734D147F-406E-9E8F-5D72-E03A941E291A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>0BCAC52D-7C1A-2D5B-F689-356C53AA379B</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_maksymalna&lt;=6000"/>
+</checkConstraint>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>

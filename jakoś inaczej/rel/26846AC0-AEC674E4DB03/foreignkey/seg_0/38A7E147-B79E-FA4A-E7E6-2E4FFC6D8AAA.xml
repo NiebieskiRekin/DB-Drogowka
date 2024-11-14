@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="38A7E147-B79E-FA4A-E7E6-2E4FFC6D8AAA" containerWithKeyObject="E48AC74D-4504-FD7B-4ED6-BA7B4BB7FF3B" localFKIndex="31BEB156-5FF2-EE1E-4B3E-3C35FD89A4AF" name="mandaty_wykroczenia_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-14 12:00:19 UTC</createdTime>
+<ownerDesignName>jakoś inaczej</ownerDesignName>
+<importedID>82BC3E2F-CF00-6A26-B8AF-F636B8937A37</importedID>
+<referredTableLongName>wykroczenia</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EDAAA352-D049-FFDB-CAE5-DF024D239642</referredTableID>
+<keyObject>6755B3A6-C206-83B1-1953-95D31DC469EB</keyObject>
+<referredKeyID>6755B3A6-C206-83B1-1953-95D31DC469EB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>nazwa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
