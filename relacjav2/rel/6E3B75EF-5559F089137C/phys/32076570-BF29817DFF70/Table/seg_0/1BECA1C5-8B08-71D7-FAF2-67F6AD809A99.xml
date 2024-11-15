@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="FORMY_WYMIARU_KARY" directorySegmentName="seg_0" id="1BECA1C5-8B08-71D7-FAF2-67F6AD809A99">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_interwencji" id="33ABD174-DDA3-92C2-5905-633C639F60C2">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="typ" id="B0C11E58-142F-A00B-B8C5-BC213141632E">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_uczestnika" id="BA53C821-0EFC-EF3F-B3F6-2F4DA9D6645E">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FORMY_WYMIARU_KARY_UCZESTNICY_ZDARZENIA_FK" id="8F0C6901-4C83-28DC-6967-37A6CAD7455D">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FORMY_WYMIARU_KARY_INTERWENCJE_FK" id="B9F1EDCE-CB75-6389-4903-F03EFF456ABB">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="FORMY_WYMIARU_KARY_PK" id="D4EC5613-C8F3-E2F5-82A1-16DE196C96AA">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

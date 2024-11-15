@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="ROLE_ZDARZENIA" directorySegmentName="seg_0" id="66BBD925-4134-38F4-56DF-C1FED19A5412">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="rola" id="92F54437-01F4-32AA-6AE4-EE6D14A4B589">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ROLE_ZDARZENIA_PK" id="2BB7AB1F-5FC5-99CE-B769-1EC7C6C634FB">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71A35C11-5628-8F6E-0D41-B65E6A6D0C8D" name="WYKROCZENIA">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>B2A54DA9-1A62-F50E-DCF3-DFA408FAA900</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nazwa" id="48053CB6-44B8-E0EB-404E-07F35A0AAF55">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>10A6A314-791B-ED70-FC02-AB6C63496B03</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>24A2F9B9-0E89-E5F4-FFE3-75495526C536</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="punkty_karne" id="7C2A4836-2D50-09C3-DA1B-EAFBBF3CD520">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>73132430-0890-D7ED-9E85-5F9D4776B6EA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>15</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="stawka_minimalna" id="D4216CEC-982F-FE8C-FB3B-A838B031ECA1">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>ED8743CF-9982-34A9-29CE-0A4DD23B1383</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EA81BBFC-B85D-0D55-907A-E39045872205</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_minimalna&gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stawka_maksymalna" id="9CFA4F70-E882-6256-6D6C-8A7D61139DBC">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>FC1674FF-0683-BA8C-1BE4-BE3345557100</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EA81BBFC-B85D-0D55-907A-E39045872205</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_maksymalna&lt;=6000"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ustawa" id="4137E92A-564F-8E6A-018E-2A2DDBA9473A">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>5B84B201-D88A-0ED4-19FC-AB1315AEFEEB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6B9F9CB4-74E1-B81E-71FC-695771731AE5" name="WYKROCZENIA_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>56283784-3405-09C2-B590-EAB7B7BEE0DD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48053CB6-44B8-E0EB-404E-07F35A0AAF55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

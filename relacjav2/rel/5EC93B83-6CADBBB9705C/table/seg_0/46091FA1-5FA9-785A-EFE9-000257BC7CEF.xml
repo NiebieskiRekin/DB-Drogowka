@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="46091FA1-5FA9-785A-EFE9-000257BC7CEF" name="UBEZPIECZENIA">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>4BE2FE77-8EFE-9A95-699E-3E7602B6A4A6</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NR_POLISY" id="64EE9275-45A2-C0CA-11C4-FDE6E20F251A">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>4219F261-EFF8-7A45-E221-E34BF3D532A5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F72E5FEA-440B-43F6-E648-C6AA68BCCA35</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_WAZNOSCI" id="B36F8818-F346-3345-29AE-C94C4DF67A02">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>7D2FDB60-386F-5FA5-EB1D-4B3BE3E14B88</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP" id="2E64EA55-D9E7-852D-CA35-C1A9E2A99ACC">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>79987BE9-04F7-D902-6CA2-257419706766</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>E2419E0B-8F64-1E4D-DCEC-3FF2C00AF5ED</domain>
+<listOfValues>
+<valueDef value="AC" description=""/>
+<valueDef value="OC" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRMA" id="1FB51749-AF1E-7CF4-D36D-B0FFB0E94E50">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>1DF98A51-C6F6-1A5A-24E4-2D9FB2CE9C78</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VIN_POJAZDU" id="575B631C-C584-B52B-C59D-755816B34670">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>28D3E5DF-BDF5-2E8A-6CA4-06EC38ECBDD8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>1DA6848D-0002-8BCD-E6D2-CF9F552BF2E9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4AF70FAF-7651-F4DC-ABF6-131CEDFF314F" referredColumn="4FBE82A2-F7D0-CE83-45CB-395127B8F586"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="238FE2E8-66EC-96F8-6211-0A50D2F5ECC5" name="UBEZPIECZENIA_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>4D7D6D22-EEC2-3B0D-6218-8FBF74CF0932</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="64EE9275-45A2-C0CA-11C4-FDE6E20F251A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69D8B065-EC0F-C7A7-F79D-1FA2CB3213F0" name="UBEZPIECZENIA_POJAZDY_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="575B631C-C584-B52B-C59D-755816B34670"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

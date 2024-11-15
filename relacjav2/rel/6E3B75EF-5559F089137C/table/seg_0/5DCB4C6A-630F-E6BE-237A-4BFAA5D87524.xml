@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5DCB4C6A-630F-E6BE-237A-4BFAA5D87524" name="INTERWENCJE">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>491F2FB9-D0AD-C2DC-606C-15370E3877C0</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_interwencji" id="C5C431DD-16CC-5293-6911-7105891724E7">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>115CFB9C-B69A-5432-9156-86F2F6A9FC42</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_i_czas_interwencji" id="D3144EE4-DFFF-E4B3-76B2-5B68CAE913BD">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>1E8D7E50-C432-D956-D8A5-88EB66AFC8D1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>A0CE3B5A-32FD-740F-E003-BDAD1A5F93D7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="funkcjonariusz" id="77A17102-5CF8-6A3A-F880-D3F4FF222EDB">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>F426290B-744E-4687-9135-F954FDF17BFB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>C5BB4BAB-2D9D-B8F1-951B-F7EB09EA02A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9C55519E-1212-5D60-52B7-66206592AC19" referredColumn="54F3AC07-E105-D82D-1101-CF95D8871B2D"/>
+</associations>
+</Column>
+<Column name="zdarzenie" id="AE9FA140-816F-42AF-2CBE-FAA1770960E8">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>49BB8DE4-D0EA-ABE5-DB4D-BFBFA3614C1E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF14FD0C-7017-1C85-87D0-0DA977F88A55" referredColumn="FEA39C49-07BA-1E40-29F0-9695369F817F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7D647DF1-F09C-8045-DCB7-C7048D6CF44E" name="INTERWENCJE_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>F15B0583-CA69-96A2-173F-DC17D4922940</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5C431DD-16CC-5293-6911-7105891724E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CBBB65E2-2EEE-CEA0-7DA4-A57D8A3B5C66" name="INDEX_1">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>2606C86A-63C5-0B5E-6943-3BA78BE314BC</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77A17102-5CF8-6A3A-F880-D3F4FF222EDB"/>
+<colUsage columnID="AE9FA140-816F-42AF-2CBE-FAA1770960E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09F01E27-A923-8A61-2EA1-C9AEA0857046" name="INTERWENCJE_FUNKCJONARIUSZE_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77A17102-5CF8-6A3A-F880-D3F4FF222EDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F0E55C2-570D-0C68-8B1C-278B2BB63005" name="INTERWENCJE_ZDARZENIA_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE9FA140-816F-42AF-2CBE-FAA1770960E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

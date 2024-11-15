@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="POJAZDY" directorySegmentName="seg_0" id="A42FDFD3-4C7C-12AE-3823-D32C06BC3EA8">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="BADANIE_TECHNICZNE" id="02403142-B52D-DCB9-0D27-CFADB85E9505">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NR_REJESTRACYJNY" id="2D869E10-F97D-F700-EEE3-ABE379120657">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CZY_POSZUKIWANE" id="432F57B9-E749-3C77-E04A-C5E6860B7F8B">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<defaultValue>(0)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="ROK_PRODUKCJI" id="4C07F753-14CC-AD3B-0C4A-E3C8079CA560">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CZY_ZAREKWIROWANY" id="B861429B-AF50-1FE5-AA24-2C15EF168392">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<defaultValue>(0)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="MODEL" id="C436FCBD-A9D6-B4F4-D695-70BD21699027">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VIN" id="E09F074F-E510-4CE7-96DB-B90133822EAD">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MARKA" id="E3D5D79E-555D-EB7C-6B4C-907729CCFD69">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="KOLOR" id="EA9A70DB-3982-E2F4-665E-733BA7DE268D">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="POJAZDY_PK" id="B0F9A289-5A8B-5C03-7493-906DE5054881">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="F653D3FC-B0E6-9F79-F168-F36FBA335DAD">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<nameChanged>true</nameChanged>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

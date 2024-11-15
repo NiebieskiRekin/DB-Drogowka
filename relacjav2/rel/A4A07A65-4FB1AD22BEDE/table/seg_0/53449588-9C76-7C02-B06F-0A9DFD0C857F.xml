@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53449588-9C76-7C02-B06F-0A9DFD0C857F" name="OSOBY">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>2BE88EAA-2424-8C0F-A586-3BD1B5B27752</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PESEL" id="EAE90E1B-EBDE-1B7B-61B3-8F66DFB4A712">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>09820708-8B0E-64F7-7AC8-B7E7EC2B8C2C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>C5BB4BAB-2D9D-B8F1-951B-F7EB09EA02A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imie" id="990DE146-AD4C-4F79-8C6E-E8BE02B49E72">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>891FE12A-6242-8E0D-8B9C-1C462BAEC299</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwisko" id="47F89881-2EDB-E957-6705-A67FC4F4E0BB">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>C51D02D7-FF28-155C-92BA-6730DC851460</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>3D1EC00C-D52B-DA58-A1E2-86565A5545C9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_telefonu" id="E965E495-FB4A-EC93-99B9-3CE34ADAB721">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>2290B258-500C-BFD3-8E79-B6C33D21D207</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>33AABF9A-5EAA-9120-EE44-CDCC1380C693</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="czy_poszukiwana" id="BC2B7238-61EA-0752-74BC-87576D1F146B">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>79704B09-7A19-9D27-3DBC-19A99E67D95E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>FB9D0D43-CB5C-0202-DB08-7B27F6B77697</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<defaultValue>(0)</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_dowodu_osobistego" id="AEAB0BAA-E26B-5041-0B0A-88E30E3575E2">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>A985E78F-EFC5-7DFA-A73D-184EA3565B37</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>45DFA1DA-7189-AC39-52D7-2F3908787F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_urodzenia" id="DB69FA71-AA59-4ABF-8B36-A3DF088EFC99">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>C104C9FC-F131-89CE-BA37-AAA2CF0DEA90</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B7BEF0B3-81D8-54D1-3759-3B1272F3BF83" name="OSOBY_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>F110B1C8-7A5A-2B7E-1824-98B6BC135E34</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EAE90E1B-EBDE-1B7B-61B3-8F66DFB4A712"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

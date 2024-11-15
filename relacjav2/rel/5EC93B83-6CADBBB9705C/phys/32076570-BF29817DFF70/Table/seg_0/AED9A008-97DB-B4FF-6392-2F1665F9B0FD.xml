@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="OSOBY" directorySegmentName="seg_0" id="AED9A008-97DB-B4FF-6392-2F1665F9B0FD">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="czy_poszukiwana" id="51282C8B-2A2B-B6E5-26DB-33FD32C32522">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<defaultValue>(0)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="nr_telefonu" id="5E63AC17-D9DC-63B9-747E-567287DC0BEE">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_dowodu_osobistego" id="7D1FCB96-E13C-0267-DE8E-32A1F6DAAA54">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PESEL" id="98BB5ED2-53D0-5F88-BC40-7EB8E5192A38">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data_urodzenia" id="9D735680-5F90-3D5F-026F-94F793DDCBAA">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="imie" id="C6401546-721F-29F5-24B5-D7124049265A">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nazwisko" id="FE114D9E-BE94-DE83-6729-7A5480B13159">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OSOBY_PK" id="0FFF5233-F873-D1BB-665D-0689741A50FC">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

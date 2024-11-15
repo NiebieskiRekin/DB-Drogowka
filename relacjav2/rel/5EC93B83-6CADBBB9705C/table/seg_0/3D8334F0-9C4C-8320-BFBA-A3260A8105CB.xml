@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D8334F0-9C4C-8320-BFBA-A3260A8105CB" name="OSOBY_POJAZDY">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>0C6F0A6A-112E-0C7A-3740-CF5B88E5B00B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="vin" id="A70CCFE7-6C01-9D83-BD5A-67BF66B19A39">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>55D524E9-6427-69AC-C1A2-ABD16BDC2643</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

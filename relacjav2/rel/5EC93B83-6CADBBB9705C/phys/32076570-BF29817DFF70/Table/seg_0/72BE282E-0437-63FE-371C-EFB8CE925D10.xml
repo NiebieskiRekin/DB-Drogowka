@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="ZDARZENIA" directorySegmentName="seg_0" id="72BE282E-0437-63FE-371C-EFB8CE925D10">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="szerokosc_geograficzna" id="054BE983-A578-C602-4DF9-72C0EBE0EF5D">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="wysokosc_geograficzna" id="212BD4FA-2F94-9C5A-5307-FF5324F2208A">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_zdarzenia" id="319CAD41-12EB-4B46-B8FA-F08DB000159B">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data_zdarzenia" id="638E6DD9-6234-36D0-A02D-B62D468C8154">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="opis" id="70048739-909A-6714-808F-1FB4E6AB7856">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ZDARZENIA_PK" id="67546734-E46E-2969-E7A9-54F2E9921CBB">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="CCA396D4-BAA0-2F22-AB74-45E594D08531">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<nameChanged>true</nameChanged>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="relacjav2" id="D983D063-F3A4-6671-D69D-A62BC4E7932A" version="3.5">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:15:46 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D983D063-F3A4-6671-D69D-A62BC4E7932A</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="82A8BDC3-16EC-4ACF-0FAC-DA35B31E095D">
+<designStoragePath>C:\diagram-relacji</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="66637BB0-4E2A-1BF4-C3B2-8A400C3682B4">
+<designStoragePath>C:\diagram-relacji</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="CB40C7B5-8279-B48F-8C57-7C8D858DC82A">
+<designStoragePath>C:\diagram-relacji</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

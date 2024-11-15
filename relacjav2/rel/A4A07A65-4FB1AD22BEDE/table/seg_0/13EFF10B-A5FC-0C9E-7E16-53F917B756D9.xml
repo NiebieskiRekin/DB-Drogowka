@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="13EFF10B-A5FC-0C9E-7E16-53F917B756D9" name="ARESZTOWANIA">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>AFCAF63B-FEEC-B295-9936-712317A8341A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_uczestnika" id="CD54C458-3100-C987-EF0B-89F312970747">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>AB0C56DC-7888-8EC5-BBE6-A24795EE3CBB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87290CC1-C0F6-04FC-8DB1-A6D9D8604E23" referredColumn="0E939C5B-AC45-5165-AFB4-4BC927C6F918"/>
+</associations>
+</Column>
+<Column name="id_interwencji" id="C2AEFD0D-C2E2-AAD7-B3ED-A192A0F1C763">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>E8B42C7E-BD9E-4EC5-5E2C-30A04C21CFE2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87290CC1-C0F6-04FC-8DB1-A6D9D8604E23" referredColumn="F465190A-9DC8-0F33-AF59-2693E4762905"/>
+</associations>
+</Column>
+<Column name="od_kiedy" id="DA230F45-F5C7-E343-BB93-36F375C8F624">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>14C3E7B7-1654-AF44-0C32-37222581C841</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="do_kiedy" id="7F80376D-F7F4-3739-BB9F-7D2872296116">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>515A24B5-5D53-CCB5-8021-53872FD48F35</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="czy_w_zawieszeniu" id="3D5F0DB1-C433-5E58-E999-6868640E77E1">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>8DDA2CDC-86F2-4538-97ED-B647470B892B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>FB9D0D43-CB5C-0202-DB08-7B27F6B77697</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6FCC6C6-3DFE-C5D2-B5E3-D08DFB92A1D0" name="ARESZTOWANIA_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>DDC1E2D4-DC6C-0C46-6E6F-E836D8517D91</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD54C458-3100-C987-EF0B-89F312970747"/>
+<colUsage columnID="C2AEFD0D-C2E2-AAD7-B3ED-A192A0F1C763"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E46382CA-D850-4869-48CE-85C207561AAE" name="ARESZTOWANIA_FORMY_WYMIARU_KARY_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD54C458-3100-C987-EF0B-89F312970747"/>
+<colUsage columnID="C2AEFD0D-C2E2-AAD7-B3ED-A192A0F1C763"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

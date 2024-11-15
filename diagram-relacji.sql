@@ -30,7 +30,9 @@ CREATE TABLE OSOBY(
 	data_urodzenia DATE NULL
 );
 
-CREATE TABLE OSOBY_POJAZDY(vin),
+CREATE TABLE OSOBY_POJAZDY(
+	vin char(17) REFERENCES pojazdy(vin),
+	pesel char(11) REFERENCES osoby(pesel),
     PRIMARY KEY(PESEL,VIN)
 );
 
@@ -112,7 +114,7 @@ CREATE TABLE ARESZTOWANIA(
 	id_interwencji integer,
 	od_kiedy DATE NOT NULL,
     do_kiedy DATE NULL,
-    czy_w_zawieszeniu CHAR(1) NOT NULL CHECK ( CZY_W_ZAWIESZENIU IN ( 'N', 'T' ) ),
+    czy_w_zawieszeniu CHAR(1) NOT NULL CHECK ( czy_w_zawieszeniu IN ( 'N', 'T' ) ),
     PRIMARY KEY ( ID_UCZESTNIKA,ID_INTERWENCJI ),
     FOREIGN KEY(id_uczestnika,id_interwencji) REFERENCES formy_wymiaru_kary(id_uczestnika,id_interwencji)
 );

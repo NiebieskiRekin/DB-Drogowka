@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="diagram-relacji(3)" id="A4A07A65-4A11-8DB2-6593-4FB1AD22BEDE" mainViewID="C83822FC-E959-DD8E-6A83-8B58B88484FB">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:07 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>diagram-relacji.sql</fileName>
+<pathName>C:\Users\kamie\Projekty\Database (SQL)</pathName>
+<dbType>9</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

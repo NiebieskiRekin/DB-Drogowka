@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9C55519E-1212-5D60-52B7-66206592AC19" containerWithKeyObject="5DCB4C6A-630F-E6BE-237A-4BFAA5D87524" localFKIndex="09F01E27-A923-8A61-2EA1-C9AEA0857046" name="INTERWENCJE_FUNKCJONARIUSZE_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>9F18C63F-32DA-B605-D7A1-753BAF39C642</importedID>
+<referredTableLongName>FUNKCJONARIUSZE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F55EBD00-759F-A01D-7742-C981DB91C7A8</referredTableID>
+<keyObject>B1358B2E-D679-3018-F866-93334754109E</keyObject>
+<referredKeyID>B1358B2E-D679-3018-F866-93334754109E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>pesel</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

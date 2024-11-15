@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AD01E366-B81D-826B-5CBE-DFF434716ED9" containerWithKeyObject="92F17024-EDA5-C025-4CEA-0946051744D5" localFKIndex="34A8FA7D-F468-6B79-EF48-0403137D32A1" name="ARESZTOWANIA_FORMY_WYMIARU_KARY_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>AC895C63-6518-37CF-8809-919462E80AC5</importedID>
+<referredTableLongName>FORMY_WYMIARU_KARY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>23D3846E-FAC1-5446-8719-483DCEC3DB2A</referredTableID>
+<keyObject>ABDF78ED-1675-0092-CB55-ECE77EB4FFD9</keyObject>
+<referredKeyID>ABDF78ED-1675-0092-CB55-ECE77EB4FFD9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_uczestnika,id_interwencji</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

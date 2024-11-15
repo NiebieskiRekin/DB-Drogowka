@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4AF70FAF-7651-F4DC-ABF6-131CEDFF314F" containerWithKeyObject="46091FA1-5FA9-785A-EFE9-000257BC7CEF" localFKIndex="69D8B065-EC0F-C7A7-F79D-1FA2CB3213F0" name="UBEZPIECZENIA_POJAZDY_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:16:10 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>0F911521-6DA5-9E69-B48C-D5A06F866D9F</importedID>
+<referredTableLongName>POJAZDY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>14F7E88F-FD46-ACAE-290E-C4EC4853E0B7</referredTableID>
+<keyObject>8F2226D5-D977-4E3F-D47C-3E9F314FE250</keyObject>
+<referredKeyID>8F2226D5-D977-4E3F-D47C-3E9F314FE250</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>VIN</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E0DBADED-6456-5159-91C4-358221E7917E" containerWithKeyObject="5C715BA2-3AC1-82C2-D7DC-35E90857A3C2" localFKIndex="04316DDA-78A9-321C-2A40-B258683CB137" name="MANDATY_WYKROCZENIA_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>1486681E-9A2B-7EB6-B0FB-947B4D3480E9</importedID>
+<referredTableLongName>WYKROCZENIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>71A35C11-5628-8F6E-0D41-B65E6A6D0C8D</referredTableID>
+<keyObject>6B9F9CB4-74E1-B81E-71FC-695771731AE5</keyObject>
+<referredKeyID>6B9F9CB4-74E1-B81E-71FC-695771731AE5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>nazwa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1BECA1C5-8B08-71D7-FAF2-67F6AD809A99" name="FORMY_WYMIARU_KARY">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>1514411E-CA18-9DF4-30DD-7833B74351B8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_uczestnika" id="BA53C821-0EFC-EF3F-B3F6-2F4DA9D6645E">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>686BCDFB-0385-92E7-2937-149F2D9E531F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="838727E1-43AF-D867-4CB2-DBF1C053FE42" referredColumn="0D15B2B4-7879-6483-5B22-CBD6FDC40111"/>
+</associations>
+</Column>
+<Column name="id_interwencji" id="33ABD174-DDA3-92C2-5905-633C639F60C2">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>923700E2-A913-739A-FB2D-E28726961C14</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5BE71CA6-C41F-C2A7-ECCF-6694B0CF01AC" referredColumn="C5C431DD-16CC-5293-6911-7105891724E7"/>
+</associations>
+</Column>
+<Column name="typ" id="B0C11E58-142F-A00B-B8C5-BC213141632E">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>EB7CA919-1E26-2FDD-9495-E687747B0C61</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>FB9D0D43-CB5C-0202-DB08-7B27F6B77697</domain>
+<listOfValues>
+<valueDef value="a" description=""/>
+<valueDef value="m" description=""/>
+<valueDef value="p" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4EC5613-C8F3-E2F5-82A1-16DE196C96AA" name="FORMY_WYMIARU_KARY_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>89954B66-9838-F43E-2C0F-CBB9677355D4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BA53C821-0EFC-EF3F-B3F6-2F4DA9D6645E"/>
+<colUsage columnID="33ABD174-DDA3-92C2-5905-633C639F60C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B9F1EDCE-CB75-6389-4903-F03EFF456ABB" name="FORMY_WYMIARU_KARY_INTERWENCJE_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33ABD174-DDA3-92C2-5905-633C639F60C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F0C6901-4C83-28DC-6967-37A6CAD7455D" name="FORMY_WYMIARU_KARY_UCZESTNICY_ZDARZENIA_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:17:47 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BA53C821-0EFC-EF3F-B3F6-2F4DA9D6645E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

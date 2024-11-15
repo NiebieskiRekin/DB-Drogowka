@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="019567DE-7644-9BC8-C2A2-4C585FB5A0AA" name="UCZESTNICY_ZDARZENIA">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>64A97AA7-62C1-F37A-573A-02BD12350324</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_uczestnika" id="94CCEEFE-7E55-050D-05D3-6DB3CF49E7BD">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>74DB3F3C-721F-D100-4DDE-B48F2B009BFD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rola" id="B89076BC-4E39-3C49-121F-CCF281E027E4">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>13899C20-4CAB-B802-433B-4CF75CB0E81C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2697760C-164A-F918-3CEB-0672829DE30F" referredColumn="92F54437-01F4-32AA-6AE4-EE6D14A4B589"/>
+</associations>
+</Column>
+<Column name="pesel_uczestnika" id="DDE56A83-8BE9-C98F-DBB6-D94384EEC75F">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>A868C500-30D7-0F51-BC28-329B0CE43CA1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>C5BB4BAB-2D9D-B8F1-951B-F7EB09EA02A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35B56230-081D-7FC6-FD99-509F0DB1DA1A" referredColumn="EAE90E1B-EBDE-1B7B-61B3-8F66DFB4A712"/>
+</associations>
+</Column>
+<Column name="zdarzenie" id="9445BEE6-2450-D6C7-794B-B16568B1D3DA">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>B69A17ED-5030-A21F-44FE-DE08E3BE2D3D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="682F47B9-44FE-529A-F080-449E478B82A9" referredColumn="2F2DF022-869A-2328-9F7C-2D18F94BE8F4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA8CC3AE-B33F-A063-8C45-98BEEE6E9801" name="UCZESTNICY_ZDARZENIA_PK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>C8490E3E-8DC6-B4B0-A63A-089453AA9BAE</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94CCEEFE-7E55-050D-05D3-6DB3CF49E7BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE8FB9CF-8285-5DF4-CF10-07CB3115A951" name="INDEX_1v3">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>33CFDDE8-4781-6304-8F2F-1C1354AB85EA</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B89076BC-4E39-3C49-121F-CCF281E027E4"/>
+<colUsage columnID="DDE56A83-8BE9-C98F-DBB6-D94384EEC75F"/>
+<colUsage columnID="9445BEE6-2450-D6C7-794B-B16568B1D3DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31FF4FA4-F899-3CA4-727D-5C247231AA0E" name="UCZESTNICY_ZDARZENIA_OSOBY_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDE56A83-8BE9-C98F-DBB6-D94384EEC75F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="18A4A0DF-612A-DCB5-D2EA-ED4E583BD5DC" name="UCZESTNICY_ZDARZENIA_ROLE_ZDARZENIA_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B89076BC-4E39-3C49-121F-CCF281E027E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E8346D2E-E29D-0C50-5746-2E1C1EB9021B" name="UCZESTNICY_ZDARZENIA_ZDARZENIA_FK">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9445BEE6-2450-D6C7-794B-B16568B1D3DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

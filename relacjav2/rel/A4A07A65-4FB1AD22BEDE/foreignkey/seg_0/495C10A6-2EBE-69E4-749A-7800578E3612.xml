@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="495C10A6-2EBE-69E4-749A-7800578E3612" containerWithKeyObject="743A6E01-B973-2D3C-00DE-F60C31A8035E" localFKIndex="722A956C-AA9E-3974-E263-3A0FB58B18C5" name="INTERWENCJE_ZDARZENIA_FK">
+<sourceDDLFile>diagram-relacji.sql</sourceDDLFile>
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:23:14 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<importedID>3C9A46FF-6883-7F79-6EED-71BF34EF2957</importedID>
+<referredTableLongName>ZDARZENIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>26D8B2EF-B075-0FFB-7BAB-94CAE111DCAF</referredTableID>
+<keyObject>D6E8016D-6264-153D-71DE-9299909928F0</keyObject>
+<referredKeyID>D6E8016D-6264-153D-71DE-9299909928F0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_zdarzenia</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
