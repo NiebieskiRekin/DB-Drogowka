@@ -17,21 +17,6 @@
 <preferredAbbreviation>Formy wymiaru kary</preferredAbbreviation>
 <shortName>FWK</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Rola" id="6188D62F-AE03-BE8B-2578-6F7CFA61E000">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 09:28:16 UTC</createdTime>
-<generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<referedAttribute>F38B987E-2154-1A63-8030-7381A8220881</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>16</dataTypeSize>
-<ownDataTypeParameters>16,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="PESEL" id="4B93A0A3-A7E5-84B8-33F1-62BAEA5D293E">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-21 09:55:08 UTC</createdTime>
@@ -60,22 +45,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>11</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="miejsce" id="45E3A130-F663-CC0A-8987-212BCA307A61">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-27 21:58:35 UTC</createdTime>
-<generatorID>68F07933-5D92-A0AF-B71E-B3C83C611454</generatorID>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<referedAttribute>C7C37AE0-C52B-EC60-720B-DE81BCC9F4AE</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>128</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="data_zdarzenia" id="56C1ABF8-6881-6038-42DC-2B7B8B946B41">
 <createdBy>niebieskirekin</createdBy>
@@ -89,21 +59,6 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="miejsce1" id="2273E662-43EB-D5A8-EBFE-CAB7EB904245">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-27 21:58:35 UTC</createdTime>
-<generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<referedAttribute>4EF1FCEB-8BBB-3436-71EA-C0BD130E29EB</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>128</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="data_zdarzenia1" id="F7166451-175D-C30D-9806-38D84D8582DB">
@@ -120,6 +75,83 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="wysokosc_geograficzna" id="C45EA587-C67C-92CB-3F93-0087693290E1">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:57:55 UTC</createdTime>
+<generatorID>68F07933-5D92-A0AF-B71E-B3C83C611454</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>8B9A368C-7E04-C54B-6AB4-881B834E7A0D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="wysokosc_geograficzna1" id="7208916B-E590-C848-3076-D0D844C9C649">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:57:55 UTC</createdTime>
+<generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>A1C5B91F-7E9F-1461-DE30-4DC3ED19B93E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="szerokosc_geograficzna" id="236197E6-E509-4BC3-4F9F-042DBAA35A71">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:58:18 UTC</createdTime>
+<generatorID>68F07933-5D92-A0AF-B71E-B3C83C611454</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>EBC079FD-72A7-77E4-9EC8-46E6817FD64A</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="szerokosc_geograficzna1" id="A2F43A06-6E19-F0E9-F2F3-29D91C8B95A9">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:58:18 UTC</createdTime>
+<generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>4D74AB56-DC52-BBAE-5B4B-D7CF91E16B13</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rola1" id="6C1B2690-D39F-A911-FCED-A69E5E589FCB">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:02:25 UTC</createdTime>
+<generatorID>51BBDD2B-C95B-399A-9EDC-06CCC18690D2</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>32136DC5-F51C-E7B7-F717-47967C6179DC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CD1C8B81-35B0-53A8-FADC-1218DF0E1E93" name="Forma wymiaru kary PK">
@@ -131,13 +163,15 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>6188D62F-AE03-BE8B-2578-6F7CFA61E000</attributeRef>
 <attributeRef>4B93A0A3-A7E5-84B8-33F1-62BAEA5D293E</attributeRef>
-<attributeRef>2273E662-43EB-D5A8-EBFE-CAB7EB904245</attributeRef>
 <attributeRef>F7166451-175D-C30D-9806-38D84D8582DB</attributeRef>
+<attributeRef>7208916B-E590-C848-3076-D0D844C9C649</attributeRef>
+<attributeRef>A2F43A06-6E19-F0E9-F2F3-29D91C8B95A9</attributeRef>
+<attributeRef>6C1B2690-D39F-A911-FCED-A69E5E589FCB</attributeRef>
 <attributeRef>887F7838-8E0E-1358-B4EB-08003D70A12A</attributeRef>
-<attributeRef>45E3A130-F663-CC0A-8987-212BCA307A61</attributeRef>
 <attributeRef>56C1ABF8-6881-6038-42DC-2B7B8B946B41</attributeRef>
+<attributeRef>C45EA587-C67C-92CB-3F93-0087693290E1</attributeRef>
+<attributeRef>236197E6-E509-4BC3-4F9F-042DBAA35A71</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

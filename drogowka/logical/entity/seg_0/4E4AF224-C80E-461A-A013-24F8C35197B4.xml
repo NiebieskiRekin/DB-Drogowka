@@ -17,19 +17,6 @@
 <preferredAbbreviation>Uczestnicy Zdarzenia</preferredAbbreviation>
 <shortName>UZ</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Rola" id="F38B987E-2154-1A63-8030-7381A8220881">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 08:40:21 UTC</createdTime>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>16</dataTypeSize>
-<ownDataTypeParameters>16,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="PESEL" id="A3AA4ADE-D0E0-2B16-8317-86E2E83A9B70">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-21 09:55:08 UTC</createdTime>
@@ -45,21 +32,6 @@
 <dataTypeSize>11</dataTypeSize>
 <ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="miejsce" id="4EF1FCEB-8BBB-3436-71EA-C0BD130E29EB">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-27 21:58:35 UTC</createdTime>
-<generatorID>0C84CB6E-90EE-BBD1-FCBF-9F8DC9C1CC85</generatorID>
-<ownerDesignName>drogowka</ownerDesignName>
-<engineerTo>
-<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
-</engineerTo>
-<referedAttribute>A48240E6-7F2C-224D-B932-F42F77B6D112</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>128</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="data_zdarzenia" id="96BE2141-A5B0-1C2C-4F6B-239F78EA4394">
 <createdBy>niebieskirekin</createdBy>
 <createdTime>2024-10-27 21:58:35 UTC</createdTime>
@@ -74,6 +46,52 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="wysokosc_geograficzna" id="A1C5B91F-7E9F-1461-DE30-4DC3ED19B93E">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:57:55 UTC</createdTime>
+<generatorID>0C84CB6E-90EE-BBD1-FCBF-9F8DC9C1CC85</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>127CAC6F-A194-BCD6-9091-BAB565417A04</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="szerokosc_geograficzna" id="4D74AB56-DC52-BBAE-5B4B-D7CF91E16B13">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:58:18 UTC</createdTime>
+<generatorID>0C84CB6E-90EE-BBD1-FCBF-9F8DC9C1CC85</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>1D37E3D0-262D-3445-2BA9-C6585C2309A6</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rola1" id="32136DC5-F51C-E7B7-F717-47967C6179DC">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:02:22 UTC</createdTime>
+<generatorID>D03B3E8B-2216-9B4C-354E-2AEF3D37B109</generatorID>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<referedAttribute>1EFE1B9D-6A50-D888-C6A0-F3BA7CDB49B5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0128F85F-CE4A-AF10-8AD2-3ACC01694F7F" name="Rola w zdarzeniu PK">
@@ -85,10 +103,11 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>F38B987E-2154-1A63-8030-7381A8220881</attributeRef>
 <attributeRef>A3AA4ADE-D0E0-2B16-8317-86E2E83A9B70</attributeRef>
-<attributeRef>4EF1FCEB-8BBB-3436-71EA-C0BD130E29EB</attributeRef>
 <attributeRef>96BE2141-A5B0-1C2C-4F6B-239F78EA4394</attributeRef>
+<attributeRef>A1C5B91F-7E9F-1461-DE30-4DC3ED19B93E</attributeRef>
+<attributeRef>4D74AB56-DC52-BBAE-5B4B-D7CF91E16B13</attributeRef>
+<attributeRef>32136DC5-F51C-E7B7-F717-47967C6179DC</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

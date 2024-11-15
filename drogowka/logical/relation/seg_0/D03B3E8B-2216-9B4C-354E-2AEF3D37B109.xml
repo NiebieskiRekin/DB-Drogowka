@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="UczestnicyRole" directorySegmentName="seg_0" id="D03B3E8B-2216-9B4C-354E-2AEF3D37B109">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 20:00:28 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<targetPk>8B9C0579-7F2F-4372-ACC4-B60FB563EC81</targetPk>
+<identifying>true</identifying>
+<nameOnSource>pełni rolę</nameOnSource>
+<nameOnTarget>jest pełniona</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>4E4AF224-C80E-461A-A013-24F8C35197B4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>B2A3735E-F63A-CCD8-89CA-10D12B355D30</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

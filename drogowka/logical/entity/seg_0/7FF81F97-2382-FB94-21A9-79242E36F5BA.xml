@@ -29,18 +29,33 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="miejsce" id="A48240E6-7F2C-224D-B932-F42F77B6D112">
-<createdBy>niebieskirekin</createdBy>
-<createdTime>2024-10-21 10:07:12 UTC</createdTime>
+<Attribute name="wysokosc_geograficzna" id="127CAC6F-A194-BCD6-9091-BAB565417A04">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:56:07 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>128</dataTypeSize>
-<ownDataTypeParameters>128,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,8,6</ownDataTypeParameters>
+</Attribute>
+<Attribute name="szerokosc_geograficzna" id="1D37E3D0-262D-3445-2BA9-C6585C2309A6">
+<createdBy>kamie</createdBy>
+<createdTime>2024-11-15 19:57:51 UTC</createdTime>
+<ownerDesignName>drogowka</ownerDesignName>
+<engineerTo>
+<item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,8,6</ownDataTypeParameters>
 </Attribute>
 <Attribute name="opis" id="7AD26D10-B630-9451-27B8-DC8C2C73D4FF">
 <createdBy>niebieskirekin</createdBy>
@@ -67,8 +82,9 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>A48240E6-7F2C-224D-B932-F42F77B6D112</attributeRef>
 <attributeRef>B9C90142-2D23-6175-FFDE-F0BCF4A5471B</attributeRef>
+<attributeRef>127CAC6F-A194-BCD6-9091-BAB565417A04</attributeRef>
+<attributeRef>1D37E3D0-262D-3445-2BA9-C6585C2309A6</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
