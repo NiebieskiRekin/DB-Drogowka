@@ -1,0 +1,54 @@
+'nazwa','ustawa','stawka_minimalna','stawka_maksymalna','punkty_karne'
+'Nieustąpienie pierwszeństwa pieszemu znajdującemu się na przejściu dla pieszych lub wchodzącemu na to przejście','86b § 1 pkt 1 KW / art. 26 ust. 1 albo ust. 1a PRD',3000,3000,15
+'Nieustąpienie przez kierującego pojazdem, który skręca w drogę poprzeczną, pierwszeństwa pieszemu przechodzącemu na skrzyżowaniu przez jezdnię drogi, na którą wjeżdża','86b § 1 pkt 1 KW / art. 26 ust. 2 PRD',3000,3000,15
+'Nieustąpienie pierwszeństwa pieszemu przy przejeżdżaniu przez chodnik lub drogę dla pieszych albo podczas jazdy po placu, na którym ruch pieszych i pojazdów odbywa się po tej samej powierzchni','86b § 1 pkt 1 KW / art. 26 ust. 4 albo ust. 5 PRD',3000,3000,0
+'Nieustąpienie pierwszeństwa pieszemu przez kierującego pojazdem podczas włączania się do ruchu','86b § 1 pkt 1 KW / art. 17 ust. 2 PRD',3000,3000,5
+'Nieustąpienie pierwszeństwa pieszemu przy cofaniu pojazdem','86b § 1 pkt 1 KW / art. 23 ust. 1 pkt 3 PRD',3000,3000,8
+'Nieustąpienie pierwszeństwa pieszemu przez kierującego pojazdem w strefie zamieszkania','86b § 1 pkt 1 KW / art. 11 ust. 5 PRD',3000,3000,0
+'Niezatrzymanie pojazdu w celu umożliwienia przejścia przez jezdnię osobie niepełnosprawnej, używającej specjalnego znaku lub osobie o widocznej ograniczonej sprawności ruchowej','86b § 1 pkt 2 KW / art. 26 ust. 7',3000,3000,15
+'Wyprzedzanie pojazdu na przejściu dla pieszych, na którym ruch nie jest kierowany, lub bezpośrednio przed tym przejściem','86b § 1 pkt 3 KW / art. 26 ust. 3 pkt 1',3000,3000,15
+'Omijanie pojazdu, który jechał w tym samym kierunku, lecz zatrzymał się w celu ustąpienia pierwszeństwa pieszemu','86b § 1 pkt 4 KW / art. 26 ust. 3 pkt 2',3000,3000,15
+'Naruszenie zakazu jazdy wzdłuż po chodniku lub przejściu dla pieszych','86b § 1 pkt 5 / 26 ust. 3 pkt 3',3000,3000,6
+'Naruszenie obowiązku zatrzymania pojazdu w takim miejscu i na taki czas, aby umożliwić pieszym swobodny dostęp do pojazdów komunikacji publicznej – w przypadku braku wysepki dla pasażerów na przystanku','97 KW / art. 26 ust. 6',300,300,6
+'Naruszenie przez kierującego pojazdem zakazu korzystania z drogi przejazdu pojazdu uprzywilejowanego utworzonej przez kierujących innymi pojazdami w warunkach zwiększonego natężenia ruchu utrudniającego swobodny przejazd pojazdu uprzywilejowanego w celu umożliwienia swobodnego przejazdu tego pojazdu','97 KW / 9 ust. 3 PRD',500,2500,0
+'Zajmowanie więcej niż jednego, wyznaczonego na jezdni, pasa ruchu','97 KW /art. 16 ust. 4 PRD',150,150,2
+'Naruszenie obowiązku poruszania się po poboczu przez kierującego pojazdem zaprzęgowym, rowerem, wózkiem rowerowym, motorowerem, wózkiem ręcznym albo osobę prowadzącą pojazd napędzany silnikiem','97 KW / art. 16 ust. 5 PRD',100,100,0
+'Przewożenie w pojeździe kategorii M1, N2i N3, o których mowa w załączniku nr 2 u.p.r.d. wyposażonym w pasy bezpieczeństwa lub urządzenia przytrzymujące dla dzieci, dziecka mającego mniej niż 150 cm wzrostu poza fotelikiem bezpieczeństwa dla dziecka lub innym urządzeniem przytrzymującym dla dzieci, zgodnym z masą i wzrostem dziecka, oraz właściwymi warunkami technicznymi określonymi w przepisach UE lub w reg. EKG ONZ dotyczącym urządzeń przytrzymujących dla dzieci w pojeździe, z wyjątkiem przewożenia: 1) na tylnym siedzeniu takiego pojazdu dziecka mającego co najmniej 135 cm wzrostu, przytrzymywanego za pomocą pasów bezpieczeństwa w przypadkach, kiedy ze względu na masę i wzrost dziecka nie jest możliwe zapewnienie fotelika bezpieczeństwa dla dziecka lub innego urządzenia przytrzymującego dla dzieci zgodnego z wymaganymi warunkami; 2) w pojeździe kategorii M1i N1na tylnym siedzeniu pojazdu trzeciego dziecka w wieku co najmniej 3 lat, przytrzymywanego za pomocą pasów bezpieczeństwa, w przypadku gdy dwoje dzieci jest przewożonych w fotelikach bezpieczeństwa dla dziecka lub innych urządzeniach przytrzymujących dla dzieci, zainstalowanych na tylnych siedzeniach pojazdu i nie ma możliwości zainstalowania trzeciego fotelika bezpieczeństwa dla dziecka lub innego urządzenia przytrzymującego dla dzieci.','97 KW / art. 45 ust. 2 pkt 5, art39 ust. 3 w zw. z ust. 3b lub 3c PRD',300,300,6
+'Przewożenie w foteliku bezpieczeństwa dla dziecka lub innym urządzeniu przytrzymującym dla dzieci dziecka siedzącego tyłem do kierunku jazdy na przednim siedzeniu pojazdu samochodowego wyposażonego w poduszkę powietrzną dla pasażera, która jest aktywna podczas przewożenia dziecka','97 KW / art. 45 ust. 2 pkt 4 PRD',300,300,6
+'Przewożenie dziecka w wieku poniżej 3 lat w pojeździe kategorii M1, N1, N2i N3. o których mowa w zał. nr 2 u.p.r.d., niewyposażonym w pasy bezpieczeństwa i fotelik bezpieczeństwa dla dziecka lub innym urządzenie przytrzymującym w pasy bezpieczeństwa i inne urządzenia przytrzymujące dla dzieci.','97 KW / art.45 ust. 2 pkt 5 PRD',300,300,6
+'Przewożenie na przednim siedzeniu pojazdu samochodowego, poza fotelikiem bezpieczeństwa dla dziecka lub innym urządzenie przytrzymującym dla dzieci, dziecka mającego mniej niż 150 cm wzrostu','97 KW / art. 45 ust. 2 pkt 6 art. 39 ust. 3 PRD',300,300,6
+'Przewożenie dziecka w foteliku bezpieczeństwa dla dziecka lub innym urządzeniu przytrzymującym dla dzieci zainstalowanym niezgodnie z zaleceniami producenta urządzenia, wskazującymi w jaki sposób urządzenie może być bezpieczne stosowane','97 KW / art. 45 ust. 2 pkt 3 w zw. z art. 39 ust. 3a art. 39 ust. 3 PRD',300,300,6
+'Niekorzystanie z pasów bezpieczeństwa podczas jazdy','97 KW / art. 39 ust. 1 PRD',100,100,2
+'Kierowanie pojazdem przewożącym pasażerów niekorzystających z pasów bezpieczeństwa','97 KW / art. 45 ust. 2 pkt 3 PRD',100,100,4
+'Nieużywanie kasku ochronnego odpowiadającego właściwym warunkom technicznym podczas jazdy motocyklem, czterokołowcem lub motorowerem','97 KW / art. 40 ust. 1 PRD',100,100,2
+'Kierowanie motocyklem, czterokołowcem lub motorowerem przewożącym pasażera nieużywającego kasku ochronnego odpowiadającego właściwym warunkom technicznym','97 KW / art. 45 ust. 2 pkt 3 PRD',100,100,4
+'Przewożenie osoby w stanie nietrzeźwości, stanie po użyciu alkoholu lub środka działającego podobnie do alkoholu na rowerze lub motorowerze albo motocyklu poza bocznym wózkiem','97 KW / art. 45 ust. 2 pkt 2 PRD',500,500,0
+'Korzystanie podczas jazdy z telefonu wymagającego trzymania słuchawki lub mikrofonu w ręku przez kierującego pojazdem','97 KW / art. 45 ust. 2 pkt 1 PRD',500,500,5
+'Wjeżdżanie na pas między jezdniami','97 KW / art. 45 ust. 1 pkt 5 PRD',100,100,0
+'Niedopełnienie obowiązków przez uczestników wypadku poprzez nieusunięcie pojazdu z miejsca wypadku, w którym nie było zabitego lub rannego','97 KW /art. 44 ust. 1 pkt 3 lub ust. 3 PRD',150,150,0
+'Nieużywanie elementów odblaskowych w sposób widoczny dla innych uczestników ruchu przez osobę wykonującą roboty lub inne czynności na drodze','97 KW / 41 PRD',150,150,0
+'Nieustąpienie pierwszeństwa innemu pojazdowi lub uczestnikowi ruchu podczas włączania się do ruchu','90 KW / art. 17 ust. 2 PRD',300,300,5
+'Uniemożliwienie włączenia się do ruchu autobusowi (trolejbusowi) sygnalizującemu zamiar zmiany pasa ruchu lub wjechania z zatoki na jezdnię z oznaczonego przystanku na obszarze zabudowanym','90 KW / art. 18 ust. 1 PRD',200,200,0
+'Naruszenie obowiązków przez kierującego pojazdem zbliżającego się do miejsca postoju autobusu szkolnego','90 KW / art. 18a ust. 1 PRD',200,200,0
+'Przekroczenie dopuszczalnej prędkości do 10 km/h','92a § 1 KW',50,50,0
+'Przekroczenie dopuszczalnej prędkości o 11-15 km/h','92a § 1 KW',100,100,3
+'Przekroczenie dopuszczalnej prędkości o 16-20 km/h','92a § 1 KW',200,200,3
+'Przekroczenie dopuszczalnej prędkości o 21-25 km/h','92a § 1 KW',300,300,6
+'Przekroczenie dopuszczalnej prędkości o 26-30 km/h','92a § 1 KW',400,400,6
+'Przekroczenie dopuszczalnej prędkości o 31-40 km/h','92a § 2 KW',1600,1600,10
+'Przekroczenie dopuszczalnej prędkości o 41-50 km/h','92a § 2 KW',4000,4000,13
+'Przekroczenie dopuszczalnej prędkości o 51-60 km/h w obszarze niezabudowamym','92a § 2 KW',3000,3000,8
+'Przekroczenie dopuszczalnej prędkości o 51-60 km/h w obszarze zabudowamym','92a § 2 KW',3000,3000,15
+'Przekroczenie dopuszczalnej prędkości o 61-70 km/h w obszarze niezabudowamym','92a § 2 KW',4000,4000,8
+'Przekroczenie dopuszczalnej prędkości o 61-70 km/h w obszarze zabudowamym','92a § 2 KW',4000,4000,15
+'Przekroczenie dopuszczalnej prędkości o 71 km/h i więcej w obszarze niezabudowamym','92a § 2 KW',5000,5000,8
+'Przekroczenie dopuszczalnej prędkości o 71 km/h i więcej w obszarze zabudowamym','92a § 2 KW',5000,5000,15
+'Niezachowanie przez kierującego pojazdem wymaganego odstępu za poprzedzającym pojazdem poza obszarem zabudowanym w tunelu o długości przekraczającej 500 m','97 KW / art. 19 ust. 4 lub 5 PRD',300,500,0
+'Niezachowanie przez kierujących pojazdami objętymi indywidualnym ograniczeniem prędkości albo pojazdami lub zespołami pojazdów o długości większej niż 7 metrów niezbędnego odstępu od pojazdów znajdujących się przed nimi','97 KW / art. 19 ust. 3 PRD',200,200,0
+'Zawracanie w warunkach, w których mogłoby to zagrażać bezpieczeństwu ruchu lub ruch ten utrudnić','97 KW / art. 22 ust. 6 pkt 4 PRD',200,400,5
+'Zawracanie w tunelach, na mostach i wiaduktach oraz na drogach jednokierunkowych','97 KW / art. 22 ust. 6 pkt 1 PRD',200,200,5
+'Utrudnianie lub tamowanie ruchu poprzez niesygnalizowanie lub błędne sygnalizowanie manewru','97 KW / art. 22 ust. 5 PRD',200,200,2
+'Nieodpowiednie ustawienie pojazdu na jezdni przed skręceniem','97 KW / art. 22 ust. 2 PRD',150,150,0
+'Nieustąpienie pierwszeństwa przez kierującego pojazdem zmieniającego zajmowany pas ruchu','97 KW / art. 22 ust. 4 PRD',20,3000,5
+'Omijanie pojazdu sygnalizującego zamiar skręcenia w lewo z jego lewej strony','97 KW / art. 23 ust. 1 pkt 2 PRD',100,100,2
+'Naruszenie zakazów cofania w tunelach, na mostach i wiaduktach','97 KW / art. 23 ust. 2 PRD',200,200,2
