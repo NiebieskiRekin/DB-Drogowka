@@ -1,0 +1,59 @@
+Zderzenie boczne pojazdów w ruchu 
+Zderzenie czołowe pojazdów w ruchu
+Zderzenie tylne pojazdów w ruchu
+Najechanie na pieszego
+Najechanie na drzewo
+Najechanie na słup
+Najechanie na znak
+Najechanie na unieruchomiony pojazd
+Najechanie na barierę ochronną
+Najechanie na dziurę
+Wywrócenie się pojazdu
+Zdarzenie z pasażerem
+Zdarzenie z osobą poruszającą się przy użyciu urządzenia wspomagającego ruch
+Nieustalony rodzaj wypadku z winy kierującego pojazdem
+Nieustąpienie pierwszeństwa przejazdu
+Niedostosowanie prędkości do warunków ruchu
+Niezachowanie bezpiecznej odległości między pojazdami
+Nieprawidłowe wyprzedzanie
+Nieprawidłowe omijanie
+Nieprawidłowe wymijanie
+Nieprawidłowe skręcanie
+Nieprawidłowe cofanie
+Nieprawidłowa zmiana pasa ruchu
+Nieprawidłowe zawracanie
+Nieprawidłowe przejeżdżanie przejazdu dla rowerzystów
+Nieprawidłowe zatrzymanie
+Nieprawidłowy postój
+Nieustąpienie pierwszeństwa pieszemu na przejściu dla pieszych
+Nieustąpienie pierwszeństwa pieszemu przy skręcaniu w drogę poprzeczną
+Nieustąpienie pierwszeństwa pieszemu w innych okolicznościach
+Omijanie pojazdu przed przejściem dla pieszych
+Wyprzedzanie pojazdu przed przejściem dla pieszych
+Jazda bez wymaganego oświetlenia
+Niestosowanie się do sygnalizacji świetlnej
+Gwałtowne hamowanie
+Zmęczenie, zaśnięcie prowadzącego pojazdem
+Nieprzestrzeganie innych znaków i sygnałów
+Inna przyczyna wypadku spowodowana przez pieszego
+Nieostrożne wejście na jezdnię przed jadącym pojazdem
+Nieostrożne wejście na jezdnię zza pojazdu
+Nieostrożne wejście na jezdnię zza przeszkody
+Przekraczanie jezdni w miejscu niedozwolonym
+Wejście na jezdnię przy czerwonym świetle
+Pozostawanie w bezruchu na jezdni
+Chodzenie nieprawidłową stroną drogi
+Zatrzymanie się, cofnięcie w miejscu niedozwolonym
+Jazda w ogumieniu niespełniającym wymogów
+Jazda bez ważnego badania technicznego pojazdu
+Usterki układu hamulcowego
+Usterki układu kierowniczego
+Przeszkody na drodze
+Zwierzęta na drodze
+Utrata przytomności kierującego przed wypadkiem
+Śmierć kierującego przed wypadkiem
+Niewłaściwy stan jezdni
+Oślepienie przez inny pojazd
+Oślepienie przez słońce
+Nieprawidłowo zabezpieczone roboty drogowe
+Nieustalona przyczyna
