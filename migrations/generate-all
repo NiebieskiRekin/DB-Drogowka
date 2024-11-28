@@ -7,8 +7,8 @@ python -m Osoby.populate-osoby
 python -m Osoby_Pojazdy.populate-osoby-pojazdy
 python -m Prawa_Jazdy.populate-prawa-jazdy
 python -m Funkcjonariusze.populate-funkcjonariusze
-python -m Interwencje.populate-interwencje
 python -m Zdarzenia.populate-zdarzenia
+python -m Interwencje.populate-interwencje
 # Role_Zdarzenia
 python -m Uczestnicy_Zdarzenia.populate-uczestnicy-zdarzenia
 python -m Wykroczenia.populate-wykroczenia

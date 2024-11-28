@@ -1,14 +1,11 @@
 import random
 from typing import List
 
-from common import (
-    gen_with_distribution,
-    insert_csv,
-    csv_reader,
-    cleanup,
-)
+from common import gen_with_distribution, insert_csv, csv_reader, cleanup, gen_unique
 
 typy = ["m", "a", "p"]
+
+interwencja_uczestnik_unique = set()
 
 
 def uczestnicy_zdarzenia_filter(row: List[str]):
@@ -75,20 +72,14 @@ def gen_id_interwencji(id_uczestnika):
 
 def gen_formy_wymiaru_kary(i):
     id_uczestnika = cleanup(uczestnicy_set[i][0])
-    id_interwencji = int(gen_id_interwencji(id_uczestnika))
+    _, id_interwencji = gen_unique(
+        lambda: (id_uczestnika, int(gen_id_interwencji(id_uczestnika))),
+        interwencja_uczestnik_unique,
+    )
     out = ""
     typ = gen_with_distribution(typy, [0.5, 0.3, 0.2])
-    if typ == "m":
-        num_mandatow_per_uczestnik_winowajca = gen_with_distribution(
-            [1, 2, 3], [0.8, 0.15, 0.05]
-        )
-        id_interwencji = gen_with_distribution(
-            [gen_id_interwencji(id_uczestnika), id_interwencji], [0.2, 0.8]
-        )
-        for _ in range(num_mandatow_per_uczestnik_winowajca):
-            out += f"{id_uczestnika},{id_interwencji},'{typ}'\n"
-    else:
-        out += f"{id_uczestnika},{id_interwencji},'{typ}'\n"
+
+    out += f"{id_uczestnika},{id_interwencji},'{typ}'\n"
 
     return out
 

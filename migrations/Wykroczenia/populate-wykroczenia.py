@@ -1,6 +1,6 @@
 import csv
 import textwrap
-from common import shorten
+from common import shorten, shorten_no_elipsis
 
 with (
     open("Wykroczenia/input.csv", newline="") as csvfile,
@@ -13,6 +13,6 @@ with (
     first_row = next(wykroczenia_in)
     wykroczenia_out.writerow(first_row)
     for row in wykroczenia_in:
-        v1 = shorten(row[0], 127)
-        v2 = shorten(row[1], 31)
+        v1 = shorten_no_elipsis(row[0], 127)
+        v2 = shorten_no_elipsis(row[1], 31)
         wykroczenia_out.writerow([v1, v2, *row[2:]])
