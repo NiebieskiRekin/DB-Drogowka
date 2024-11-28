@@ -25,10 +25,12 @@ def gen_with_distribution(population, weights):
     return chosen
 
 
-def insert_csv(cols, gen, n):
-    print(cols)
-    for i in range(n):
-        print(f"{gen(i)}", end="")
+def insert_csv(cols, gen, n, file="output.csv"):
+    with open(file, "w") as f:
+        f.write(cols)
+        f.write("\n")
+        for i in range(n):
+            f.write(f"{gen(i)}")
 
 
 def wrap_str(x):
@@ -45,7 +47,10 @@ def us_date(d):
     return datetime.date.strftime(d, "%m-%d-%Y")
 
 
-def csv_reader(path: str, func: Callable[[List[str]]]):
+def csv_reader(
+    path: str,
+    func: Callable[[List[str]], None],
+):
     with open(path, newline="") as csvfile:
         my_reader = csv.reader(csvfile, delimiter=",", quotechar="'")
         next(my_reader)  # Ignore header

@@ -1,108 +1,88 @@
 id_uczestnika,rola,pesel_uczestnika,zdarzenie
-10,'zgłaszający zdarzenie','60041672996',60
-20,'poszkodowany','98080121535',60
-30,'zgłaszający zdarzenie','04241359118',60
-40,'poszkodowany','77102116641',60
-50,'zgłaszający zdarzenie','63082666274',60
-60,'sprawca wypadku','83061164281',210
-70,'świadek','60041672996',210
-80,'poszkodowany','33020753571',140
-90,'poszkodowany','06241949265',140
-100,'zgłaszający zdarzenie','59121411318',140
-110,'poszkodowany','80030708996',140
-120,'zgłaszający zdarzenie','04241359118',140
-130,'świadek','87081019086',10
-140,'poszkodowany','55021931875',10
-150,'zgłaszający zdarzenie','06261123795',100
-160,'poszkodowany','98050746115',100
-170,'sprawca wypadku','33020753571',100
-180,'świadek','96110863370',100
-190,'zgłaszający zdarzenie','95081530984',100
-200,'zgłaszający zdarzenie','06252036204',130
-210,'świadek','06241949265',130
-220,'sprawca wypadku','94071040144',130
-230,'zgłaszający zdarzenie','07261096942',130
-240,'sprawca wypadku','84020769305',130
-250,'świadek','63122775829',170
-260,'poszkodowany','84020769305',170
-270,'sprawca wypadku','59082121411',170
-280,'świadek','58061144825',170
-290,'zgłaszający zdarzenie','63082666274',170
-300,'zgłaszający zdarzenie','57111223949',190
-310,'zgłaszający zdarzenie','33020753571',190
-320,'zgłaszający zdarzenie','77012945223',40
-330,'sprawca wypadku','79070844852',40
-340,'świadek','86021186972',40
-350,'poszkodowany','55052955082',40
-360,'poszkodowany','91051978783',40
-370,'świadek','74122343192',120
-380,'sprawca wypadku','66110284330',120
-390,'poszkodowany','64120591918',120
-400,'zgłaszający zdarzenie','28101208855',120
-410,'poszkodowany','74022310906',50
-420,'poszkodowany','96110863370',50
-430,'świadek','68021817441',50
-440,'świadek','98011929456',50
-450,'sprawca wypadku','22091034423',50
-460,'sprawca wypadku','05231835195',0
-470,'sprawca wypadku','96122478515',0
-480,'poszkodowany','83061164281',110
-490,'świadek','96061918309',110
-500,'sprawca wypadku','07261096942',110
-510,'sprawca wypadku','95081530984',110
-520,'poszkodowany','26010348026',110
-530,'świadek','98112609093',70
-540,'sprawca wypadku','94071040144',70
-550,'świadek','87081019086',70
-560,'poszkodowany','06261123795',70
-570,'świadek','62122770179',70
-580,'świadek','07261096942',180
-590,'świadek','98011929456',180
-600,'sprawca wypadku','85061671969',180
-610,'świadek','91052178977',180
-620,'zgłaszający zdarzenie','79070844852',180
-630,'świadek','03291209770',80
-640,'świadek','94071040144',80
-650,'sprawca wypadku','03291209770',200
-660,'poszkodowany','79122030480',200
-670,'świadek','80030708996',20
-680,'zgłaszający zdarzenie','22051704436',20
-690,'zgłaszający zdarzenie','98050746115',90
-700,'zgłaszający zdarzenie','68021817441',90
-710,'poszkodowany','85080592467',240
-720,'zgłaszający zdarzenie','80030708996',240
-730,'sprawca wypadku','07261096942',220
-740,'zgłaszający zdarzenie','70020559226',220
-750,'poszkodowany','85061671969',220
-760,'poszkodowany','06271987145',220
-770,'zgłaszający zdarzenie','86021186972',220
-780,'poszkodowany','80030708996',150
-790,'świadek','68021817441',150
-800,'zgłaszający zdarzenie','16080618019',230
-810,'zgłaszający zdarzenie','06252036204',230
-820,'zgłaszający zdarzenie','06210529665',230
-830,'sprawca wypadku','03291209770',230
-840,'świadek','70020559226',290
-850,'poszkodowany','96061918309',290
-860,'świadek','79122030480',290
-870,'sprawca wypadku','74112916883',290
-880,'sprawca wypadku','49121139107',290
-890,'świadek','04212426966',270
-900,'sprawca wypadku','88071007544',270
-910,'sprawca wypadku','77042420299',270
-920,'zgłaszający zdarzenie','77062393878',270
-930,'sprawca wypadku','50062127382',270
-940,'poszkodowany','06271987145',280
-950,'poszkodowany','80070543665',280
-960,'świadek','06261123795',160
-970,'świadek','63122775829',160
-980,'poszkodowany','86092053511',260
-990,'świadek','57081793055',260
-1000,'poszkodowany','80030708996',250
-1010,'zgłaszający zdarzenie','64030612200',250
-1020,'świadek','50062127382',250
-1030,'poszkodowany','69121896765',30
-1040,'zgłaszający zdarzenie','60041672996',30
-1050,'świadek','94071040144',30
-1060,'poszkodowany','22091034423',30
-1070,'sprawca wypadku','80030708996',30
+10,'zgłaszający zdarzenie','01232788708',30
+20,'sprawca wypadku','90070643319',30
+30,'zgłaszający zdarzenie','97102769472',100
+40,'poszkodowany','05311513142',100
+50,'świadek','82020370390',180
+60,'poszkodowany','01232788708',180
+70,'świadek','98013035191',180
+80,'sprawca wypadku','98012229456',180
+90,'zgłaszający zdarzenie','80031553304',180
+100,'sprawca wypadku','95072655089',170
+110,'sprawca wypadku','37100740888',170
+120,'poszkodowany','04212726967',50
+130,'świadek','02302720761',50
+140,'zgłaszający zdarzenie','82020370390',0
+150,'poszkodowany','90070643319',0
+160,'sprawca wypadku','05261562377',70
+170,'zgłaszający zdarzenie','01211830572',70
+180,'świadek','04212726967',260
+190,'zgłaszający zdarzenie','73090482410',290
+200,'sprawca wypadku','24290371486',290
+210,'zgłaszający zdarzenie','87070139492',290
+220,'sprawca wypadku','84032244216',140
+230,'poszkodowany','26120596577',200
+240,'świadek','82020370390',200
+250,'zgłaszający zdarzenie','77101711311',200
+260,'sprawca wypadku','95042663513',200
+270,'świadek','96122778516',200
+280,'świadek','74122643193',250
+290,'zgłaszający zdarzenie','74022610907',250
+300,'poszkodowany','63051804023',210
+310,'zgłaszający zdarzenie','98051046115',210
+320,'zgłaszający zdarzenie','90103171505',20
+330,'sprawca wypadku','78011458062',20
+340,'zgłaszający zdarzenie','70020859227',190
+350,'poszkodowany','50070279235',190
+360,'sprawca wypadku','26120596577',190
+370,'sprawca wypadku','69111319652',190
+380,'poszkodowany','09272035138',190
+390,'sprawca wypadku','05261562377',40
+400,'poszkodowany','22030948923',230
+410,'poszkodowany','78011458062',230
+420,'poszkodowany','24290371486',230
+430,'poszkodowany','98051046115',230
+440,'sprawca wypadku','99102813274',230
+450,'sprawca wypadku','98012229456',60
+460,'poszkodowany','37100740888',110
+470,'świadek','90012315320',110
+480,'poszkodowany','13261067693',110
+490,'poszkodowany','83040739219',110
+500,'poszkodowany','71012648704',110
+510,'świadek','73090482410',220
+520,'poszkodowany','74013038532',220
+530,'poszkodowany','26120596577',90
+540,'świadek','43120622965',90
+550,'świadek','06261423796',280
+560,'sprawca wypadku','26120596577',280
+570,'poszkodowany','28081929078',150
+580,'sprawca wypadku','69043051240',150
+590,'zgłaszający zdarzenie','04300837320',150
+600,'zgłaszający zdarzenie','85080892468',150
+610,'świadek','98112909094',150
+620,'świadek','03280142822',160
+630,'świadek','06261423796',160
+640,'zgłaszający zdarzenie','72120600400',80
+650,'zgłaszający zdarzenie','48052382576',80
+660,'zgłaszający zdarzenie','84032244216',80
+670,'poszkodowany','57102962725',80
+680,'poszkodowany','98013035191',80
+690,'zgłaszający zdarzenie','91052278783',10
+700,'sprawca wypadku','03272227825',10
+710,'świadek','02232158339',10
+720,'zgłaszający zdarzenie','28081929078',10
+730,'zgłaszający zdarzenie','65100453572',10
+740,'sprawca wypadku','99102813274',130
+750,'zgłaszający zdarzenie','48052382576',130
+760,'świadek','72120600400',130
+770,'poszkodowany','96103060483',130
+780,'sprawca wypadku','26120596577',130
+790,'sprawca wypadku','83040739219',240
+800,'świadek','30060314186',240
+810,'świadek','24290371486',120
+820,'świadek','26120596577',120
+830,'świadek','61111337827',120
+840,'poszkodowany','13101297765',120
+850,'świadek','80031553304',120
+860,'sprawca wypadku','60121204433',270
+870,'świadek','62011808859',270
