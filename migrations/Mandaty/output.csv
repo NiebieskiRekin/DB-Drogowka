@@ -1,0 +1,16 @@
+nr_serii,kwota,punkty_karne,czy_przyjeto,czy_oplacone,opis,wykroczenie,id_uczestnika,id_interwencji
+'W8I86GY9J64LUZ6M',100,0,'T','N','Naruszenie obowiązku poruszania się po poboczu przez kierującego pojazdem zaprzęgowym, rowerem, wózkiem rowerowym,...','Naruszenie obowiązku poruszania się po poboczu przez kierującego pojazdem zaprzęgowym, rowerem, wózkiem rowerowym,...',790,500
+'SXG3Z05P0VLFK4CE',100,2,'T','N','Omijanie pojazdu sygnalizującego zamiar skręcenia w lewo z jego lewej strony','Omijanie pojazdu sygnalizującego zamiar skręcenia w lewo z jego lewej strony',360,300
+'55KWV6JZI7ZLYDZI',500,5,'T','N','Korzystanie podczas jazdy z telefonu wymagającego trzymania słuchawki lub mikrofonu w ręku przez kierującego pojazdem','Korzystanie podczas jazdy z telefonu wymagającego trzymania słuchawki lub mikrofonu w ręku przez kierującego pojazdem',100,90
+'FIBCB2GU458925YP',200,3,'T','N','Przekroczenie dopuszczalnej prędkości o 16-20 km/h','Przekroczenie dopuszczalnej prędkości o 16-20 km/h',20,10
+'DQHSVM5K7VLCF1H7',300,6,'T','T','Naruszenie obowiązku zatrzymania pojazdu w takim miejscu i na taki czas, aby umożliwić pieszym swobodny dostęp do pojazdów','Naruszenie obowiązku zatrzymania pojazdu w takim miejscu i na taki czas, aby umożliwić pieszym swobodny dostęp do pojazdów',200,180
+'R369E2Y417C7P5N7',1970,0,'T','T','Naruszenie przez kierującego pojazdem zakazu korzystania z drogi przejazdu pojazdu uprzywilejowanego utworzonej przez...','Naruszenie przez kierującego pojazdem zakazu korzystania z drogi przejazdu pojazdu uprzywilejowanego utworzonej przez...',740,490
+'7UD31YR6G4E4JMRB',3000,8,'T','T','Przekroczenie dopuszczalnej prędkości o 51-60 km/h w obszarze niezabudowamym','Przekroczenie dopuszczalnej prędkości o 51-60 km/h w obszarze niezabudowamym',560,410
+'PCGMUAD3AALXG7SB',1600,10,'T','N','Przekroczenie dopuszczalnej prędkości o 31-40 km/h','Przekroczenie dopuszczalnej prędkości o 31-40 km/h',780,490
+'MOG9Z0T5L2YH8FUM',4000,13,'T','N','Przekroczenie dopuszczalnej prędkości o 41-50 km/h','Przekroczenie dopuszczalnej prędkości o 41-50 km/h',780,490
+'JOQ50CLAFESOQ2PQ',300,6,'T','N','Naruszenie obowiązku zatrzymania pojazdu w takim miejscu i na taki czas, aby umożliwić pieszym swobodny dostęp do pojazdów','Naruszenie obowiązku zatrzymania pojazdu w takim miejscu i na taki czas, aby umożliwić pieszym swobodny dostęp do pojazdów',560,410
+'4GASXVZ02VKJT3QC',3000,0,'T','N','Nieustąpienie pierwszeństwa pieszemu przez kierującego pojazdem w strefie zamieszkania','Nieustąpienie pierwszeństwa pieszemu przez kierującego pojazdem w strefie zamieszkania',370,300
+'0PQK0D00X6C7CJHB',100,0,'T','N','Wjeżdżanie na pas między jezdniami','Wjeżdżanie na pas między jezdniami',450,350
+'1HS7G8XM79H122DG',1600,10,'T','N','Przekroczenie dopuszczalnej prędkości o 31-40 km/h','Przekroczenie dopuszczalnej prędkości o 31-40 km/h',260,220
+'VTRNYBDOI089HLLN',3000,15,'T','T','Przekroczenie dopuszczalnej prędkości o 51-60 km/h w obszarze zabudowamym','Przekroczenie dopuszczalnej prędkości o 51-60 km/h w obszarze zabudowamym',780,490
+'2HA9INPZ8I7UF3JB',100,2,'T','N','Niekorzystanie z pasów bezpieczeństwa podczas jazdy','Niekorzystanie z pasów bezpieczeństwa podczas jazdy',80,60
