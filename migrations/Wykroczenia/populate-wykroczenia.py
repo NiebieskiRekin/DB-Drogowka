@@ -12,7 +12,7 @@ with (
     )
     first_row = next(wykroczenia_in)
     wykroczenia_out.writerow(first_row)
-    for row in wykroczenia_in:
+    for i, row in enumerate(wykroczenia_in):
         v1 = shorten_no_elipsis(row[0], 127)
         v2 = shorten_no_elipsis(row[1], 31)
-        wykroczenia_out.writerow([v1, v2, *row[2:]])
+        wykroczenia_out.writerow([i, v1, v2, *row[2:]])
