@@ -45,6 +45,14 @@ kategorie = [
     "Tramwaj",
 ]
 
+id = 0
+
+
+def gen_id():
+    global id
+    id += 1
+    return id
+
 
 def gen_prawa_jazdy(i):
     np = print_csv_null
@@ -56,9 +64,7 @@ def gen_prawa_jazdy(i):
     for kategoria in uprawnienia:
         od_kiedy = fake.date_between(start_date="-20y")
         do_kiedy = fake.date_between(start_date=od_kiedy, end_date="+10y")
-        out += (
-            f"{i},'{kategoria}','{us_date(od_kiedy)}','{us_date(do_kiedy)}','{pesel}'\n"
-        )
+        out += f"{gen_id()},'{kategoria}','{us_date(od_kiedy)}','{us_date(do_kiedy)}','{pesel}'\n"
     return out
 
 

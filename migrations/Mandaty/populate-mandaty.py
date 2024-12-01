@@ -30,7 +30,7 @@ wykroczenia_set = []
 
 
 def wykroczenia_filter(row: List[str]):
-    wykroczenia_set.append((row[0], row[2], row[3], row[4]))
+    wykroczenia_set.append((row[0], *row[3:6]))
 
 
 csv_reader("Wykroczenia/output.csv", wykroczenia_filter)

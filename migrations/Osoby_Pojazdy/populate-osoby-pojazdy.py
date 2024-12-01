@@ -34,6 +34,14 @@ def osoby_filter(row: List[str]):
 
 csv_reader("Osoby/output.csv", osoby_filter)
 
+id = 0
+
+
+def gen_id():
+    global id
+    id += 1
+    return id
+
 
 n = len(vin_set)
 random.shuffle(vin_set)
@@ -48,7 +56,7 @@ def gen_osoby_pojazdy(i):
     for _ in range(num_person_per_veh):
         pesel = gen_unique(lambda: random.choice(pesel_set), wspolwlasciciele)
         wspolwlasciciele.add(pesel)
-        out += f"{i},'{vin}','{pesel}'\n"
+        out += f"{gen_id()},'{vin}','{pesel}'\n"
 
     return out
 
