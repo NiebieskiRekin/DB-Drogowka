@@ -120,7 +120,18 @@ CREATE TABLE ARESZTOWANIA(
 );
 
 
+CREATE OR REPLACE VIEW OSOBY_POSZUKIWANE AS
+    SELECT * from osoby where osoby.CZY_POSZUKIWANA='T';
+
 CREATE OR REPLACE VIEW PERSPEKTYWA_FUNKCJONARIUSZE AS
     SELECT nr_odznaki,stopien,imie, nazwisko, o.pesel, nr_telefonu, czy_poszukiwana, nr_dowodu_osobistego, data_urodzenia
     FROM FUNKCJONARIUSZE f LEFT JOIN osoby o
     ON f.pesel=o.PESEL;
+
+create or replace view perspektywa_pojazdy_danej_osoby as 
+    select osoby_pojazdy.vin,nr_rejestracyjny,badanie_techniczne,marka,pojazdy.model,rok_produkcji, czy_zarekwirowany,
+    czy_poszukiwane,kolor,pesel  from pojazdy right join osoby_pojazdy on pojazdy.vin=osoby_pojazdy.vin;
+
+
+create or replace view perspektywa_wyszukiwanie_informacje_ogolne_o_danej_osobie_2pola as
+    select pesel, imie || ' ' || nazwisko as "Imie_i_Nazwisko" from osoby;
