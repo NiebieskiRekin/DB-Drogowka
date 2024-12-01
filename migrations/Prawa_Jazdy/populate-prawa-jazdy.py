@@ -56,10 +56,15 @@ def gen_prawa_jazdy(i):
     for kategoria in uprawnienia:
         od_kiedy = fake.date_between(start_date="-20y")
         do_kiedy = fake.date_between(start_date=od_kiedy, end_date="+10y")
-        out += f"'{kategoria}','{us_date(od_kiedy)}','{us_date(do_kiedy)}','{pesel}'\n"
+        out += (
+            f"{i},'{kategoria}','{us_date(od_kiedy)}','{us_date(do_kiedy)}','{pesel}'\n"
+        )
     return out
 
 
 insert_csv(
-    "kategoria,od_kiedy,do_kiedy,PESEL", gen_prawa_jazdy, n, "Prawa_Jazdy/output.csv"
+    "id_prawa_jazdy,kategoria,od_kiedy,do_kiedy,PESEL",
+    gen_prawa_jazdy,
+    n,
+    "Prawa_Jazdy/output.csv",
 )

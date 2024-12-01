@@ -56,7 +56,7 @@ def gen_mandaty(i):
     opis = wykroczenie
     kwota = random.randint(int(kwota_min), int(kwota_max))
 
-    return f"'{nr_serii}',{kwota},{punkty},'{czy_przyjeto}','{czy_oplacone}','{opis}','{wykroczenie}',{id_uczestnika},{id_interwencji}\n"
+    return f"'{nr_serii}',{kwota},{punkty},'{czy_przyjeto}','{czy_oplacone}','{opis}',{wykroczenie},{id_uczestnika},{id_interwencji}\n"
 
 
 insert_csv(

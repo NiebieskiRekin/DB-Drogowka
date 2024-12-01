@@ -48,9 +48,9 @@ def gen_osoby_pojazdy(i):
     for _ in range(num_person_per_veh):
         pesel = gen_unique(lambda: random.choice(pesel_set), wspolwlasciciele)
         wspolwlasciciele.add(pesel)
-        out += f"'{vin}','{pesel}'\n"
+        out += f"{i},'{vin}','{pesel}'\n"
 
     return out
 
 
-insert_csv("vin,pesel", gen_osoby_pojazdy, n, "Osoby_Pojazdy/output.csv")
+insert_csv("i,vin,pesel", gen_osoby_pojazdy, n, "Osoby_Pojazdy/output.csv")

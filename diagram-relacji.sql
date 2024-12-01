@@ -31,17 +31,38 @@ CREATE TABLE OSOBY(
 );
 
 CREATE TABLE OSOBY_POJAZDY(
-	vin char(17) REFERENCES pojazdy(vin),
-	pesel char(11) REFERENCES osoby(pesel),
-    PRIMARY KEY(PESEL,VIN)
+  id integer primary key,
+	vin char(17) not null REFERENCES pojazdy(vin),
+	pesel char(11) not null REFERENCES osoby(pesel),
+  UNIQUE(PESEL,VIN)
 );
 
 CREATE TABLE PRAWA_JAZDY(
-	kategoria varchar(7),
-	od_kiedy DATE,
+  id_prawa_jazdy integer primary key,
+	kategoria varchar(7) not null check(kategoria in (
+    'AM',
+    'A1',
+    'A2',
+    'A',
+    'B1',
+    'B',
+    'B+E',
+    'C',
+    'C1',
+    'C1+E',
+    'C+E',
+    'D',
+    'D1',
+    'D1+E',
+    'D+E',
+    'T',
+    'Tramwaj'
+    )
+  ),
+	od_kiedy DATE not null,
 	do_kiedy DATE NOT NULL,
 	PESEL char(11) REFERENCES osoby(pesel),
-	PRIMARY KEY(kategoria,od_kiedy,pesel)
+	UNIQUE(kategoria,od_kiedy,pesel)
 );
 
 CREATE TABLE FUNKCJONARIUSZE(
@@ -67,20 +88,17 @@ CREATE TABLE INTERWENCJE(
 	UNIQUE(funkcjonariusz,zdarzenie)
 );
 
-CREATE TABLE ROLE_ZDARZENIA(
-	rola varchar(32) PRIMARY KEY
-);
-
 CREATE TABLE UCZESTNICY_ZDARZENIA(
 	id_uczestnika integer PRIMARY KEY,
-	rola varchar(32) NOT NULL REFERENCES role_zdarzenia(rola),
+	rola varchar(32) NOT NULL check(rola in ('poszkodowany', 'winowajca','zgłaszający', 'świadek','podejrzany')),
 	pesel_uczestnika char(11) NOT NULL REFERENCES osoby(pesel),
 	zdarzenie integer NOT NULL REFERENCES zdarzenia(id_zdarzenia),
 	UNIQUE(rola,pesel_uczestnika,zdarzenie)
 );
 
 CREATE TABLE WYKROCZENIA(
-	nazwa varchar(128) PRIMARY KEY,
+  id_wykroczenia integer PRIMARY KEY,
+	nazwa varchar(128) NOT NULL UNIQUE,
 	punkty_karne integer NOT NULL CHECK(punkty_karne BETWEEN 0 AND 15),
 	stawka_minimalna NUMBER NOT NULL CHECK(stawka_minimalna>=0),
 	stawka_maksymalna NUMBER NOT NULL CHECK(stawka_maksymalna<=6000),
@@ -101,7 +119,7 @@ CREATE TABLE MANDATY(
 	czy_przyjeto char(1) NOT NULL CHECK(czy_przyjeto IN ('N', 'T')),
 	czy_oplacone char(1) NOT NULL CHECK(czy_oplacone IN ('N', 'T')),
 	opis varchar(128) NOT NULL,
-	wykroczenie varchar(128) REFERENCES wykroczenia(nazwa) NOT NULL,
+	wykroczenie integer REFERENCES wykroczenia(id_wykroczenia) NOT NULL,
 	id_uczestnika integer,
 	id_interwencji integer,
 	UNIQUE(nr_serii),
