@@ -9,7 +9,7 @@ interwencja_uczestnik_unique = set()
 
 
 def uczestnicy_zdarzenia_filter(row: List[str]):
-    if row[1] == "sprawca wypadku":
+    if row[1] == "winowajca":
         uczestnicy_set.append(row)
 
 

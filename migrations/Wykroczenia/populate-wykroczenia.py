@@ -11,6 +11,7 @@ with (
         out, delimiter=",", quotechar="'", quoting=csv.QUOTE_ALL
     )
     first_row = next(wykroczenia_in)
+    first_row.insert(0, "id_wykroczenia")
     wykroczenia_out.writerow(first_row)
     for i, row in enumerate(wykroczenia_in):
         v1 = shorten_no_elipsis(row[0], 127)

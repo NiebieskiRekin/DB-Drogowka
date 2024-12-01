@@ -1,4 +1,4 @@
-'nazwa','ustawa','stawka_minimalna','stawka_maksymalna','punkty_karne'
+'id_wykroczenia','nazwa','ustawa','stawka_minimalna','stawka_maksymalna','punkty_karne'
 '0','Nieustąpienie pierwszeństwa pieszemu znajdującemu się na przejściu dla pieszych lub wchodzącemu na to przejście','86b § 1 pkt 1 KW / art. 26 ust','3000','3000','15'
 '1','Nieustąpienie przez kierującego pojazdem, który skręca w drogę poprzeczną, pierwszeństwa pieszemu przechodzącemu na skr','86b § 1 pkt 1 KW / art. 26 ust','3000','3000','15'
 '2','Nieustąpienie pierwszeństwa pieszemu przy przejeżdżaniu przez chodnik lub drogę dla pieszych albo podczas jazdy po placu, ','86b § 1 pkt 1 KW / art. 26 ust','3000','3000','0'
