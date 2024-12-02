@@ -143,15 +143,6 @@ CREATE OR REPLACE VIEW PERSPEKTYWA_FUNKCJONARIUSZE AS
     FROM FUNKCJONARIUSZE f LEFT JOIN osoby o
     ON f.pesel=o.PESEL;
 
-
-CREATE OR REPLACE VIEW OSOBY_POSZUKIWANE AS
-    SELECT * from osoby where osoby.CZY_POSZUKIWANA='T';
-
-CREATE OR REPLACE VIEW PERSPEKTYWA_FUNKCJONARIUSZE AS
-    SELECT nr_odznaki,stopien,imie, nazwisko, o.pesel, nr_telefonu, czy_poszukiwana, nr_dowodu_osobistego, data_urodzenia
-    FROM FUNKCJONARIUSZE f LEFT JOIN osoby o
-    ON f.pesel=o.PESEL;
-
 create or replace view perspektywa_pojazdy_danej_osoby as 
     select osoby_pojazdy.vin,nr_rejestracyjny,badanie_techniczne,marka,pojazdy.model,rok_produkcji, czy_zarekwirowany,
     czy_poszukiwane,kolor,pesel  from pojazdy right join osoby_pojazdy on pojazdy.vin=osoby_pojazdy.vin;
@@ -174,4 +165,47 @@ from osoby o join osoby_pojazdy op on o.pesel = op.pesel;
 create or replace view perspektywa_aresztowania_danej_osoby as
 select pesel_uczestnika as pesel, od_kiedy, do_kiedy, czy_w_zawieszeniu, zdarzenie
 from uczestnicy_zdarzenia uz join aresztowania ar on uz.id_uczestnika=ar.id_uczestnika;
+
+create or replace view nowa_PERSPEKTYWA_FUNKCJONARIUSZE as
+select f.nr_odznaki, f.stopien, f.pesel, o.imie, o.nazwisko, o.nr_telefonu, o.czy_poszukiwana, o.nr_dowodu_osobistego, o.data_urodzenia, o.PESEL as "LINK" 
+from funkcjonariusze f left join osoby o on f.pesel=o.pesel;
+
+CREATE SEQUENCE  "SEKWENCJA_ID_WYKROCZENIA"  MINVALUE 1 INCREMENT BY 1 START WITH 53;
+CREATE SEQUENCE  "SEKWENCJA_ID_PRAWA_JAZDY"  MINVALUE 1 INCREMENT BY 1 START WITH 165;
+
+
+create trigger wyzwalacz_pojazdy_danej_osoby_update
+    instead of update on PERSPEKTYWA_POJAZDY_DANEJ_OSOBY
+    for each row
+begin
+    delete from osoby_pojazdy where vin=:OLD.vin and pesel=:OLD.pesel;
+    insert into osoby_pojazdy(vin,pesel) values (:NEW.vin,:NEW.pesel);
+end;
+
+create trigger wyzwalacz_pojazdy_danej_osoby_insert
+    instead of insert on PERSPEKTYWA_POJAZDY_DANEJ_OSOBY
+    for each row
+begin
+    insert into osoby_pojazdy(vin,pesel) values (:NEW.vin,:NEW.pesel);
+end;
+
+create or replace trigger wyzwalacz_prawa_jazdy_insert
+    before insert on prawa_jazdy 
+    for each row 
+begin 
+    :NEW.id_prawa_jazdy := sekwencja_id_prawa_jazdy.NEXTVAL; 
+end;
+
+create or replace trigger wyzwalacz_wykroczenia_insert
+    before insert on wykroczenia 
+    for each row 
+DECLARE
+    e_kwota_min_max EXCEPTION;
+    PRAGMA exception_init( e_kwota_min_max, -20001 );
+begin 
+    :NEW.id_wykroczenia := sekwencja_id_wykroczenia.NEXTVAL; 
+    IF :NEW.kwota_min > :NEW.kwota_max THEN 
+        RAISE e_kwota_min_max;
+    END IF;
+end;
 
