@@ -224,3 +224,39 @@ begin
     return not vin is NULL and lengthb(vin) = 17 and REGEXP_LIKE(vin, '^[A-Z0-9]{17}$');
 end;
 /
+
+create sequence sekwencja_osoby_pojazdy start with 124 increment by 1;
+
+create or replace procedure silent_insert_osoby_pojazdy(
+    v_vin osoby_pojazdy.VIN%TYPE, v_pesel osoby_pojazdy.pesel%TYPE
+) as
+begin
+     insert into osoby_pojazdy(pesel,vin) values (v_pesel,v_vin);
+exception
+    when DUP_VAL_ON_INDEX then
+        null;
+end silent_insert_osoby_pojazdy;
+
+create or replace trigger wyzwalacz_osoby_pojazdy_insert
+    before insert on osoby_pojazdy
+    for each row
+begin
+    :NEW.id := sekwencja_osoby_pojazdy.nextval;
+end;
+
+
+-- to jest w tabeli osoby_pojazdy
+DECLARE
+  pesele   apex_t_number;
+  v_pesel     osoby.PESEL%TYPE;
+BEGIN
+    SAVEPOINT start_tran;
+  -- Turn the ':' delimited string into a PL/SQL Array.
+  pesele := apex_string.split_numbers(:P1011_PESEL_SELECTED,':');
+  delete from osoby_pojazdy where vin=:P1011_VIN_SELECTED;
+  -- Loop through the PL/SQL Array.
+  FOR i IN 1..pesele.COUNT() LOOP
+    v_pesel := pesele(i);
+    silent_insert_osoby_pojazdy(:P1011_VIN_SELECTED,v_pesel);
+  end loop;
+END;
