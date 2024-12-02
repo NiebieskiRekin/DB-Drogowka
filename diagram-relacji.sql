@@ -160,3 +160,18 @@ create or replace view perspektywa_pojazdy_danej_osoby as
 create or replace view perspektywa_wyszukiwanie_informacje_ogolne_o_danej_osobie_2pola as
     select pesel, imie || ' ' || nazwisko as "Imie_i_Nazwisko" from osoby;
 
+
+create or replace view perspektywa_mandaty_danej_osoby as
+select pesel_uczestnika as pesel, nr_serii, kwota, zdarzenie, punkty_karne, czy_przyjeto, czy_oplacone, opis, wykroczenie
+from uczestnicy_zdarzenia uz join mandaty m on uz.id_uczestnika=m.id_uczestnika;
+
+
+create or replace view perspektywa_wlasciciele_pojazdu as
+select vin, o.pesel as pesel, imie, nazwisko, nr_telefonu, czy_poszukiwana, nr_dowodu_osobistego, data_urodzenia
+from osoby o join osoby_pojazdy op on o.pesel = op.pesel;
+
+
+create or replace view perspektywa_aresztowania_danej_osoby as
+select pesel_uczestnika as pesel, od_kiedy, do_kiedy, czy_w_zawieszeniu, zdarzenie
+from uczestnicy_zdarzenia uz join aresztowania ar on uz.id_uczestnika=ar.id_uczestnika;
+
