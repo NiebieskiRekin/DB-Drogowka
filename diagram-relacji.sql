@@ -172,6 +172,7 @@ from funkcjonariusze f left join osoby o on f.pesel=o.pesel;
 
 CREATE SEQUENCE  "SEKWENCJA_ID_WYKROCZENIA"  MINVALUE 1 INCREMENT BY 1 START WITH 53;
 CREATE SEQUENCE  "SEKWENCJA_ID_PRAWA_JAZDY"  MINVALUE 1 INCREMENT BY 1 START WITH 165;
+CREATE SEQUENCE "SEKWENCJA_ID_ZDARZENIA" MINVALUE 1 INCREMENT BY 1 START WITH 291;
 
 
 create trigger wyzwalacz_pojazdy_danej_osoby_update
@@ -209,3 +210,17 @@ begin
     END IF;
 end;
 
+create or replace trigger wyzwalacz_zdarzenia_insert
+    before insert on zdarzenia
+    for each row
+begin
+    :NEW.id_zdarzenia := SEKWENCJA_ID_ZDARZENIA.NEXTVAL;
+end;
+
+create or replace function funkcja_zweryfikuj_vin(
+    vin varchar2
+) return boolean as
+begin
+    return not vin is NULL and lengthb(vin) = 17 and REGEXP_LIKE(vin, '^[A-Z0-9]{17}$');
+end;
+/
