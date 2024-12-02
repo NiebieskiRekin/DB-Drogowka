@@ -5,8 +5,8 @@ CREATE TABLE POJAZDY (
     MARKA VARCHAR(32) NOT NULL,
     MODEL VARCHAR(32) NOT NULL,
     ROK_PRODUKCJI INTEGER NOT NULL,
-    CZY_ZAREKWIROWANY CHAR(1) DEFAULT (0) NOT NULL CHECK ( CZY_ZAREKWIROWANY IN ( 'N', 'T' ) ),
-    CZY_POSZUKIWANE CHAR(1) DEFAULT (0) NOT NULL CHECK ( CZY_POSZUKIWANE IN ( 'N', 'T' ) ),
+    CZY_ZAREKWIROWANY CHAR(1) DEFAULT ('N') NOT NULL CHECK ( CZY_ZAREKWIROWANY IN ( 'N', 'T' ) ),
+    CZY_POSZUKIWANE CHAR(1) DEFAULT ('N') NOT NULL CHECK ( CZY_POSZUKIWANE IN ( 'N', 'T' ) ),
     KOLOR VARCHAR(32) NULL
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE OSOBY(
 	imie VARCHAR(32) NOT NULL,
 	nazwisko Varchar(64) NOT NULL,
 	nr_telefonu varchar(16) NULL,
-	czy_poszukiwana char(1) DEFAULT (0) NOT NULL CHECK ( czy_poszukiwana IN ( 'N', 'T' )),
+	czy_poszukiwana char(1) DEFAULT ('N') NOT NULL CHECK ( czy_poszukiwana IN ( 'N', 'T' )),
 	nr_dowodu_osobistego char(9) NULL,
 	data_urodzenia DATE NULL
 );
