@@ -255,3 +255,20 @@ begin
     end LOOP;
 end;
 /
+
+
+create or replace function funkcja_zweryfikuj_pesel(
+    pesel varchar2
+) return boolean as
+begin
+    return not pesel is NULL and lengthb(pesel) = 11 and REGEXP_LIKE(pesel, '^[0-9]{11}$');
+end;
+/
+
+create or replace view PERSPEKTYWA_UCZESTNICY_W_ZDARZENIU as
+select id_zdarzenia,pesel, imie, nazwisko, czy_poszukiwana, rola
+from (zdarzenia z join UCZESTNICY_ZDARZENIA uz on z.ID_ZDARZENIA=uz.ZDARZENIE) join osoby o on uz.pesel_uczestnika=o.pesel;
+
+create or replace view PERSPEKTYWA_FUNKCJONARIUSZE_W_ZDARZENIU as
+select f.PESEL, imie, nazwisko, nr_odznaki, stopien, data_i_czas_interwencji, id_zdarzenia
+from ((zdarzenia z join interwencje i on z.id_zdarzenia=i.zdarzenie) join funkcjonariusze f on i.funkcjonariusz=f.pesel) join osoby o on f.pesel=o.pesel;
