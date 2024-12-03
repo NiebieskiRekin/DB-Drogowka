@@ -138,11 +138,6 @@ CREATE TABLE ARESZTOWANIA(
 );
 
 
-CREATE OR REPLACE VIEW PERSPEKTYWA_FUNKCJONARIUSZE AS
-    SELECT nr_odznaki,stopien,imie, nazwisko, o.pesel, nr_telefonu, czy_poszukiwana, nr_dowodu_osobistego, data_urodzenia
-    FROM FUNKCJONARIUSZE f LEFT JOIN osoby o
-    ON f.pesel=o.PESEL;
-
 create or replace view perspektywa_pojazdy_danej_osoby as 
     select osoby_pojazdy.vin,nr_rejestracyjny,badanie_techniczne,marka,pojazdy.model,rok_produkcji, czy_zarekwirowany,
     czy_poszukiwane,kolor,pesel  from pojazdy right join osoby_pojazdy on pojazdy.vin=osoby_pojazdy.vin;
@@ -165,10 +160,6 @@ from osoby o join osoby_pojazdy op on o.pesel = op.pesel;
 create or replace view perspektywa_aresztowania_danej_osoby as
 select pesel_uczestnika as pesel, od_kiedy, do_kiedy, czy_w_zawieszeniu, zdarzenie
 from uczestnicy_zdarzenia uz join aresztowania ar on uz.id_uczestnika=ar.id_uczestnika;
-
-create or replace view nowa_PERSPEKTYWA_FUNKCJONARIUSZE as
-select f.nr_odznaki, f.stopien, f.pesel, o.imie, o.nazwisko, o.nr_telefonu, o.czy_poszukiwana, o.nr_dowodu_osobistego, o.data_urodzenia, o.PESEL as "LINK" 
-from funkcjonariusze f left join osoby o on f.pesel=o.pesel;
 
 CREATE SEQUENCE  "SEKWENCJA_ID_WYKROCZENIA"  MINVALUE 1 INCREMENT BY 1 START WITH 53;
 CREATE SEQUENCE  "SEKWENCJA_ID_PRAWA_JAZDY"  MINVALUE 1 INCREMENT BY 1 START WITH 165;
@@ -244,19 +235,12 @@ begin
     :NEW.id := sekwencja_osoby_pojazdy.nextval;
 end;
 
+create or replace view PERSPEKTYWA_ZDARZENIA_ILE AS
+select id_zdarzenia, data_zdarzenia, wysokosc_geograficzna, szerokosc_geograficzna, opis, 
+(select count(zdarzenie) from interwencje where zdarzenie=id_zdarzenia) as "Liczba_funkcjonariuszy", 
+(select count(zdarzenie) from uczestnicy_zdarzenia where zdarzenie=id_zdarzenia) as "Liczba_uczestnikow"
+from zdarzenia;
 
--- to jest w tabeli osoby_pojazdy
-DECLARE
-  pesele   apex_t_number;
-  v_pesel     osoby.PESEL%TYPE;
-BEGIN
-    SAVEPOINT start_tran;
-  -- Turn the ':' delimited string into a PL/SQL Array.
-  pesele := apex_string.split_numbers(:P1011_PESEL_SELECTED,':');
-  delete from osoby_pojazdy where vin=:P1011_VIN_SELECTED;
-  -- Loop through the PL/SQL Array.
-  FOR i IN 1..pesele.COUNT() LOOP
-    v_pesel := pesele(i);
-    silent_insert_osoby_pojazdy(:P1011_VIN_SELECTED,v_pesel);
-  end loop;
-END;
+create or replace view PERSPEKTYWA_FUNKCJONARIUSZE as
+select f.nr_odznaki, f.stopien, f.pesel, o.imie, o.nazwisko, o.nr_telefonu, o.czy_poszukiwana, o.nr_dowodu_osobistego, o.data_urodzenia, o.PESEL as "LINK" 
+from funkcjonariusze f left join osoby o on f.pesel=o.pesel;
