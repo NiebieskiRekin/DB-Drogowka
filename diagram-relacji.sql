@@ -1,10 +1,10 @@
 CREATE TABLE POJAZDY (
     VIN CHAR(17) PRIMARY KEY,
-    NR_REJESTRACYJNY VARCHAR(8) UNIQUE,
-    BADANIE_TECHNICZNE DATE NOT NULL,
+    NR_REJESTRACYJNY VARCHAR(8) NOT NULL UNIQUE,
+    BADANIE_TECHNICZNE DATE NOT NULL check(BADANIE_TECHNICZNE > to_date('1-1-1900')),
     MARKA VARCHAR(32) NOT NULL,
     MODEL VARCHAR(32) NOT NULL,
-    ROK_PRODUKCJI INTEGER NOT NULL,
+    ROK_PRODUKCJI INTEGER NOT NULL check(rok_produkcji > 1900),
     CZY_ZAREKWIROWANY CHAR(1) DEFAULT ('N') NOT NULL CHECK ( CZY_ZAREKWIROWANY IN ( 'N', 'T' ) ),
     CZY_POSZUKIWANE CHAR(1) DEFAULT ('N') NOT NULL CHECK ( CZY_POSZUKIWANE IN ( 'N', 'T' ) ),
     KOLOR VARCHAR(32) NULL
@@ -12,7 +12,7 @@ CREATE TABLE POJAZDY (
 
 CREATE TABLE UBEZPIECZENIA (
     NR_POLISY VARCHAR(10) ,
-    DATA_WAZNOSCI DATE NOT NULL,
+    DATA_WAZNOSCI DATE NOT NULL check(data_waznosci > to_date('1-1-1900')),
     TYP CHAR(2) NOT NULL CHECK ( TYP IN ( 'OC', 'AC' ) ),
     FIRMA VARCHAR(32) NULL,
     VIN_POJAZDU CHAR(17) NOT NULL,
@@ -27,14 +27,13 @@ CREATE TABLE OSOBY(
 	nr_telefonu varchar(16) NULL,
 	czy_poszukiwana char(1) DEFAULT ('N') NOT NULL CHECK ( czy_poszukiwana IN ( 'N', 'T' )),
 	nr_dowodu_osobistego char(9) NULL,
-	data_urodzenia DATE NULL
+	data_urodzenia DATE NULL check(data_urodzenia is null or data_urodzenia > to_date('1-1-1900'))
 );
 
 CREATE TABLE OSOBY_POJAZDY(
-  id integer primary key,
 	vin char(17) not null REFERENCES pojazdy(vin),
 	pesel char(11) not null REFERENCES osoby(pesel),
-  UNIQUE(PESEL,VIN)
+  primary key(PESEL,VIN)
 );
 
 CREATE TABLE PRAWA_JAZDY(
@@ -216,7 +215,6 @@ begin
 end;
 /
 
-create sequence sekwencja_osoby_pojazdy start with 124 increment by 1;
 
 create or replace procedure silent_insert_osoby_pojazdy(
     v_vin osoby_pojazdy.VIN%TYPE, v_pesel osoby_pojazdy.pesel%TYPE
@@ -228,12 +226,6 @@ exception
         null;
 end silent_insert_osoby_pojazdy;
 
-create or replace trigger wyzwalacz_osoby_pojazdy_insert
-    before insert on osoby_pojazdy
-    for each row
-begin
-    :NEW.id := sekwencja_osoby_pojazdy.nextval;
-end;
 
 create or replace view PERSPEKTYWA_ZDARZENIA_ILE AS
 select id_zdarzenia, data_zdarzenia, wysokosc_geograficzna, szerokosc_geograficzna, opis, 
@@ -244,3 +236,22 @@ from zdarzenia;
 create or replace view PERSPEKTYWA_FUNKCJONARIUSZE as
 select f.nr_odznaki, f.stopien, f.pesel, o.imie, o.nazwisko, o.nr_telefonu, o.czy_poszukiwana, o.nr_dowodu_osobistego, o.data_urodzenia, o.PESEL as "LINK" 
 from funkcjonariusze f left join osoby o on f.pesel=o.pesel;
+
+create or replace trigger wyzwalacz_pojazdy_delete
+    before delete on pojazdy
+    for each row
+declare
+    CURSOR cUbezpieczenia IS 
+        SELECT nr_polisy FROM Ubezpieczenia WHERE VIN_POJAZDU=:OLD.VIN;
+    CURSOR cOsoby_Pojazdy IS
+        SELECT pesel,vin FROM Osoby_Pojazdy op WHERE op.VIN=:OLD.VIN;
+begin
+    for vUbezpieczenie in cUbezpieczenia LOOP
+        delete from Ubezpieczenia where nr_polisy=vUbezpieczenie.nr_polisy;
+    end LOOP;
+
+    for vOsoby_Pojazdy in cOsoby_Pojazdy LOOP
+        delete from Osoby_Pojazdy op where op.pesel=vOsoby_Pojazdy.pesel and op.vin=vOsoby_Pojazdy.vin ;
+    end LOOP;
+end;
+/
