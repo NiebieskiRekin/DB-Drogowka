@@ -298,20 +298,31 @@ begin
     where id_uczestnika=:OLD.id_uczestnika and id_interwencji=:OLD.id_interwencji;
 end;
 
-
 create or replace trigger wyzwalacz_aresztowania_insert
 before insert on aresztowania
 for each row
 declare
     UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA exception;
+    OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY exception;
+    ARESZTOWANIE_PRZED_16 exception;
     zdarzenie_interwencja interwencje.zdarzenie%TYPE;
     zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
+    data_ur_uczestnika osoby.data_urodzenia%TYPE;
 begin
     select zdarzenie into zdarzenie_interwencja from interwencje where id_interwencji=:NEW.id_interwencji;
     select zdarzenie into zdarzenie_uczestnik from uczestnicy_zdarzenia where id_uczestnika=:NEW.id_uczestnika;
     if (zdarzenie_interwencja !=zdarzenie_uczestnik ) then
       raise UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA;
     end if;
+    if (not :NEW.DO_KIEDY is null and :NEW.od_kiedy > :NEW.do_kiedy) then
+        raise OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY;
+    end if;
+    
+    select data_urodzenia  into data_ur_uczestnika from osoby join uczestnicy_zdarzenia on osoby.pesel=uczestnicy_zdarzenia.pesel_uczestnika where id_uczestnika=:NEW.id_uczestnika;
+    if (not data_ur_uczestnika is null and calculate_age(data_ur_uczestnika,:NEW.od_kiedy)<interval '16' year ) then
+        raise ARESZTOWANIE_PRZED_16;
+    end if;
+    
     insert into formy_wymiaru_kary(id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'a');
 end;
 
@@ -324,4 +335,21 @@ begin
 end;
 
 
+CREATE OR REPLACE FUNCTION calculate_age (
+    d1 IN DATE, 
+    d2 IN DATE
+) RETURN INTERVAL YEAR TO MONTH IS
+    v_months_diff NUMBER;
+    v_years NUMBER;
+    v_months NUMBER;
+    v_interval INTERVAL YEAR TO MONTH;
+BEGIN
+    v_months_diff := MONTHS_BETWEEN(d2, d1);
+    v_years := TRUNC(v_months_diff / 12);
+    v_months := MOD(TRUNC(v_months_diff), 12);
+    
+    v_interval := NUMTOYMINTERVAL(v_years, 'YEAR') +NUMTOYMINTERVAL(v_months, 'MONTH') ;
+    RETURN v_interval;
+END calculate_age;
+/
 
