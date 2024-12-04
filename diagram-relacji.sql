@@ -182,9 +182,23 @@ end;
 
 create or replace trigger wyzwalacz_prawa_jazdy_insert
     before insert on prawa_jazdy 
-    for each row 
-begin 
-    :NEW.id_prawa_jazdy := sekwencja_id_prawa_jazdy.NEXTVAL; 
+    for each row
+declare
+    OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY exception;
+    PRAWO_JAZDY_PRZED_16 exception;
+    data_ur osoby.data_urodzenia%TYPE;
+begin
+    if (not :NEW.DO_KIEDY is null and :NEW.od_kiedy > :NEW.do_kiedy) then
+        raise OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY;
+    end if;
+    
+    select data_urodzenia  into data_ur from osoby where pesel=:NEW.pesel;
+    if (not data_ur is null and calculate_age(data_ur,:NEW.od_kiedy)<interval '16' year ) then
+        raise PRAWO_JAZDY_PRZED_16;
+    end if;
+
+
+    :NEW.id_prawa_jazdy := sekwencja_id_prawa_jazdy.NEXTVAL;
 end;
 
 create or replace trigger wyzwalacz_wykroczenia_insert
