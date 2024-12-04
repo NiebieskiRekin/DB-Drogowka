@@ -272,3 +272,34 @@ from (zdarzenia z join UCZESTNICY_ZDARZENIA uz on z.ID_ZDARZENIA=uz.ZDARZENIE) j
 create or replace view PERSPEKTYWA_FUNKCJONARIUSZE_W_ZDARZENIU as
 select f.PESEL, imie, nazwisko, nr_odznaki, stopien, data_i_czas_interwencji, id_zdarzenia
 from ((zdarzenia z join interwencje i on z.id_zdarzenia=i.zdarzenie) join funkcjonariusze f on i.funkcjonariusz=f.pesel) join osoby o on f.pesel=o.pesel;
+
+
+create or replace trigger wyzwalacz_mandaty_insert
+before insert on mandaty
+for each row
+begin
+    insert into formy_wymiaru_kary(	id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'m');
+end;
+
+create or replace trigger wyzwalacz_mandaty_delete
+after delete on mandaty
+for each row
+begin
+    delete from formy_wymiaru_kary
+    where id_uczestnika=:OLD.id_uczestnika and id_interwencji=:OLD.id_interwencji;
+end;
+
+create or replace trigger wyzwalacz_aresztowania_insert
+before insert on aresztowania
+for each row
+begin
+    insert into formy_wymiaru_kary(	id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'a');
+end;
+
+create or replace trigger wyzwalacz_aresztowania_delete
+after delete on aresztowania
+for each row
+begin
+    delete from formy_wymiaru_kary
+    where id_uczestnika=:OLD.id_uczestnika and id_interwencji=:OLD.id_interwencji;
+end;
