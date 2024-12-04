@@ -277,8 +277,17 @@ from ((zdarzenia z join interwencje i on z.id_zdarzenia=i.zdarzenie) join funkcj
 create or replace trigger wyzwalacz_mandaty_insert
 before insert on mandaty
 for each row
+declare
+  UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA exception;
+  zdarzenie_interwencja interwencje.zdarzenie%TYPE;
+  zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
 begin
-    insert into formy_wymiaru_kary(	id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'m');
+  select zdarzenie into zdarzenie_interwencja from interwencje where id_interwencji=:NEW.id_interwencji;
+  select zdarzenie into zdarzenie_uczestnik from uczestnicy_zdarzenia where id_uczestnika=:NEW.id_uczestnika;
+  if (zdarzenie_interwencja !=zdarzenie_uczestnik ) then
+    raise UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA;
+  end if;
+  insert into formy_wymiaru_kary(id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'m');
 end;
 
 create or replace trigger wyzwalacz_mandaty_delete
@@ -289,11 +298,21 @@ begin
     where id_uczestnika=:OLD.id_uczestnika and id_interwencji=:OLD.id_interwencji;
 end;
 
+
 create or replace trigger wyzwalacz_aresztowania_insert
 before insert on aresztowania
 for each row
+declare
+    UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA exception;
+    zdarzenie_interwencja interwencje.zdarzenie%TYPE;
+    zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
 begin
-    insert into formy_wymiaru_kary(	id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'a');
+    select zdarzenie into zdarzenie_interwencja from interwencje where id_interwencji=:NEW.id_interwencji;
+    select zdarzenie into zdarzenie_uczestnik from uczestnicy_zdarzenia where id_uczestnika=:NEW.id_uczestnika;
+    if (zdarzenie_interwencja !=zdarzenie_uczestnik ) then
+      raise UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA;
+    end if;
+    insert into formy_wymiaru_kary(id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'a');
 end;
 
 create or replace trigger wyzwalacz_aresztowania_delete
@@ -303,3 +322,6 @@ begin
     delete from formy_wymiaru_kary
     where id_uczestnika=:OLD.id_uczestnika and id_interwencji=:OLD.id_interwencji;
 end;
+
+
+
