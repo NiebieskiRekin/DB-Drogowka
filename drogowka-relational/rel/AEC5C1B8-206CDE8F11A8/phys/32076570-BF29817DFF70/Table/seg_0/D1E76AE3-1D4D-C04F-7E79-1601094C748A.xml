@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="INTERWENCJE" directorySegmentName="seg_0" id="D1E76AE3-1D4D-C04F-7E79-1601094C748A">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_interwencji" id="05FF7BF0-07C7-9994-0DCD-DCCD63F687D9">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="funkcjonariusz" id="B4EFA160-AB64-5DF2-BBAF-F9FF8FE6056C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="zdarzenie" id="D8E4ED63-9B71-C8A0-F532-393DE043DC8F">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data_i_czas_interwencji" id="E9ED6F72-B0B2-BAD5-16F9-1861EBAAD038">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="INTERWENCJE_FUNKCJONARIUSZE_FK" id="D3BC97CE-C32D-811E-5EBA-8E77A3E3DDBB">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="INTERWENCJE_ZDARZENIA_FK" id="F20C1AC6-5DAF-948E-A45C-246C41DFA8CF">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="INTERWENCJE_PK" id="DF9C788A-C582-0176-8468-9B2B8BF3B683">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="2EA1D751-F624-0425-3906-91EF34184B2C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

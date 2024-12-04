@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="50490387-45FD-4A55-0468-8719E328EA1D" name="WYKROCZENIA">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>51235587-073D-3041-FA0B-7773E4EE83E7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_wykroczenia" id="F9626079-3543-B58C-B45E-F4CD2CD9D502">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>6F07ABFB-5CEC-909D-416C-35C8DF66AB41</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="22D58A5B-623A-CDB9-1CAB-F424618EDA24">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>81BAB134-04B1-F223-FEE9-00B847CD26A0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>24A2F9B9-0E89-E5F4-FFE3-75495526C536</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="punkty_karne" id="08D2BA52-6DB6-A3D4-A5EA-746CF6BC8F8E">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>5BC64824-1CC8-E0DA-284F-D10941067BB3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>15</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="stawka_minimalna" id="55D0835C-0884-3373-267A-FE4BA845F4ED">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>8C6FD60D-5F36-8DE1-9672-18450728EC9B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EA81BBFC-B85D-0D55-907A-E39045872205</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_minimalna&gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stawka_maksymalna" id="CA2A6A9C-B60E-5FB8-EE8F-8D89D9F9EE8B">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>E31E01AE-6239-898C-C725-0506FB13FE2C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EA81BBFC-B85D-0D55-907A-E39045872205</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="stawka_maksymalna&lt;=6000"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ustawa" id="05C8A8AC-87F5-C826-BE13-7FF741E045A1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>D4D0A430-59CF-1ACA-F807-2C3339ABC036</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C3FBA9A9-4FC8-CE67-C800-E5E697928F4E" name="WYKROCZENIA_PK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>C2DB5992-8A5D-A8D2-8EB1-6E4FC1616A29</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9626079-3543-B58C-B45E-F4CD2CD9D502"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="68E7FC24-CAE1-B961-4A64-A95FB2AF1606" name="INDEX_1v5">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>0A530C9A-B0AB-CA6D-589B-030EA6224A9A</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22D58A5B-623A-CDB9-1CAB-F424618EDA24"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

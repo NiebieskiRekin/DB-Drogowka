@@ -10,7 +10,7 @@
 <identifying>true</identifying>
 <nameOnSource>posiada</nameOnSource>
 <nameOnTarget>uczestniczy</nameOnTarget>
-<optionalSource>false</optionalSource>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>7FF81F97-2382-FB94-21A9-79242E36F5BA</sourceEntity>

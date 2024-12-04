@@ -1,0 +1,196 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BC2F8ECA-EA69-C518-C259-9C14746F3FFC" name="MANDATY">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>57EB6302-C89F-0416-9360-7DE4FAF2D590</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_serii" id="1CC3D9C2-2D1C-B608-4E50-81A5CA1F413D">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>6231D087-5EB5-6764-7206-2CD1BACA7CA7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>33AABF9A-5EAA-9120-EE44-CDCC1380C693</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kwota" id="5A65ED58-CC60-C120-D637-A1D44CB04660">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>C113F207-6FB3-4AF1-7E73-F4F0E829382C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EA81BBFC-B85D-0D55-907A-E39045872205</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>6000</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="punkty_karne" id="9458C608-10EC-151D-E7A8-3508ABC2107D">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>2ADECBF2-E4AC-70B9-92CA-6312F52D2926</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="czy_przyjeto" id="BC6BD52B-D029-9A91-701D-B46E179CD51F">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>4E92F87D-44D1-31C4-1BD5-183E19AC73C0</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>FB9D0D43-CB5C-0202-DB08-7B27F6B77697</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="czy_oplacone" id="00FCC103-EF4D-40C8-1BB5-BDBDC0D151ED">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>81A41BFF-A195-F822-DE19-0B68C94CB677</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>FB9D0D43-CB5C-0202-DB08-7B27F6B77697</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="opis" id="302ECA6F-8641-F533-7E68-B8F656C3E725">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>42A5DD2B-C14D-094D-9D4C-33FCDC2407D8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>24A2F9B9-0E89-E5F4-FFE3-75495526C536</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="wykroczenie" id="A59F46E0-CD72-1029-B859-79B35E22BD31">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>444AD160-6435-A105-0F47-220CF884CC13</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="068DD393-D691-C861-1190-5B77320F308D" referredColumn="F9626079-3543-B58C-B45E-F4CD2CD9D502"/>
+</associations>
+</Column>
+<Column name="id_uczestnika" id="354629B6-C49B-3BCC-AF11-0AA0D3FA750F">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>2B055D59-9FFC-6545-D55A-78F5FFE5294C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7827BDC7-0577-E121-0989-4D6587F1F132" referredColumn="70243EB0-F47E-CA0F-50F0-540883BBDAE1"/>
+</associations>
+</Column>
+<Column name="id_interwencji" id="615C0DB0-281C-B2F4-B642-8962F347461B">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>EAE78AA1-3FD5-7B72-5F1D-2FF9C7BD6B65</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7827BDC7-0577-E121-0989-4D6587F1F132" referredColumn="4190843A-AB27-E0BE-AC47-5675BB9748CD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="691B32DD-2583-B331-A3F7-29D6EFDB7FF7" name="MANDATY_PK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>1FB1AD4B-A8AD-7D86-EE83-35FD79741B71</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="354629B6-C49B-3BCC-AF11-0AA0D3FA750F"/>
+<colUsage columnID="615C0DB0-281C-B2F4-B642-8962F347461B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0113F86-E8F9-B010-EB95-2C8A5EACA210" name="INDEX_1v1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>85250CD7-9904-DD12-BE76-4D2FD37DE8D3</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CC3D9C2-2D1C-B608-4E50-81A5CA1F413D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8E1A907-A06B-E836-71F2-224239FA9D61" name="MANDATY_FORMY_WYMIARU_KARY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="354629B6-C49B-3BCC-AF11-0AA0D3FA750F"/>
+<colUsage columnID="615C0DB0-281C-B2F4-B642-8962F347461B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02535188-BBEB-2914-ADB5-F67C4B182CAE" name="MANDATY_WYKROCZENIA_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A59F46E0-CD72-1029-B859-79B35E22BD31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

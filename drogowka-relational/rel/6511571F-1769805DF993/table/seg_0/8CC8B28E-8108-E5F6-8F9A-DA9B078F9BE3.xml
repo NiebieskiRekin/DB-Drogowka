@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8CC8B28E-8108-E5F6-8F9A-DA9B078F9BE3" name="OSOBY_POJAZDY">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>E9757A64-F9DE-2206-39F0-08410FBDE28B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="vin" id="C119CF4E-9F75-5082-FB7D-BBD44AB6147F">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>8175A4B1-5981-640D-C0CE-68770505ED12</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>1DA6848D-0002-8BCD-E6D2-CF9F552BF2E9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3630C823-AC7B-5590-8B0F-88BD748AB696" referredColumn="DEF792F7-2035-E0C9-7001-1A3CDE3B18F2"/>
+</associations>
+</Column>
+<Column name="pesel" id="92B370AA-C001-90F7-5741-EAB29C57CFD7">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>4E546302-9F70-F990-B9D0-656A7F42EA86</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>C5BB4BAB-2D9D-B8F1-951B-F7EB09EA02A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D4B164C4-1168-811E-0112-8FF99E01591A" referredColumn="24E94E3A-F75C-03AD-90C6-F28946DC6ED8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C962CF90-6DB7-F9E0-C2D6-D6D0C675E446" name="OSOBY_POJAZDY_PK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>FB33F165-1595-E4D7-A7D9-1EECF7DBF136</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92B370AA-C001-90F7-5741-EAB29C57CFD7"/>
+<colUsage columnID="C119CF4E-9F75-5082-FB7D-BBD44AB6147F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E79A5AA6-E8EA-10E6-790E-CF91593A1F38" name="OSOBY_POJAZDY_OSOBY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92B370AA-C001-90F7-5741-EAB29C57CFD7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FAEDD82-E704-7C40-7FB6-FC927E2FA84D" name="OSOBY_POJAZDY_POJAZDY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C119CF4E-9F75-5082-FB7D-BBD44AB6147F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="UBEZPIECZENIA" directorySegmentName="seg_0" id="8DBAABA6-2AD1-D826-4322-DC4A777EAA0D">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FIRMA" id="520BD908-56F5-CD03-CCD4-E86A7285E8F0">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VIN_POJAZDU" id="5D909F32-371D-4D13-951B-6931C8F187C9">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NR_POLISY" id="6D7743A8-E8DE-F051-AF38-D9A4D7363F09">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_WAZNOSCI" id="A26E134C-0EC0-7308-49BB-8B2EB766E449">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TYP" id="A6A79E38-7E22-6F7B-8140-5DFE9BF7575E">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="UBEZPIECZENIA_POJAZDY_FK" id="7F94D36C-B603-FF40-E0EC-AD6F7243C264">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="UBEZPIECZENIA_PK" id="5F904F71-52A5-DD06-5C69-C583AF6DBDA1">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

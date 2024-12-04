@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="OSOBY" directorySegmentName="seg_0" id="91E5086C-B1FE-DF91-073A-41ABC977B6D0">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="data_urodzenia" id="0DE0D72B-B70F-D8A9-C5CA-A62410D38178">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nazwisko" id="2407488A-FF9C-2732-A559-05C795A68EEA">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="imie" id="26E7320D-3C15-D5AA-AE1D-8477DCBF58A9">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="czy_poszukiwana" id="58A2E354-A228-C7B2-07C5-BB1308919DB2">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<defaultValue>(&apos;N&apos;)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="nr_dowodu_osobistego" id="82D21328-CDAE-260F-4438-C8777C7A8863">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_telefonu" id="B57A85E9-3F92-4B90-B203-20A556C014B8">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PESEL" id="B5ACF418-4700-4341-AE06-333F5785241C">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OSOBY_PK" id="B6620042-E5AE-09B2-1396-8328E7537BA3">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>relacjav2</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8DBAABA6-2AD1-D826-4322-DC4A777EAA0D" name="UBEZPIECZENIA">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>0B01EA09-5BEA-CAF7-159C-66B597E916B1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NR_POLISY" id="6D7743A8-E8DE-F051-AF38-D9A4D7363F09">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>63E8032B-ABD5-338B-80CA-F4DA638CE1F8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F72E5FEA-440B-43F6-E648-C6AA68BCCA35</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_WAZNOSCI" id="A26E134C-0EC0-7308-49BB-8B2EB766E449">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>8D346979-428C-9784-3F36-C00CCC2576FA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="data_waznosci &gt; to_date(&apos;1-1-1900&apos;,&apos;DD-MM-YYYY&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYP" id="A6A79E38-7E22-6F7B-8140-5DFE9BF7575E">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>4F7330EE-DE67-2DE2-B574-D6077BE7EA32</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>E2419E0B-8F64-1E4D-DCEC-3FF2C00AF5ED</domain>
+<listOfValues>
+<valueDef value="AC" description=""/>
+<valueDef value="OC" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRMA" id="520BD908-56F5-CD03-CCD4-E86A7285E8F0">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>63E40FEA-B064-5EB6-4E10-F7E089595DF0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VIN_POJAZDU" id="5D909F32-371D-4D13-951B-6931C8F187C9">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>81EDEB81-59C7-4727-3640-3D4DC1F8876A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>1DA6848D-0002-8BCD-E6D2-CF9F552BF2E9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DD7711DE-A7D6-809A-0214-7ACF66EB29AC" referredColumn="DEF792F7-2035-E0C9-7001-1A3CDE3B18F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5F904F71-52A5-DD06-5C69-C583AF6DBDA1" name="UBEZPIECZENIA_PK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>3E5AE67B-357A-F3E6-86C9-2FF2A99F89A4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D7743A8-E8DE-F051-AF38-D9A4D7363F09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F94D36C-B603-FF40-E0EC-AD6F7243C264" name="UBEZPIECZENIA_POJAZDY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:46:18 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D909F32-371D-4D13-951B-6931C8F187C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

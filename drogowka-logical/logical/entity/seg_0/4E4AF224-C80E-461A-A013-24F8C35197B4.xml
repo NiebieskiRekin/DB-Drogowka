@@ -30,7 +30,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>11</dataTypeSize>
-<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="data_zdarzenia" id="96BE2141-A5B0-1C2C-4F6B-239F78EA4394">
 <createdBy>niebieskirekin</createdBy>
@@ -60,7 +60,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>8</dataTypePrecision>
 <dataTypeScale>6</dataTypeScale>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,8,6</ownDataTypeParameters>
 </Attribute>
 <Attribute name="szerokosc_geograficzna" id="4D74AB56-DC52-BBAE-5B4B-D7CF91E16B13">
 <createdBy>kamie</createdBy>
@@ -71,26 +71,25 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <referedAttribute>1D37E3D0-262D-3445-2BA9-C6585C2309A6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>8</dataTypePrecision>
 <dataTypeScale>6</dataTypeScale>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,8,6</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rola1" id="32136DC5-F51C-E7B7-F717-47967C6179DC">
-<createdBy>kamie</createdBy>
-<createdTime>2024-11-15 20:02:22 UTC</createdTime>
-<generatorID>D03B3E8B-2216-9B4C-354E-2AEF3D37B109</generatorID>
+<Attribute name="rola" id="2C7060D4-E179-9D80-CDD1-AAF2829B81B8">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:03:29 UTC</createdTime>
 <ownerDesignName>drogowka</ownerDesignName>
 <engineerTo>
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
-<referedAttribute>1EFE1B9D-6A50-D888-C6A0-F3BA7CDB49B5</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>32</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -107,7 +106,6 @@
 <attributeRef>96BE2141-A5B0-1C2C-4F6B-239F78EA4394</attributeRef>
 <attributeRef>A1C5B91F-7E9F-1461-DE30-4DC3ED19B93E</attributeRef>
 <attributeRef>4D74AB56-DC52-BBAE-5B4B-D7CF91E16B13</attributeRef>
-<attributeRef>32136DC5-F51C-E7B7-F717-47967C6179DC</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

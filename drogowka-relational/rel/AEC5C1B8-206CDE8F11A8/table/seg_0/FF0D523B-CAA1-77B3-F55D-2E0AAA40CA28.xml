@@ -1,0 +1,169 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FF0D523B-CAA1-77B3-F55D-2E0AAA40CA28" name="POJAZDY">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>540F9AFC-36BD-DA5B-9E30-1D6B63E83A36</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VIN" id="A03370FD-DE9F-71AF-BC28-4C7E331D0404">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>49B3730B-8FDD-3158-103A-A074BCD29933</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>1DA6848D-0002-8BCD-E6D2-CF9F552BF2E9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NR_REJESTRACYJNY" id="C6B54AAB-CB37-716F-3C06-807F48CE317C">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>06A1256F-0A00-C8B1-CE5C-F36C509D1C76</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1A1CC49F-4776-5A34-149A-7724609F95CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BADANIE_TECHNICZNE" id="83C2AEFF-680E-FB8C-B175-496873E28810">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>A918A70B-4731-AF68-D267-3AFB056B9515</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="BADANIE_TECHNICZNE &gt; to_date(&apos;1-1-1900&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MARKA" id="159E8662-0089-0959-7141-9776C3F5628B">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>3506560B-5DAC-DA8D-3EE3-2DDF23AE9D7A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODEL" id="E9A9DBDA-0CCE-A067-C9E7-FE1445754DB7">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>C0FDAD36-2667-6054-8B30-4D29AA79DFAF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROK_PRODUKCJI" id="DBAFF090-0260-1782-DB79-BF9AA45A356D">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>694CAF28-367F-FE0D-2F34-CC9C79CBD789</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="rok_produkcji &gt; 1900"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CZY_ZAREKWIROWANY" id="0A34ADFB-E10D-C2EA-D590-70254D5EFFE1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>B001A80A-9265-2485-B2CE-EF2EA4CAFE5F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>FB9D0D43-CB5C-0202-DB08-7B27F6B77697</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<defaultValue>(&apos;N&apos;)</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CZY_POSZUKIWANE" id="4BF0D3A4-07A1-90D6-F8E1-CDDFB3CB56E3">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>EB465F24-C9EB-55D4-9EC1-EF986CF0E702</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>FB9D0D43-CB5C-0202-DB08-7B27F6B77697</domain>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="T" description=""/>
+</listOfValues>
+<defaultValue>(&apos;N&apos;)</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="KOLOR" id="AE1E7B8F-DB7F-889F-D8AA-F4299CC48C78">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>668DC61F-6809-B6F8-E327-175C96DF3990</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>12A098D6-8E08-155F-20EF-C04E9CA9FC65</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3BEBD61A-6E21-3EDA-6811-32B7B3EC0DEA" name="POJAZDY_PK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>41BE903A-C9E7-9259-F97C-4C9A99EEA518</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A03370FD-DE9F-71AF-BC28-4C7E331D0404"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33336EC6-EB70-617C-F740-B99EC3B9CDFF" name="INDEX_1v2">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>C15AA097-3B64-44DC-A843-70759CEC3714</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6B54AAB-CB37-716F-3C06-807F48CE317C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

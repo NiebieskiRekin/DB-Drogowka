@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3AD0E455-7AC0-5286-D8FF-ADC526B27E58" containerWithKeyObject="A9419564-BDD8-1C39-E39E-D8938742EE34" localFKIndex="6DA36B38-36BB-3CD2-08C9-CA9338EFC6E9" name="OSOBY_POJAZDY_POJAZDY_FK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>3E63B4B2-61D7-0A69-A3A4-9364A4923322</importedID>
+<referredTableLongName>POJAZDY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FF0D523B-CAA1-77B3-F55D-2E0AAA40CA28</referredTableID>
+<keyObject>3BEBD61A-6E21-3EDA-6811-32B7B3EC0DEA</keyObject>
+<referredKeyID>3BEBD61A-6E21-3EDA-6811-32B7B3EC0DEA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>VIN</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

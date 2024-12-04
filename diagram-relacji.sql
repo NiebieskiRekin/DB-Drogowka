@@ -1,7 +1,7 @@
 CREATE TABLE POJAZDY (
     VIN CHAR(17) PRIMARY KEY,
     NR_REJESTRACYJNY VARCHAR(8) NOT NULL UNIQUE,
-    BADANIE_TECHNICZNE DATE NOT NULL check(BADANIE_TECHNICZNE > to_date('1-1-1900')),
+    BADANIE_TECHNICZNE DATE NOT NULL check(BADANIE_TECHNICZNE > to_date('1-1-1900','DD-MM-YYYY')),
     MARKA VARCHAR(32) NOT NULL,
     MODEL VARCHAR(32) NOT NULL,
     ROK_PRODUKCJI INTEGER NOT NULL check(rok_produkcji > 1900),
@@ -12,7 +12,7 @@ CREATE TABLE POJAZDY (
 
 CREATE TABLE UBEZPIECZENIA (
     NR_POLISY VARCHAR(10) ,
-    DATA_WAZNOSCI DATE NOT NULL check(data_waznosci > to_date('1-1-1900')),
+    DATA_WAZNOSCI DATE NOT NULL check(data_waznosci > to_date('1-1-1900','DD-MM-YYYY')),
     TYP CHAR(2) NOT NULL CHECK ( TYP IN ( 'OC', 'AC' ) ),
     FIRMA VARCHAR(32) NULL,
     VIN_POJAZDU CHAR(17) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE OSOBY(
 	nr_telefonu varchar(16) NULL,
 	czy_poszukiwana char(1) DEFAULT ('N') NOT NULL CHECK ( czy_poszukiwana IN ( 'N', 'T' )),
 	nr_dowodu_osobistego char(9) NULL,
-	data_urodzenia DATE NULL check(data_urodzenia is null or data_urodzenia > to_date('1-1-1900'))
+	data_urodzenia DATE NULL check(data_urodzenia is null or data_urodzenia > to_date('1-1-1900','DD-MM-YYYY'))
 );
 
 CREATE TABLE OSOBY_POJAZDY(
@@ -58,9 +58,9 @@ CREATE TABLE PRAWA_JAZDY(
     'Tramwaj'
     )
   ),
-	od_kiedy DATE not null,
-	do_kiedy DATE NOT NULL,
-	PESEL char(11) REFERENCES osoby(pesel),
+	od_kiedy DATE not null check(od_kiedy > to_date('1-1-1900','DD-MM-YYYY')),
+	do_kiedy DATE NOT NULL check(do_kiedy > to_date('1-1-1900','DD-MM-YYYY')),
+	PESEL char(11) not null REFERENCES osoby(pesel),
 	UNIQUE(kategoria,od_kiedy,pesel)
 );
 
@@ -72,7 +72,7 @@ CREATE TABLE FUNKCJONARIUSZE(
 
 CREATE TABLE ZDARZENIA(
 	id_zdarzenia integer PRIMARY KEY,
-	data_zdarzenia DATE NOT NULL,
+	data_zdarzenia DATE NOT NULL check(data_zdarzenia > to_date('1-1-1900','DD-MM-YYYY')),
 	wysokosc_geograficzna NUMBER(8,6) NOT NULL,
 	szerokosc_geograficzna NUMBER(8,6) NOT NULL,
 	opis varchar(128) NULL,
@@ -81,7 +81,7 @@ CREATE TABLE ZDARZENIA(
 
 CREATE TABLE INTERWENCJE(
 	id_interwencji integer PRIMARY KEY,
-	data_i_czas_interwencji timestamp NOT NULL,
+	data_i_czas_interwencji timestamp NOT NULL check(data_i_czas_interwencji > to_timestamp('1-1-1900','DD-MM-YYYY')),
 	funkcjonariusz char(11)  NOT NULL REFERENCES Funkcjonariusze(pesel),
 	zdarzenie integer  NOT NULL REFERENCES zdarzenia(id_zdarzenia),
 	UNIQUE(funkcjonariusz,zdarzenie)
@@ -97,7 +97,7 @@ CREATE TABLE UCZESTNICY_ZDARZENIA(
 
 CREATE TABLE WYKROCZENIA(
   id_wykroczenia integer PRIMARY KEY,
-	nazwa varchar(128) NOT NULL UNIQUE,
+	nazwa varchar(512) NOT NULL UNIQUE,
 	punkty_karne integer NOT NULL CHECK(punkty_karne BETWEEN 0 AND 15),
 	stawka_minimalna NUMBER NOT NULL CHECK(stawka_minimalna>=0),
 	stawka_maksymalna NUMBER NOT NULL CHECK(stawka_maksymalna<=6000),
@@ -114,7 +114,7 @@ CREATE TABLE FORMY_WYMIARU_KARY(
 CREATE TABLE MANDATY(
 	nr_serii varchar(16) NOT NULL,
 	kwota NUMBER CHECK(kwota BETWEEN 0 AND 6000) NOT NULL,
-	punkty_karne integer NOT NULL,
+	punkty_karne integer NOT NULL CHECK(punkty_karne BETWEEN 0 AND 15),
 	czy_przyjeto char(1) NOT NULL CHECK(czy_przyjeto IN ('N', 'T')),
 	czy_oplacone char(1) NOT NULL CHECK(czy_oplacone IN ('N', 'T')),
 	opis varchar(128) NOT NULL,
@@ -129,11 +129,11 @@ CREATE TABLE MANDATY(
 CREATE TABLE ARESZTOWANIA(
 	id_uczestnika integer,
 	id_interwencji integer,
-	od_kiedy DATE NOT NULL,
-    do_kiedy DATE NULL,
-    czy_w_zawieszeniu CHAR(1) NOT NULL CHECK ( czy_w_zawieszeniu IN ( 'N', 'T' ) ),
-    PRIMARY KEY ( ID_UCZESTNIKA,ID_INTERWENCJI ),
-    FOREIGN KEY(id_uczestnika,id_interwencji) REFERENCES formy_wymiaru_kary(id_uczestnika,id_interwencji)
+	od_kiedy DATE NOT NULL check(	od_kiedy > to_date('1-1-1900','DD-MM-YYYY')),
+  do_kiedy DATE NULL check(do_kiedy is null or do_kiedy > to_date('1-1-1900','DD-MM-YYYY')),
+  czy_w_zawieszeniu CHAR(1) NOT NULL CHECK ( czy_w_zawieszeniu IN ( 'N', 'T' ) ),
+  PRIMARY KEY ( ID_UCZESTNIKA,ID_INTERWENCJI ),
+  FOREIGN KEY(id_uczestnika,id_interwencji) REFERENCES formy_wymiaru_kary(id_uczestnika,id_interwencji)
 );
 
 

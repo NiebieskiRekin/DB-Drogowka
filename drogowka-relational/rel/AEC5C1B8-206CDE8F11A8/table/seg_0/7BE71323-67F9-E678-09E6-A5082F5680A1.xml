@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7BE71323-67F9-E678-09E6-A5082F5680A1" name="PRAWA_JAZDY">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>7CCEB613-E067-992E-7D2D-086E5CB75D55</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_prawa_jazdy" id="C8B21798-F213-939C-2024-A205E81DAFB3">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>1DE8F2DE-F599-4BA1-463D-C8FFAB20DC93</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>DD5F7EF0-5F21-4EDA-A439-4CF59D003F10</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kategoria" id="A9008134-DCBA-70FA-925A-5B9E213F1882">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>AC343A66-82C4-B753-AEBD-C5C8579621D4</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A6989F96-F486-23D2-9F28-87EFA24C1713</domain>
+<listOfValues>
+<valueDef value="A" description=""/>
+<valueDef value="A1" description=""/>
+<valueDef value="A2" description=""/>
+<valueDef value="AM" description=""/>
+<valueDef value="B" description=""/>
+<valueDef value="B+E" description=""/>
+<valueDef value="B1" description=""/>
+<valueDef value="C" description=""/>
+<valueDef value="C+E" description=""/>
+<valueDef value="C1" description=""/>
+<valueDef value="C1+E" description=""/>
+<valueDef value="D" description=""/>
+<valueDef value="D+E" description=""/>
+<valueDef value="D1" description=""/>
+<valueDef value="D1+E" description=""/>
+<valueDef value="T" description=""/>
+<valueDef value="Tramwaj" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="od_kiedy" id="C6469F18-81E7-F0A9-3166-3EA9B51564D8">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>E2C12D96-4589-99E8-434E-6F7EE3F0DF1D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="do_kiedy" id="4985317C-4161-386D-AF0D-4DCE553F9ECE">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>43C38E10-FDB5-D4F7-4334-E8F094565291</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>641C7ED9-B7E1-EFD9-D362-3622427FF3FB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PESEL" id="DBF6528A-2215-1CC1-7309-3BB6DA50F0ED">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>FBF6DC1B-96FE-49C0-FA6B-6BD7FEE5D436</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>C5BB4BAB-2D9D-B8F1-951B-F7EB09EA02A2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6DD15744-C935-2997-CAC6-FE635E45F979" referredColumn="B5ACF418-4700-4341-AE06-333F5785241C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5A0FD340-4ED1-1B22-5F8B-595F2E9C8F3A" name="PRAWA_JAZDY_PK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>D694E49C-CE61-610E-CBEB-01B923B52A63</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8B21798-F213-939C-2024-A205E81DAFB3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="133F3F14-E2ED-B96C-E7AE-D4626E54BB0B" name="INDEX_1v3">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>29CBA501-BD63-980C-9C0B-7F3D944D340C</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9008134-DCBA-70FA-925A-5B9E213F1882"/>
+<colUsage columnID="C6469F18-81E7-F0A9-3166-3EA9B51564D8"/>
+<colUsage columnID="DBF6528A-2215-1CC1-7309-3BB6DA50F0ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DE3B28D-A4E4-AD98-44F2-3B62423F700D" name="PRAWA_JAZDY_OSOBY_FK">
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DBF6528A-2215-1CC1-7309-3BB6DA50F0ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

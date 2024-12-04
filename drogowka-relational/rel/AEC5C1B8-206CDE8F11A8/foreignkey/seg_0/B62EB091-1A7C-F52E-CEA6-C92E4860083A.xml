@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B62EB091-1A7C-F52E-CEA6-C92E4860083A" containerWithKeyObject="D1E76AE3-1D4D-C04F-7E79-1601094C748A" localFKIndex="D3BC97CE-C32D-811E-5EBA-8E77A3E3DDBB" name="INTERWENCJE_FUNKCJONARIUSZE_FK">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>niebieskirekin</createdBy>
+<createdTime>2024-12-04 20:12:51 UTC</createdTime>
+<ownerDesignName>drogowka-relational</ownerDesignName>
+<importedID>A62DA2B1-E6A4-D387-0A3B-6DC3B7CB6023</importedID>
+<referredTableLongName>FUNKCJONARIUSZE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0894EDFA-2056-0369-7B5B-2D6852EF882E</referredTableID>
+<keyObject>47CE635B-AA0F-A2FD-DACC-FB2F99FF9FC2</keyObject>
+<referredKeyID>47CE635B-AA0F-A2FD-DACC-FB2F99FF9FC2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>pesel</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

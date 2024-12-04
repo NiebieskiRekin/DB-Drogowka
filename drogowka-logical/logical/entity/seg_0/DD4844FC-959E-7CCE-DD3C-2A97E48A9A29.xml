@@ -72,7 +72,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>8</dataTypePrecision>
 <dataTypeScale>6</dataTypeScale>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,8,6</ownDataTypeParameters>
 </Attribute>
 <Attribute name="szerokosc_geograficzna" id="EBC079FD-72A7-77E4-9EC8-46E6817FD64A">
 <createdBy>kamie</createdBy>
@@ -83,11 +83,12 @@
 <item key="DDFD5617-CD5E-8FB4-46D0-E089DBDB55C4" value="true"/>
 </engineerTo>
 <referedAttribute>1D37E3D0-262D-3445-2BA9-C6585C2309A6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>8</dataTypePrecision>
 <dataTypeScale>6</dataTypeScale>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,8,6</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
