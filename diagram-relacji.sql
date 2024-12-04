@@ -136,6 +136,11 @@ CREATE TABLE ARESZTOWANIA(
   FOREIGN KEY(id_uczestnika,id_interwencji) REFERENCES formy_wymiaru_kary(id_uczestnika,id_interwencji)
 );
 
+CREATE SEQUENCE "SEKWENCJA_ID_WYKROCZENIA" MINVALUE 1 INCREMENT BY 1 START WITH 100;
+CREATE SEQUENCE "SEKWENCJA_ID_PRAWA_JAZDY" MINVALUE 1 INCREMENT BY 1 START WITH 1000;
+CREATE SEQUENCE "SEKWENCJA_ID_ZDARZENIA"   MINVALUE 1 INCREMENT BY 1 START WITH 1000;
+CREATE SEQUENCE "SEKWENCJA_ID_INTERWENCJI"   MINVALUE 1 INCREMENT BY 1 START WITH 1000;
+CREATE SEQUENCE "SEKWENCJA_ID_UCZESTNIKA_ZDARZENIA"   MINVALUE 1 INCREMENT BY 1 START WITH 1000;
 
 create or replace view perspektywa_pojazdy_danej_osoby as 
     select osoby_pojazdy.vin,nr_rejestracyjny,badanie_techniczne,marka,pojazdy.model,rok_produkcji, czy_zarekwirowany,
@@ -160,10 +165,15 @@ create or replace view perspektywa_aresztowania_danej_osoby as
 select pesel_uczestnika as pesel, od_kiedy, do_kiedy, czy_w_zawieszeniu, zdarzenie
 from uczestnicy_zdarzenia uz join aresztowania ar on uz.id_uczestnika=ar.id_uczestnika;
 
-CREATE SEQUENCE  "SEKWENCJA_ID_WYKROCZENIA"  MINVALUE 1 INCREMENT BY 1 START WITH 53;
-CREATE SEQUENCE  "SEKWENCJA_ID_PRAWA_JAZDY"  MINVALUE 1 INCREMENT BY 1 START WITH 165;
-CREATE SEQUENCE "SEKWENCJA_ID_ZDARZENIA" MINVALUE 1 INCREMENT BY 1 START WITH 291;
+create or replace view PERSPEKTYWA_ZDARZENIA_ILE AS
+select id_zdarzenia, data_zdarzenia, wysokosc_geograficzna, szerokosc_geograficzna, opis, 
+(select count(zdarzenie) from interwencje where zdarzenie=id_zdarzenia) as "Liczba_funkcjonariuszy", 
+(select count(zdarzenie) from uczestnicy_zdarzenia where zdarzenie=id_zdarzenia) as "Liczba_uczestnikow"
+from zdarzenia;
 
+create or replace view PERSPEKTYWA_FUNKCJONARIUSZE as
+select f.nr_odznaki, f.stopien, f.pesel, o.imie, o.nazwisko, o.nr_telefonu, o.czy_poszukiwana, o.nr_dowodu_osobistego, o.data_urodzenia, o.PESEL as "LINK" 
+from funkcjonariusze f left join osoby o on f.pesel=o.pesel;
 
 create trigger wyzwalacz_pojazdy_danej_osoby_update
     instead of update on PERSPEKTYWA_POJAZDY_DANEJ_OSOBY
@@ -172,6 +182,7 @@ begin
     delete from osoby_pojazdy where vin=:OLD.vin and pesel=:OLD.pesel;
     insert into osoby_pojazdy(vin,pesel) values (:NEW.vin,:NEW.pesel);
 end;
+/
 
 create trigger wyzwalacz_pojazdy_danej_osoby_insert
     instead of insert on PERSPEKTYWA_POJAZDY_DANEJ_OSOBY
@@ -179,6 +190,7 @@ create trigger wyzwalacz_pojazdy_danej_osoby_insert
 begin
     insert into osoby_pojazdy(vin,pesel) values (:NEW.vin,:NEW.pesel);
 end;
+/
 
 create or replace trigger wyzwalacz_prawa_jazdy_insert
     before insert on prawa_jazdy 
@@ -200,6 +212,7 @@ begin
 
     :NEW.id_prawa_jazdy := sekwencja_id_prawa_jazdy.NEXTVAL;
 end;
+/
 
 create or replace trigger wyzwalacz_wykroczenia_insert
     before insert on wykroczenia 
@@ -213,6 +226,7 @@ begin
         RAISE e_kwota_min_max;
     END IF;
 end;
+/
 
 create or replace trigger wyzwalacz_zdarzenia_insert
     before insert on zdarzenia
@@ -220,36 +234,6 @@ create or replace trigger wyzwalacz_zdarzenia_insert
 begin
     :NEW.id_zdarzenia := SEKWENCJA_ID_ZDARZENIA.NEXTVAL;
 end;
-
-create or replace function funkcja_zweryfikuj_vin(
-    vin varchar2
-) return boolean as
-begin
-    return not vin is NULL and lengthb(vin) = 17 and REGEXP_LIKE(vin, '^[A-Z0-9]{17}$');
-end;
-/
-
-
-create or replace procedure silent_insert_osoby_pojazdy(
-    v_vin osoby_pojazdy.VIN%TYPE, v_pesel osoby_pojazdy.pesel%TYPE
-) as
-begin
-     insert into osoby_pojazdy(pesel,vin) values (v_pesel,v_vin);
-exception
-    when DUP_VAL_ON_INDEX then
-        null;
-end silent_insert_osoby_pojazdy;
-
-
-create or replace view PERSPEKTYWA_ZDARZENIA_ILE AS
-select id_zdarzenia, data_zdarzenia, wysokosc_geograficzna, szerokosc_geograficzna, opis, 
-(select count(zdarzenie) from interwencje where zdarzenie=id_zdarzenia) as "Liczba_funkcjonariuszy", 
-(select count(zdarzenie) from uczestnicy_zdarzenia where zdarzenie=id_zdarzenia) as "Liczba_uczestnikow"
-from zdarzenia;
-
-create or replace view PERSPEKTYWA_FUNKCJONARIUSZE as
-select f.nr_odznaki, f.stopien, f.pesel, o.imie, o.nazwisko, o.nr_telefonu, o.czy_poszukiwana, o.nr_dowodu_osobistego, o.data_urodzenia, o.PESEL as "LINK" 
-from funkcjonariusze f left join osoby o on f.pesel=o.pesel;
 
 create or replace trigger wyzwalacz_pojazdy_delete
     before delete on pojazdy
@@ -270,24 +254,6 @@ begin
 end;
 /
 
-
-create or replace function funkcja_zweryfikuj_pesel(
-    pesel varchar2
-) return boolean as
-begin
-    return not pesel is NULL and lengthb(pesel) = 11 and REGEXP_LIKE(pesel, '^[0-9]{11}$');
-end;
-/
-
-create or replace view PERSPEKTYWA_UCZESTNICY_W_ZDARZENIU as
-select id_zdarzenia,pesel, imie, nazwisko, czy_poszukiwana, rola
-from (zdarzenia z join UCZESTNICY_ZDARZENIA uz on z.ID_ZDARZENIA=uz.ZDARZENIE) join osoby o on uz.pesel_uczestnika=o.pesel;
-
-create or replace view PERSPEKTYWA_FUNKCJONARIUSZE_W_ZDARZENIU as
-select f.PESEL, imie, nazwisko, nr_odznaki, stopien, data_i_czas_interwencji, id_zdarzenia
-from ((zdarzenia z join interwencje i on z.id_zdarzenia=i.zdarzenie) join funkcjonariusze f on i.funkcjonariusz=f.pesel) join osoby o on f.pesel=o.pesel;
-
-
 create or replace trigger wyzwalacz_mandaty_insert
 before insert on mandaty
 for each row
@@ -303,6 +269,7 @@ begin
   end if;
   insert into formy_wymiaru_kary(id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'m');
 end;
+/
 
 create or replace trigger wyzwalacz_mandaty_delete
 after delete on mandaty
@@ -311,6 +278,7 @@ begin
     delete from formy_wymiaru_kary
     where id_uczestnika=:OLD.id_uczestnika and id_interwencji=:OLD.id_interwencji;
 end;
+/
 
 create or replace trigger wyzwalacz_aresztowania_insert
 before insert on aresztowania
@@ -339,6 +307,7 @@ begin
     
     insert into formy_wymiaru_kary(id_uczestnika, id_interwencji, typ) values (:NEW.id_uczestnika,:NEW.id_interwencji,'a');
 end;
+/
 
 create or replace trigger wyzwalacz_aresztowania_delete
 after delete on aresztowania
@@ -347,23 +316,76 @@ begin
     delete from formy_wymiaru_kary
     where id_uczestnika=:OLD.id_uczestnika and id_interwencji=:OLD.id_interwencji;
 end;
-
-
-CREATE OR REPLACE FUNCTION calculate_age (
-    d1 IN DATE, 
-    d2 IN DATE
-) RETURN INTERVAL YEAR TO MONTH IS
-    v_months_diff NUMBER;
-    v_years NUMBER;
-    v_months NUMBER;
-    v_interval INTERVAL YEAR TO MONTH;
-BEGIN
-    v_months_diff := MONTHS_BETWEEN(d2, d1);
-    v_years := TRUNC(v_months_diff / 12);
-    v_months := MOD(TRUNC(v_months_diff), 12);
-    
-    v_interval := NUMTOYMINTERVAL(v_years, 'YEAR') +NUMTOYMINTERVAL(v_months, 'MONTH') ;
-    RETURN v_interval;
-END calculate_age;
 /
 
+create or replace package Drogowka is
+  function funkcja_zweryfikuj_vin(
+      vin varchar2
+  ) return boolean;
+
+ procedure silent_insert_osoby_pojazdy(
+      v_vin osoby_pojazdy.VIN%TYPE, v_pesel osoby_pojazdy.pesel%TYPE
+  );
+
+ function funkcja_zweryfikuj_pesel(
+      pesel varchar2
+  ) return boolean;
+
+  FUNCTION calculate_age (
+      d1 IN DATE, 
+      d2 IN DATE
+  ) RETURN INTERVAL YEAR TO MONTH;
+
+
+end Drogowka;
+
+
+create or replace package body Drogowka is 
+  
+  create or replace function funkcja_zweryfikuj_vin(
+      vin varchar2
+  ) return boolean as
+  begin
+      return not vin is NULL and lengthb(vin) = 17 and REGEXP_LIKE(vin, '^[A-Z0-9]{17}$');
+  end;
+  /
+
+  create or replace procedure silent_insert_osoby_pojazdy(
+      v_vin osoby_pojazdy.VIN%TYPE, v_pesel osoby_pojazdy.pesel%TYPE
+  ) as
+  begin
+      insert into osoby_pojazdy(pesel,vin) values (v_pesel,v_vin);
+  exception
+      when DUP_VAL_ON_INDEX then
+          null;
+  end silent_insert_osoby_pojazdy;
+  /
+
+
+  create or replace function funkcja_zweryfikuj_pesel(
+      pesel varchar2
+  ) return boolean as
+  begin
+      return not pesel is NULL and lengthb(pesel) = 11 and REGEXP_LIKE(pesel, '^[0-9]{11}$');
+  end;
+  /
+
+  CREATE OR REPLACE FUNCTION calculate_age (
+      d1 IN DATE, 
+      d2 IN DATE
+  ) RETURN INTERVAL YEAR TO MONTH IS
+      v_months_diff NUMBER;
+      v_years NUMBER;
+      v_months NUMBER;
+      v_interval INTERVAL YEAR TO MONTH;
+  BEGIN
+      v_months_diff := MONTHS_BETWEEN(d2, d1);
+      v_years := TRUNC(v_months_diff / 12);
+      v_months := MOD(TRUNC(v_months_diff), 12);
+      
+      v_interval := NUMTOYMINTERVAL(v_years, 'YEAR') +NUMTOYMINTERVAL(v_months, 'MONTH') ;
+      RETURN v_interval;
+  END calculate_age;
+  /
+
+end Drogowka;
