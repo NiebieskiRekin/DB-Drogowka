@@ -147,6 +147,8 @@ CREATE SEQUENCE "SEKWENCJA_ID_INTERWENCJI" MINVALUE 1 INCREMENT BY 1 START WITH 
 
 CREATE SEQUENCE "SEKWENCJA_ID_UCZESTNIKA_ZDARZENIA" MINVALUE 1 INCREMENT BY 1 START WITH 1000;
 
+CREATE SEQUENCE "SEKWENCJA_NR_MANDATU"  INCREMENT BY 57 START WITH 1000000000;
+
 CREATE OR REPLACE
 VIEW perspektywa_pojazdy_danej_osoby AS SELECT
 	osoby_pojazdy.vin,
@@ -493,6 +495,15 @@ END;
 
 CREATE OR REPLACE PACKAGE Drogowka IS
 
+  FUNCTION funkcja_numer_mandatu
+  RETURN varchar2;
+  /
+
+  FUNCTION funkcja_zweryfikuj_nr_telefonu(
+    nr_telefonu varchar2
+  ) RETURN boolean;
+  /
+
   FUNCTION funkcja_zweryfikuj_vin(
       vin varchar2
   ) RETURN boolean;
@@ -515,7 +526,16 @@ FUNCTION calculate_age (
 END Drogowka;
 
 CREATE OR REPLACE PACKAGE BODY Drogowka IS 
-  
+ 
+  CREATE OR REPLACE FUNCTION funkcja_numer_mandatu
+  RETURN varchar2  AS
+      v_nr integer;
+  BEGIN
+      v_nr := SEKWENCJA_NR_MANDATU.NEXTVAL;
+      RETURN 'DR' || v_nr;
+  END;
+  /
+
   CREATE OR REPLACE
 	FUNCTION funkcja_zweryfikuj_vin(
       vin varchar2
@@ -552,6 +572,16 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     RETURN NOT pesel IS NULL
     AND lengthb(pesel) = 11
     AND REGEXP_LIKE(pesel, '^[0-9]{11}$');
+  END;
+  /
+
+  CREATE OR REPLACE
+  FUNCTION funkcja_zweryfikuj_nr_telefonu(
+    nr_telefonu varchar2
+  ) RETURN boolean AS
+  BEGIN
+    RETURN NOT nr_telefonu IS NULL
+    AND REGEXP_LIKE(nr_telefonu, '^(\+\d{2})?\d{9}$');
   END;
   /
 
