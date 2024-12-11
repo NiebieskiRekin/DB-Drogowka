@@ -275,10 +275,6 @@ END;
 /
 
 CREATE OR REPLACE TRIGGER wyzwalacz_pojazdy_danej_osoby_update
-    BEFORE INSERT ON PERSPEKTYWA_POJAZDY_DANEJ_OSOBY
-    FOR EACH ROW
-
-CREATE OR REPLACE TRIGGER wyzwalacz_pojazdy_danej_osoby_update
     instead OF UPDATE ON PERSPEKTYWA_POJAZDY_DANEJ_OSOBY
     FOR EACH ROW
 BEGIN
@@ -308,7 +304,9 @@ CREATE OR REPLACE TRIGGER wyzwalacz_prawa_jazdy_insert
     FOR EACH ROW
 DECLARE
 	OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY EXCEPTION;
+  PRAGMA exception_init(OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY,-20003 );
   PRAWO_JAZDY_PRZED_16 EXCEPTION;
+  PRAGMA exception_init(PRAWO_JAZDY_PRZED_16 ,-20005 );
   data_ur osoby.data_urodzenia%TYPE;
 BEGIN
 	IF (NOT :NEW.DO_KIEDY IS NULL AND :NEW.od_kiedy > :NEW.do_kiedy) THEN
@@ -342,7 +340,7 @@ DECLARE
 BEGIN
   :NEW.id_wykroczenia := sekwencja_id_wykroczenia.NEXTVAL;
 
-  IF :NEW.kwota_min > :NEW.kwota_max THEN 
+  IF :NEW.stawka_minimalna> :NEW.stawka_maksymalna THEN 
           RAISE e_kwota_min_max;
   END IF;
 END;
@@ -399,6 +397,7 @@ CREATE OR REPLACE TRIGGER wyzwalacz_mandaty_insert
   FOR EACH ROW
 DECLARE
 	UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA EXCEPTION;
+  PRAGMA exception_init(UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA,-20002 );
   zdarzenie_interwencja interwencje.zdarzenie%TYPE;
   zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
 BEGIN
@@ -448,8 +447,11 @@ CREATE OR REPLACE TRIGGER wyzwalacz_aresztowania_insert
   FOR EACH ROW
 DECLARE
 	UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA EXCEPTION;
+  PRAGMA exception_init(UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA,-20002 );
   OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY EXCEPTION;
+  PRAGMA exception_init(OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY,-20003 );
   ARESZTOWANIE_PRZED_16 EXCEPTION;
+  PRAGMA exception_init(ARESZTOWANIE_PRZED_16 ,-20004 );
   zdarzenie_interwencja interwencje.zdarzenie%TYPE;
   zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
   data_ur_uczestnika osoby.data_urodzenia%TYPE;
