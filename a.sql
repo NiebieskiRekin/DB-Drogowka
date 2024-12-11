@@ -310,7 +310,9 @@ DECLARE
   data_ur osoby.data_urodzenia%TYPE;
 BEGIN
 	IF (NOT :NEW.DO_KIEDY IS NULL AND :NEW.od_kiedy > :NEW.do_kiedy) THEN
-        raise OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY;
+    apex_error.add_error (
+    p_message          => 'Czas zakończenia uprawnień mija przed ich rozpoczęciem.',
+    p_display_location => apex_error.c_inline_in_notification );
   END IF;
 
   SELECT
@@ -323,7 +325,9 @@ BEGIN
     pesel =:NEW.pesel;
 
   IF (NOT data_ur IS NULL AND calculate_age(data_ur,:NEW.od_kiedy)<INTERVAL '16' YEAR ) THEN
-          raise PRAWO_JAZDY_PRZED_16;
+    apex_error.add_error (
+    p_message          => 'Prawo jazdy nie może zostać przyznane przed 16 rokiem życia.',
+    p_display_location => apex_error.c_inline_in_notification );
   END IF;
 
   :NEW.id_prawa_jazdy := sekwencja_id_prawa_jazdy.NEXTVAL;
@@ -341,7 +345,9 @@ BEGIN
   :NEW.id_wykroczenia := sekwencja_id_wykroczenia.NEXTVAL;
 
   IF :NEW.stawka_minimalna> :NEW.stawka_maksymalna THEN 
-          RAISE e_kwota_min_max;
+    apex_error.add_error (
+    p_message          => 'Minimalna stawka wykroczenia nie może być większa niż maksymalna.',
+    p_display_location => apex_error.c_inline_in_notification );
   END IF;
 END;
 /
@@ -420,7 +426,9 @@ BEGIN
     id_uczestnika =:NEW.id_uczestnika;
 
   IF (zdarzenie_interwencja != zdarzenie_uczestnik ) THEN
-      raise UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA;
+    apex_error.add_error (
+    p_message          => 'Uczestnik zdarzenia i interwencja dotyczą różnych zdarzeń. Zweryfikuj poprawność wybranych danych.',
+    p_display_location => apex_error.c_inline_in_notification );
   END IF;
 
   INSERT INTO
@@ -475,11 +483,15 @@ BEGIN
     id_uczestnika =:NEW.id_uczestnika;
 
   IF (zdarzenie_interwencja != zdarzenie_uczestnik ) THEN
-        raise UCZESTNIK_INTERWENCJA_ROZNE_ZDARZENIA;
+    apex_error.add_error (
+    p_message          => 'Uczestnik zdarzenia i interwencja dotyczą różnych zdarzeń. Zweryfikuj poprawność wybranych danych.',
+    p_display_location => apex_error.c_inline_in_notification );
   END IF;
 
   IF (NOT :NEW.DO_KIEDY IS NULL AND :NEW.od_kiedy > :NEW.do_kiedy) THEN
-          raise OD_KIEDY_POZNIEJ_NIZ_DO_KIEDY;
+    apex_error.add_error (
+    p_message          => 'Czas zakończenia uprawnień mija przed ich rozpoczęciem.',
+    p_display_location => apex_error.c_inline_in_notification );
   END IF;
 
   SELECT
@@ -494,7 +506,9 @@ BEGIN
     id_uczestnika =:NEW.id_uczestnika;
 
   IF (NOT data_ur_uczestnika IS NULL AND calculate_age(data_ur_uczestnika, :NEW.od_kiedy)<INTERVAL '16' YEAR ) THEN
-          raise ARESZTOWANIE_PRZED_16;
+    apex_error.add_error (
+    p_message          => 'Aresztowanie osób do 16 roku życia nie jest dozwolone.',
+    p_display_location => apex_error.c_inline_in_notification );
   END IF;
 
   INSERT INTO
