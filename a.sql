@@ -257,6 +257,11 @@ FROM
 LEFT JOIN osoby o ON
 	f.pesel = o.pesel;
 
+create or replace view PERSPEKTYWA_INTERWENCJE_DANEGO_POLICJANTA as
+select id_interwencji, data_i_czas_interwencji, funkcjonariusz, zdarzenie, opis, (select count(*) 
+from uczestnicy_zdarzenia where i.zdarzenie=zdarzenie) as "Liczba_uczestnikow_zdarzenia" from interwencje i left join zdarzenia
+on zdarzenie=id_zdarzenia;
+
 
 CREATE OR REPLACE TRIGGER wyzwalacz_interwencje_insert
     BEFORE INSERT ON INTERWENCJE 
@@ -560,6 +565,13 @@ FUNCTION calculate_age (
       d1 IN DATE, 
       d2 IN DATE
   ) RETURN INTERVAL YEAR TO MONTH;
+
+  CREATE OR REPLACE
+  FUNCTION funkcja_zweryfikuj_kwote_mandatu (
+    kwota IN NUMERIC,
+    wykroczenie IN WYKROCZENIA.ID_WYKROCZENIA%TYPE
+  ) RETURN boolean;
+
 END Drogowka;
 
 CREATE OR REPLACE PACKAGE BODY Drogowka IS 
@@ -639,6 +651,18 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
   RETURN v_interval;
   END calculate_age;
   /
+  
+  CREATE OR REPLACE
+  FUNCTION funkcja_zweryfikuj_kwote_mandatu (
+    kwota IN NUMERIC,
+    wykroczenie IN WYKROCZENIA.ID_WYKROCZENIA%TYPE
+  ) RETURN boolean AS
+    v_min NUMERIC;
+    v_max NUMERIC;
+  BEGIN
+    SELECT stawka_minimalna, stawka_maksymalna into v_min, v_max from wykroczenia where id_wykroczenia=wykroczenie;
+    RETURN kwota between v_min and v_max;
+  END;
 
 END Drogowka;
 
