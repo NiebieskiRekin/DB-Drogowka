@@ -59,3 +59,15 @@ igUtil.selectRow = function (IGStaticId, returnPageItem) {
     return true;
   }
 }
+
+
+igUtil.reselectRows = function (IGStaticId, sourcePageItem) {
+  var ids = apex.item(sourcePageItem).getValue().split(":");
+  var gridView = apex.region(IGStaticId).widget().interactiveGrid("getViews").grid;
+  gridView.setSelectedRecords(ids);
+  apex.debug.info("IG Region Static ID: " + IGStaticId);
+  apex.debug.info("Source Page Item: " + sourcePageItem);
+  apex.debug.info("Selected records: " + ids);
+}
+
+
