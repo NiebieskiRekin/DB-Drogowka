@@ -574,7 +574,7 @@ FUNCTION calculate_age (
 
   CREATE OR REPLACE
   FUNCTION funkcja_zweryfikuj_ffk(
-    id_interwencji IN Interwencje.id_interwencji%TYPE, id_uczestnika IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
+    interwencja IN Interwencje.id_interwencji%TYPE, uczestnik IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
   ) RETURN BOOLEAN;
 
 END Drogowka;
@@ -669,19 +669,15 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     RETURN kwota between v_min and v_max;
   END;
 
-  CREATE OR REPLACE
-  FUNCTION funkcja_zweryfikuj_ffk(
-    id_interwencji IN Interwencje.id_interwencji%TYPE, id_uczestnika IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
-  ) RETURN boolean as
-    v_has_ffk integer;
-  begin    
-    if id_interwencji is null or id_uczestnika is null then
-        return FALSE;
-    end if;
+  create or replace FUNCTION funkcja_zweryfikuj_ffk(
+      interwencja IN Interwencje.id_interwencji%TYPE, uczestnik IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
+    ) RETURN boolean as
+      v_has_ffk integer;
+    begin
+      select COUNT(*) into v_has_ffk from formy_wymiaru_kary where id_uczestnika=uczestnik and id_interwencji=interwencja;
+      return v_has_ffk = 0;
+    end;
+  /
 
-    select COUNT(*) into v_has_ffk from formy_wymiaru_kary where id_uczestnika=id_uczestnika and id_interwencji=id_interwencji;
-    return v_has_ffk = 0;
-  end;
-/
 END Drogowka;
 
