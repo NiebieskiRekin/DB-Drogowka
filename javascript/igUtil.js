@@ -64,7 +64,8 @@ igUtil.selectRow = function (IGStaticId, returnPageItem) {
 igUtil.reselectRows = function (IGStaticId, sourcePageItem) {
   var ids = apex.item(sourcePageItem).getValue().split(":");
   var gridView = apex.region(IGStaticId).widget().interactiveGrid("getViews").grid;
-  gridView.setSelectedRecords(ids);
+  var records = gridView.model._data.filter(sub => ids.includes(sub[0]))
+  gridView.setSelectedRecords(records);
   apex.debug.info("IG Region Static ID: " + IGStaticId);
   apex.debug.info("Source Page Item: " + sourcePageItem);
   apex.debug.info("Selected records: " + ids);
