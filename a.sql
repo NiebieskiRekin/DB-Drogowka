@@ -629,7 +629,8 @@ CREATE OR REPLACE PACKAGE Drogowka IS
 
   PROCEDURE silent_insert_uczestnicy_zdarzenia(
       v_zdarzenie zdarzenia.id_zdarzenia%TYPE,
-      v_pesel osoby.pesel%TYPE
+      v_pesel osoby.pesel%TYPE,
+      v_rola uczestnicy_zdarzenia.rola%TYPE
   );
 
 FUNCTION funkcja_zweryfikuj_pesel(
@@ -834,13 +835,14 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
 
   PROCEDURE silent_insert_uczestnicy_zdarzenia(
       v_zdarzenie zdarzenia.id_zdarzenia%TYPE,
-      v_pesel osoby.pesel%TYPE
+      v_pesel osoby.pesel%TYPE,
+      v_rola uczestnicy_zdarzenia.rola%TYPE
   ) as
   begin
 
     INSERT INTO
-      uczestnicy_zdarzenia(pesel_uczestnika,zdarzenie)
-    VALUES (v_pesel,v_zdarzenie);
+      uczestnicy_zdarzenia(pesel_uczestnika,zdarzenie,rola)
+    VALUES (v_pesel,v_zdarzenie, v_rola);
 
     EXCEPTION
       WHEN DUP_VAL_ON_INDEX THEN
