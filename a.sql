@@ -795,7 +795,7 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
   begin
     IF (NOT do_kiedy IS NULL AND od_kiedy > do_kiedy) THEN
       apex_error.add_error (
-      p_message          => 'Czas zakończenia uprawnień mija przed ich rozpoczęciem.',
+      p_message          => 'Czas zakończenia aresztowania mija przed jego rozpoczęciem.',
       p_display_location => apex_error.c_inline_in_notification );
     END IF;
   end;
