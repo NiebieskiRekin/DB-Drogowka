@@ -517,6 +517,14 @@ BEGIN
 END;
 /
 
+CREATE OR REPLACE TRIGGER wyzwalacz_mandaty_update
+  BEFORE UPDATE ON mandaty
+  FOR EACH ROW
+BEGIN
+  Drogowka.procedura_uczestnik_interwencja_to_samo_zdarzenie(:NEW.id_interwencji,:NEW.id_uczestnika);
+END;
+/
+
 CREATE OR REPLACE TRIGGER wyzwalacz_mandaty_insert
   BEFORE INSERT ON mandaty
   FOR EACH ROW
@@ -526,29 +534,8 @@ DECLARE
   zdarzenie_interwencja interwencje.zdarzenie%TYPE;
   zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
 BEGIN
-	SELECT
-    zdarzenie
-  INTO
-    zdarzenie_interwencja
-  FROM
-    interwencje
-  WHERE
-    id_interwencji =:NEW.id_interwencji;
-
-  SELECT
-    zdarzenie
-  INTO
-    zdarzenie_uczestnik
-  FROM
-    uczestnicy_zdarzenia
-  WHERE
-    id_uczestnika =:NEW.id_uczestnika;
-
-  IF (zdarzenie_interwencja != zdarzenie_uczestnik ) THEN
-    apex_error.add_error (
-    p_message          => 'Uczestnik zdarzenia i interwencja dotyczą różnych zdarzeń. Zweryfikuj poprawność wybranych danych.',
-    p_display_location => apex_error.c_inline_in_notification );
-  END IF;
+  
+  Drogowka.procedura_uczestnik_interwencja_to_samo_zdarzenie(:NEW.id_interwencji,:NEW.id_uczestnika);
 
   INSERT INTO
     formy_wymiaru_kary(id_uczestnika,id_interwencji,typ)
