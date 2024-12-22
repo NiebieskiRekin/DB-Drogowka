@@ -328,6 +328,55 @@ JOIN OSOBY o1 on uz.PESEL_UCZESTNIKA=o1.PESEL
 JOIN OSOBY o2 on i.FUNKCJONARIUSZ=o2.PESEL;
 
 
+CREATE OR REPLACE TRIGGER wyzwalacz_mandaty_pesele_uczestnika_funkcjonariusza_update
+    INSTEAD OF UPDATE ON perspektywa_mandaty_pesele_uczestnika_funkcjonariusza
+    FOR EACH ROW
+BEGIN
+  UPDATE MANDATY
+  SET nr_serii=:NEW.nr_serii,
+      kwota=:NEW.kwota,
+      punkty_karne=:NEW.punkty_karne,
+      czy_przyjeto=:NEW.czy_przyjeto,
+      czy_oplacone=:NEW.czy_oplacone,
+      opis=:NEW.opis
+  WHERE ID_INTERWENCJI=:NEW.ID_INTERWENCJI
+  AND   ID_UCZESTNIKA=:NEW.ID_UCZESTNIKA;
+END;
+
+CREATE OR REPLACE TRIGGER wyzwalacz_mandaty_pesele_uczestnika_funkcjonariusza_delete
+    INSTEAD OF DELETE ON perspektywa_mandaty_pesele_uczestnika_funkcjonariusza
+    FOR EACH ROW
+BEGIN
+  DELETE FROM MANDATY WHERE ID_UCZESTNIKA=:OLD.ID_UCZESTNIKA AND ID_INTERWENCJI=:OLD.ID_INTERWENCJI;
+END;
+
+CREATE OR REPLACE TRIGGER wyzwalacz_aresztowania_pesele_uczestnika_funkcjonariusza_update
+    INSTEAD OF UPDATE ON perspektywa_aresztowania_pesele_uczestnika_funkcjonariusza
+    FOR EACH ROW
+BEGIN
+  UPDATE ARESZTOWANIA
+  SET od_kiedy=:NEW.od_kiedy,
+      do_kiedy=:NEW.do_kiedy,
+      czy_w_zawieszeniu=:NEW.czy_w_zawieszeniu
+  WHERE ID_INTERWENCJI=:NEW.ID_INTERWENCJI
+  AND   ID_UCZESTNIKA=:NEW.ID_UCZESTNIKA;
+END;
+
+CREATE OR REPLACE TRIGGER wyzwalacz_aresztowania_pesele_uczestnika_funkcjonariusza_delete
+    INSTEAD OF DELETE ON perspektywa_aresztowania_pesele_uczestnika_funkcjonariusza
+    FOR EACH ROW
+BEGIN
+  DELETE FROM ARESZTOWANIA WHERE ID_UCZESTNIKA=:OLD.ID_UCZESTNIKA AND ID_INTERWENCJI=:OLD.ID_INTERWENCJI;
+END;
+
+CREATE OR REPLACE TRIGGER wyzwalacz_pouczenia_pesele_uczestnika_funkcjonariusza_delete
+    INSTEAD OF DELETE ON perspektywa_pouczenia_pesele_uczestnika_funkcjonariusza
+    FOR EACH ROW
+BEGIN
+  DELETE FROM FORMY_WYMIARU_KARY WHERE ID_UCZESTNIKA=:OLD.ID_UCZESTNIKA AND ID_INTERWENCJI=:OLD.ID_INTERWENCJI;
+END;
+
+
 CREATE OR REPLACE TRIGGER wyzwalacz_interwencje_insert
     BEFORE INSERT ON INTERWENCJE 
     FOR EACH ROW
