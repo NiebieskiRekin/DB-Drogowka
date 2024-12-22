@@ -607,6 +607,10 @@ END;
 
 CREATE OR REPLACE PACKAGE Drogowka IS
 
+  PROCEDURE procedura_wyswietl_stawki_wykroczenia(
+    wykroczenie wykroczenia.id_wykroczenia%TYPE
+  );
+
   FUNCTION funkcja_numer_mandatu
   RETURN varchar2;
 
@@ -810,6 +814,18 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     END IF;
   end;
 
+  PROCEDURE procedura_wyswietl_stawki_wykroczenia(
+    wykroczenie wykroczenia.id_wykroczenia%TYPE
+  ) as
+    s_min wykroczenia.stawka_minimalna%TYPE;
+    s_max wykroczenia.stawka_maksymalna%TYPE;
+  begin
+    select stawka_minimalna, stawka_maksymalna into s_min, s_max from wykroczenia where id_wykroczenia=wykroczenie;
+
+    apex_error.add_error (
+    p_message          => 'Kwota za podane wykroczenie pownna zawierać się w przedziale od ' || s_min || ' do ' || s_max,
+    p_display_location => apex_error.c_inline_in_notification );
+  end;
 
 END Drogowka;
 
