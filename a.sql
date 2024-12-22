@@ -276,33 +276,44 @@ VIEW perspektywa_pouczenia_pesele_uczestnika_funkcjonariusza AS SELECT
   ID_UCZESTNIKA,
   ID_INTERWENCJI,
   PESEL_UCZESTNIKA,
-  FUNKCJONARIUSZ AS PESEL_FUNKCJONARIUSZA
+  (o1.imie || ' ' || o1.nazwisko) as Imie_i_Nazwisko_Uczestnika,
+  FUNKCJONARIUSZ AS PESEL_FUNKCJONARIUSZA,
+  (o2.imie || ' ' || o2.nazwisko) as FUNKCJONARIUSZ,
+  i.ZDARZENIE
 FROM FORMY_WYMIARU_KARY 
-JOIN UCZESTNICY_ZDARZENIA USING(id_uczestnika)
-JOIN INTERWENCJE USING(id_interwencji)
+JOIN UCZESTNICY_ZDARZENIA uz USING(id_uczestnika)
+JOIN INTERWENCJE i USING(id_interwencji)
+JOIN OSOBY o1 on uz.PESEL_UCZESTNIKA=o1.PESEL
+JOIN OSOBY o2 on i.FUNKCJONARIUSZ=o2.PESEL
 WHERE FORMY_WYMIARU_KARY.typ = 'p';
-
 
 CREATE OR REPLACE
 VIEW perspektywa_aresztowania_pesele_uczestnika_funkcjonariusza AS SELECT
   id_uczestnika,
   id_interwencji,
   PESEL_UCZESTNIKA,
+  (o1.imie || ' ' || o1.nazwisko) as Imie_i_Nazwisko_Uczestnika,
   FUNKCJONARIUSZ AS PESEL_FUNKCJONARIUSZA,
+  (o2.imie || ' ' || o2.nazwisko) as FUNKCJONARIUSZ,
+  i.ZDARZENIE,
 	od_kiedy,
   do_kiedy,
   czy_w_zawieszeniu
 FROM ARESZTOWANIA
-JOIN UCZESTNICY_ZDARZENIA USING(id_uczestnika)
-JOIN INTERWENCJE USING(id_interwencji);
-
+JOIN UCZESTNICY_ZDARZENIA uz USING(id_uczestnika)
+JOIN INTERWENCJE i USING(id_interwencji)
+JOIN OSOBY o1 on uz.PESEL_UCZESTNIKA=o1.PESEL
+JOIN OSOBY o2 on i.FUNKCJONARIUSZ=o2.PESEL;
 
 CREATE OR REPLACE
 VIEW perspektywa_mandaty_pesele_uczestnika_funkcjonariusza AS SELECT
   id_uczestnika,
   id_interwencji,
   PESEL_UCZESTNIKA,
+  (o1.imie || ' ' || o1.nazwisko) as Imie_i_Nazwisko_Uczestnika,
   FUNKCJONARIUSZ AS PESEL_FUNKCJONARIUSZA,
+  (o2.imie || ' ' || o2.nazwisko) as FUNKCJONARIUSZ,
+  i.ZDARZENIE,
 	nr_serii,
 	kwota,
 	punkty_karne,
@@ -311,8 +322,10 @@ VIEW perspektywa_mandaty_pesele_uczestnika_funkcjonariusza AS SELECT
 	opis,
 	wykroczenie
 FROM MANDATY
-JOIN UCZESTNICY_ZDARZENIA USING(id_uczestnika)
-JOIN INTERWENCJE USING(id_interwencji);
+JOIN UCZESTNICY_ZDARZENIA uz USING(id_uczestnika)
+JOIN INTERWENCJE i USING(id_interwencji)
+JOIN OSOBY o1 on uz.PESEL_UCZESTNIKA=o1.PESEL
+JOIN OSOBY o2 on i.FUNKCJONARIUSZ=o2.PESEL;
 
 
 CREATE OR REPLACE TRIGGER wyzwalacz_interwencje_insert
