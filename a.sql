@@ -257,10 +257,63 @@ FROM
 LEFT JOIN osoby o ON
 	f.pesel = o.pesel;
 
-create or replace view PERSPEKTYWA_INTERWENCJE_DANEGO_POLICJANTA as
-select id_interwencji, data_i_czas_interwencji, funkcjonariusz, zdarzenie, opis, (select count(*) 
-from uczestnicy_zdarzenia where i.zdarzenie=zdarzenie) as "Liczba_uczestnikow_zdarzenia" from interwencje i left join zdarzenia
+CREATE OR REPLACE
+VIEW perspektywa_interwencje_danego_policjanta AS SELECT 
+  id_interwencji,
+  data_i_czas_interwencji,
+  funkcjonariusz,
+  zdarzenie,
+  opis,
+  (SELECT COUNT(*) 
+   FROM UCZESTNICY_ZDARZENIA
+   WHERE i.zdarzenie=zdarzenie) AS "Liczba_uczestnikow_zdarzenia"
+FROM INTERWENCJE i
+LEFT JOIN ZDARZENIA
 on zdarzenie=id_zdarzenia;
+
+
+CREATE OR REPLACE
+VIEW perspektywa_pouczenia_pesele_uczestnika_funkcjonariusza AS SELECT
+  ffk.id_uczestnika,
+  ffk.id_interwencji,
+  PESEL_UCZESTNIKA,
+  FUNKCJONARIUSZ AS PESEL_FUNKCJONARIUSZA
+FROM FORMY_WYMIARU_KARY ffk
+JOIN UCZESTNICY_ZDARZENIA USING(id_uczestnika)
+JOIN INTERWENCJE USING(id_interwencji)
+WHERE ffk.typ = 'p';
+
+
+CREATE OR REPLACE
+VIEW perspektywa_aresztowania_pesele_uczestnika_funkcjonariusza AS SELECT
+  a.id_uczestnika,
+  a.id_interwencji,
+  PESEL_UCZESTNIKA,
+  FUNKCJONARIUSZ AS PESEL_FUNKCJONARIUSZA,
+	od_kiedy,
+  do_kiedy,
+  czy_w_zawieszeniu
+FROM ARESZTOWANIA a
+JOIN UCZESTNICY_ZDARZENIA USING(id_uczestnika)
+JOIN INTERWENCJE USING(id_interwencji);
+
+
+CREATE OR REPLACE
+VIEW perspektywa_mandaty_pesele_uczestnika_funkcjonariusza AS SELECT
+  m.id_uczestnika,
+  m.id_interwencji,
+  PESEL_UCZESTNIKA,
+  FUNKCJONARIUSZ AS PESEL_FUNKCJONARIUSZA,
+	nr_serii,
+	kwota,
+	punkty_karne,
+	czy_przyjeto,
+	czy_oplacone,
+	opis,
+	wykroczenie
+FROM MANDATY m
+JOIN UCZESTNICY_ZDARZENIA USING(id_uczestnika)
+JOIN INTERWENCJE USING(id_interwencji);
 
 
 CREATE OR REPLACE TRIGGER wyzwalacz_interwencje_insert
