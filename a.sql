@@ -583,52 +583,12 @@ DECLARE
   zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
   data_ur_uczestnika osoby.data_urodzenia%TYPE;
 BEGIN
-	SELECT
-    zdarzenie
-  INTO
-    zdarzenie_interwencja
-  FROM
-    interwencje
-  WHERE
-    id_interwencji =:NEW.id_interwencji;
 
-  SELECT
-    zdarzenie
-  INTO
-    zdarzenie_uczestnik
-  FROM
-    uczestnicy_zdarzenia
-  WHERE
-    id_uczestnika =:NEW.id_uczestnika;
-
-  IF (zdarzenie_interwencja != zdarzenie_uczestnik ) THEN
-    apex_error.add_error (
-    p_message          => 'Uczestnik zdarzenia i interwencja dotyczą różnych zdarzeń. Zweryfikuj poprawność wybranych danych.',
-    p_display_location => apex_error.c_inline_in_notification );
-  END IF;
-
-  IF (NOT :NEW.DO_KIEDY IS NULL AND :NEW.od_kiedy > :NEW.do_kiedy) THEN
-    apex_error.add_error (
-    p_message          => 'Czas zakończenia uprawnień mija przed ich rozpoczęciem.',
-    p_display_location => apex_error.c_inline_in_notification );
-  END IF;
-
-  SELECT
-    data_urodzenia
-  INTO
-    data_ur_uczestnika
-  FROM
-    osoby
-  JOIN uczestnicy_zdarzenia ON
-    osoby.pesel = uczestnicy_zdarzenia.pesel_uczestnika
-  WHERE
-    id_uczestnika =:NEW.id_uczestnika;
-
-  IF (NOT data_ur_uczestnika IS NULL AND calculate_age(data_ur_uczestnika, :NEW.od_kiedy)<INTERVAL '16' YEAR ) THEN
-    apex_error.add_error (
-    p_message          => 'Aresztowanie osób do 16 roku życia nie jest dozwolone.',
-    p_display_location => apex_error.c_inline_in_notification );
-  END IF;
+  Drogowka.procedura_uczestnik_interwencja_to_samo_zdarzenie(:NEW.id_interwencji, :NEW.id_uczestnika);
+  
+  Drogowka.procedura_od_kiedy_przed_do_kiedy(:NEW:od_kiedy, :NEW.do_kiedy);
+  
+  Drogowka.procedura_uczestnik_min_16_lat(:NEW.od_kiedy, :NEW.id_uczestnika);
 
   INSERT INTO
     formy_wymiaru_kary(id_uczestnika,id_interwencji,typ)
@@ -636,6 +596,15 @@ BEGIN
     (:NEW.id_uczestnika,:NEW.id_interwencji,'a');
 END;
 /
+
+CREATE OR REPLACE TRIGGER wyzwalacz_aresztowania_update
+  BEFORE UPDATE ON aresztowania
+  FOR EACH ROW
+BEGIN
+  Drogowka.procedura_uczestnik_interwencja_to_samo_zdarzenie(:NEW.id_interwencji, :NEW.id_uczestnika);
+  Drogowka.procedura_od_kiedy_przed_do_kiedy(:NEW.od_kiedy, :NEW.do_kiedy);
+  Drogowka.procedura_uczestnik_min_16_lat(:NEW.od_kiedy, :NEW.id_uczestnika);
+END;
 
 CREATE OR REPLACE TRIGGER wyzwalacz_aresztowania_delete
   AFTER DELETE ON aresztowania
@@ -653,23 +622,19 @@ CREATE OR REPLACE PACKAGE Drogowka IS
 
   FUNCTION funkcja_numer_mandatu
   RETURN varchar2;
-  /
 
   FUNCTION funkcja_zweryfikuj_nr_telefonu(
     nr_telefonu varchar2
   ) RETURN boolean;
-  /
 
   FUNCTION funkcja_zweryfikuj_vin(
       vin varchar2
   ) RETURN boolean;
-  /
 
   PROCEDURE silent_insert_osoby_pojazdy(
       v_vin osoby_pojazdy.VIN%TYPE,
       v_pesel osoby_pojazdy.pesel%TYPE
   );
-  /
 
 FUNCTION funkcja_zweryfikuj_pesel(
       pesel varchar2
@@ -680,32 +645,41 @@ FUNCTION calculate_age (
       d2 IN DATE
   ) RETURN INTERVAL YEAR TO MONTH;
 
-  CREATE OR REPLACE
   FUNCTION funkcja_zweryfikuj_kwote_mandatu (
     kwota IN NUMERIC,
     wykroczenie IN WYKROCZENIA.ID_WYKROCZENIA%TYPE
   ) RETURN boolean;
 
-  CREATE OR REPLACE
   FUNCTION funkcja_zweryfikuj_ffk(
     interwencja IN Interwencje.id_interwencji%TYPE, uczestnik IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
   ) RETURN BOOLEAN;
+
+
+  PROCEDURE procedura_uczestnik_interwencja_to_samo_zdarzenie(
+    interwencja IN Interwencje.id_interwencji%TYPE, uczestnik IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
+  );
+
+  PROCEDURE procedura_od_kiedy_przed_do_kiedy(
+    od_kiedy aresztowania.od_kiedy%TYPE,do_kiedy aresztowania.do_kiedy%TYPE
+  );
+
+  PROCEDURE procedura_uczestnik_min_16_lat(
+    od_kiedy aresztowania.od_kiedy%TYPE,uczestnik uczestnicy_zdarzenia.id_uczestnika%TYPE
+  );
 
 END Drogowka;
 
 CREATE OR REPLACE PACKAGE BODY Drogowka IS 
  
-  CREATE OR REPLACE FUNCTION funkcja_numer_mandatu
+  FUNCTION funkcja_numer_mandatu
   RETURN varchar2  AS
       v_nr integer;
   BEGIN
       v_nr := SEKWENCJA_NR_MANDATU.NEXTVAL;
       RETURN 'DR' || v_nr;
   END;
-  /
 
-  CREATE OR REPLACE
-	FUNCTION funkcja_zweryfikuj_vin(
+  FUNCTION funkcja_zweryfikuj_vin(
       vin varchar2
   ) RETURN boolean AS
   BEGIN
@@ -713,9 +687,7 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
       AND lengthb(vin) = 17
       AND REGEXP_LIKE(vin, '^[A-Z0-9]{17}$');
   END;
-  /
 
-  CREATE OR REPLACE
   PROCEDURE silent_insert_osoby_pojazdy(
     v_vin osoby_pojazdy.VIN%TYPE,
     v_pesel osoby_pojazdy.pesel%TYPE
@@ -729,10 +701,7 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     WHEN DUP_VAL_ON_INDEX THEN
       NULL;
   END silent_insert_osoby_pojazdy;
-  /
 
-
-  CREATE OR REPLACE
   FUNCTION funkcja_zweryfikuj_pesel(
     pesel varchar2
   ) RETURN boolean AS
@@ -741,9 +710,8 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     AND lengthb(pesel) = 11
     AND REGEXP_LIKE(pesel, '^[0-9]{11}$');
   END;
-  /
 
-  CREATE OR REPLACE
+
   FUNCTION funkcja_zweryfikuj_nr_telefonu(
     nr_telefonu varchar2
   ) RETURN boolean AS
@@ -751,9 +719,8 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     RETURN NOT nr_telefonu IS NULL
     AND REGEXP_LIKE(nr_telefonu, '^(\+\d{2})?\d{9}$');
   END;
-  /
 
-  CREATE OR REPLACE
+
   FUNCTION calculate_age (
     d1 IN DATE,
     d2 IN DATE
@@ -769,9 +736,8 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     v_interval := NUMTOYMINTERVAL(v_years, 'YEAR') + NUMTOYMINTERVAL(v_months, 'MONTH') ;
   RETURN v_interval;
   END calculate_age;
-  /
   
-  CREATE OR REPLACE
+
   FUNCTION funkcja_zweryfikuj_kwote_mandatu (
     kwota IN NUMERIC,
     wykroczenie IN WYKROCZENIA.ID_WYKROCZENIA%TYPE
@@ -783,7 +749,7 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     RETURN kwota between v_min and v_max;
   END;
 
-  create or replace FUNCTION funkcja_zweryfikuj_ffk(
+ FUNCTION funkcja_zweryfikuj_ffk(
       interwencja IN Interwencje.id_interwencji%TYPE, uczestnik IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
     ) RETURN boolean as
       v_has_ffk integer;
@@ -791,7 +757,72 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
       select COUNT(*) into v_has_ffk from formy_wymiaru_kary where id_uczestnika=uczestnik and id_interwencji=interwencja;
       return v_has_ffk = 0;
     end;
-  /
+
+  PROCEDURE procedura_uczestnik_interwencja_to_samo_zdarzenie(
+    interwencja IN Interwencje.id_interwencji%TYPE, uczestnik IN Uczestnicy_Zdarzenia.id_uczestnika%TYPE
+  ) AS
+    zdarzenie_interwencja interwencje.zdarzenie%TYPE;
+    zdarzenie_uczestnik uczestnicy_zdarzenia.zdarzenie%TYPE;
+  BEGIN
+    SELECT
+      zdarzenie
+    INTO
+      zdarzenie_interwencja
+    FROM
+      interwencje
+    WHERE
+      id_interwencji =interwencja;
+
+    SELECT
+      zdarzenie
+    INTO
+      zdarzenie_uczestnik
+    FROM
+      uczestnicy_zdarzenia
+    WHERE
+      id_uczestnika =uczestnik;
+
+    IF (zdarzenie_interwencja != zdarzenie_uczestnik ) THEN
+      apex_error.add_error (
+      p_message          => 'Uczestnik zdarzenia i interwencja dotyczą różnych zdarzeń. Zweryfikuj poprawność wybranych danych.',
+      p_display_location => apex_error.c_inline_in_notification );
+    END IF;
+  END;
+
+  PROCEDURE procedura_od_kiedy_przed_do_kiedy(
+    od_kiedy aresztowania.od_kiedy%TYPE,do_kiedy aresztowania.do_kiedy%TYPE
+  ) as
+  begin
+    IF (NOT do_kiedy IS NULL AND od_kiedy > do_kiedy) THEN
+      apex_error.add_error (
+      p_message          => 'Czas zakończenia uprawnień mija przed ich rozpoczęciem.',
+      p_display_location => apex_error.c_inline_in_notification );
+    END IF;
+  end;
+
+  PROCEDURE procedura_uczestnik_min_16_lat(
+    od_kiedy aresztowania.od_kiedy%TYPE,uczestnik uczestnicy_zdarzenia.id_uczestnika%TYPE
+  ) as
+    data_ur_uczestnika osoby.data_urodzenia%TYPE;
+  begin
+    SELECT
+      data_urodzenia
+    INTO
+      data_ur_uczestnika
+    FROM
+      osoby
+    JOIN uczestnicy_zdarzenia ON
+      osoby.pesel = uczestnicy_zdarzenia.pesel_uczestnika
+    WHERE
+      id_uczestnika =uczestnik;
+
+    IF (NOT data_ur_uczestnika IS NULL AND calculate_age(data_ur_uczestnika, od_kiedy)<INTERVAL '16' YEAR ) THEN
+      apex_error.add_error (
+      p_message          => 'Aresztowanie osób do 16 roku życia nie jest dozwolone.',
+      p_display_location => apex_error.c_inline_in_notification );
+    END IF;
+  end;
+
 
 END Drogowka;
 
