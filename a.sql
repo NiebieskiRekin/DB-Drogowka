@@ -627,6 +627,11 @@ CREATE OR REPLACE PACKAGE Drogowka IS
       v_pesel osoby_pojazdy.pesel%TYPE
   );
 
+  PROCEDURE silent_insert_uczestnicy_zdarzenia(
+      v_zdarzenie zdarzenia.id_zdarzenia%TYPE,
+      v_pesel osoby.pesel%TYPE
+  );
+
 FUNCTION funkcja_zweryfikuj_pesel(
       pesel varchar2
   ) RETURN boolean;
@@ -827,5 +832,20 @@ CREATE OR REPLACE PACKAGE BODY Drogowka IS
     p_display_location => apex_error.c_inline_in_notification );
   end;
 
-END Drogowka;
+  PROCEDURE silent_insert_uczestnicy_zdarzenia(
+      v_zdarzenie zdarzenia.id_zdarzenia%TYPE,
+      v_pesel osoby.pesel%TYPE
+  ) as
+  begin
 
+    INSERT INTO
+      uczestnicy_zdarzenia(pesel_uczestnika,zdarzenie)
+    VALUES (v_pesel,v_zdarzenie);
+
+    EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+        NULL;
+  end;
+
+
+END Drogowka;
