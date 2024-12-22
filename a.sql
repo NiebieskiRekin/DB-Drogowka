@@ -328,6 +328,56 @@ JOIN OSOBY o1 on uz.PESEL_UCZESTNIKA=o1.PESEL
 JOIN OSOBY o2 on i.FUNKCJONARIUSZ=o2.PESEL;
 
 
+CREATE OR REPLACE TRIGGER wyzwalacz_funkcjonariusze_update
+    INSTEAD OF UPDATE ON perspektywa_funkcjonariusze
+    FOR EACH ROW
+BEGIN
+
+  UPDATE FUNKCJONARIUSZE
+  SET nr_odznaki = :NEW.nr_odznaki,
+      stopien = :NEW.stopien
+  where pesel = :NEW.pesel;
+
+  UPDATE OSOBY
+  SET imie = :NEW.imie,
+      nazwisko = :NEW.nazwisko,
+      nr_telefonu = :NEW.nr_telefonu,
+      czy_poszukiwana = :NEW.czy_poszukiwana,
+      nr_dowodu_osobistego = :NEW.nr_dowodu_osobistego,
+      data_urodzenia = :NEW.data_urodzenia
+  WHERE pesel = :NEW.pesel;
+
+END;
+
+CREATE OR REPLACE TRIGGER wyzwalacz_funkcjonariusze_insert
+    INSTEAD OF INSERT ON perspektywa_funkcjonariusze
+    FOR EACH ROW
+BEGIN
+
+  BEGIN
+    INSERT INTO OSOBY
+    values(:NEW.imie, :NEW.nazwisko, :NEW.nr_telefonu,:NEW.czy_poszukiwana,:NEW.nr_dowodu_osobistego,:NEW.data_urodzenia,:NEW.pesel);
+  EXCEPTION
+      WHEN DUP_VAL_ON_INDEX THEN
+        NULL;
+  END;
+
+  INSERT INTO FUNKCJONARIUSZE(nr_odznaki, stopien, pesel) 
+  values (:NEW.nr_odznaki, :NEW.stopien, :NEW.pesel);
+END;
+
+
+CREATE OR REPLACE TRIGGER wyzwalacz_funkcjonariusze_delete
+    INSTEAD OF DELETE ON perspektywa_funkcjonariusze
+    FOR EACH ROW
+BEGIN
+  DELETE FROM FUNKCJONARIUSZE
+  WHERE PESEL=:OLD.PESEL;
+
+  -- Celowo pominięte usuwanie z osób
+END;
+
+
 CREATE OR REPLACE TRIGGER wyzwalacz_mandaty_pesele_uczestnika_funkcjonariusza_update
     INSTEAD OF UPDATE ON perspektywa_mandaty_pesele_uczestnika_funkcjonariusza
     FOR EACH ROW
