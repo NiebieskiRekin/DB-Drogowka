@@ -349,13 +349,13 @@ BEGIN
 
 END;
 
-CREATE OR REPLACE TRIGGER wyzwalacz_funkcjonariusze_insert
+create or replace TRIGGER wyzwalacz_funkcjonariusze_insert
     INSTEAD OF INSERT ON perspektywa_funkcjonariusze
     FOR EACH ROW
 BEGIN
 
   BEGIN
-    INSERT INTO OSOBY
+    INSERT INTO OSOBY(imie,nazwisko,nr_telefonu,czy_poszukiwana,nr_dowodu_osobistego,data_urodzenia,pesel)
     values(:NEW.imie, :NEW.nazwisko, :NEW.nr_telefonu,:NEW.czy_poszukiwana,:NEW.nr_dowodu_osobistego,:NEW.data_urodzenia,:NEW.pesel);
   EXCEPTION
       WHEN DUP_VAL_ON_INDEX THEN
@@ -365,7 +365,6 @@ BEGIN
   INSERT INTO FUNKCJONARIUSZE(nr_odznaki, stopien, pesel) 
   values (:NEW.nr_odznaki, :NEW.stopien, :NEW.pesel);
 END;
-
 
 CREATE OR REPLACE TRIGGER wyzwalacz_funkcjonariusze_delete
     INSTEAD OF DELETE ON perspektywa_funkcjonariusze
