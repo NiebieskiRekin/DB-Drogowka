@@ -327,6 +327,25 @@ JOIN INTERWENCJE i USING(id_interwencji)
 JOIN OSOBY o1 on uz.PESEL_UCZESTNIKA=o1.PESEL
 JOIN OSOBY o2 on i.FUNKCJONARIUSZ=o2.PESEL;
 
+CREATE OR REPLACE
+VIEW perpsektywa_uczestnicy_w_zdarzeniu AS SELECT
+  id_uczestnika,
+  zdarzenie,
+  PESEL,
+  (imie || ' ' || nazwisko) as Imie_i_Nazwisko_Uczestnika,
+  rola
+FROM Uczestnicy_Zdarzenia
+JOIN OSOBY on PESEL_UCZESTNIKA = PESEL;
+
+CREATE OR REPLACE
+VIEW perpsektywa_interwencje_w_zdarzeniu AS SELECT
+  id_interwencji,
+  zdarzenie,
+  funkcjonariusz as PESEL,
+  (imie || ' ' || nazwisko) as Imie_i_Nazwisko_Funkcjonariusza,
+  data_i_czas_interwencji
+FROM Interwencje
+JOIN OSOBY on funkcjonariusz = pesel;
 
 CREATE OR REPLACE TRIGGER wyzwalacz_funkcjonariusze_update
     INSTEAD OF UPDATE ON perspektywa_funkcjonariusze
