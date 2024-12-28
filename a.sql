@@ -149,6 +149,21 @@ CREATE SEQUENCE "SEKWENCJA_ID_UCZESTNIKA_ZDARZENIA" MINVALUE 1 INCREMENT BY 1 ST
 
 CREATE SEQUENCE "SEKWENCJA_NR_MANDATU"  INCREMENT BY 57 START WITH 1000000000;
 
+
+CREATE OR REPLACE
+VIEW perspektywa_czestosc_zdarzen_w_ciagu_roku(dzien_w_roku, liczba_zdarzen) AS SELECT
+  TO_NUMBER(TO_CHAR(data_zdarzenia, 'DDD')),
+  COUNT(id_zdarzenia)
+FROM zdarzenia
+GROUP BY  TO_NUMBER(TO_CHAR(data_zdarzenia, 'DDD'));
+
+CREATE OR REPLACE
+VIEW perspektywa_czestosc_zdarzen_w_zaleznosci_od_miesiaca(miesiac, liczba_zdarzen) AS SELECT
+  to_char(data_zdarzenia,'Month'),
+  COUNT(id_zdarzenia)
+FROM zdarzenia
+GROUP BY to_char(data_zdarzenia,'Month');
+
 CREATE OR REPLACE
 VIEW perspektywa_pojazdy_danej_osoby AS SELECT
 	osoby_pojazdy.vin,
