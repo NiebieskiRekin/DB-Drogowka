@@ -328,7 +328,7 @@ JOIN OSOBY o1 on uz.PESEL_UCZESTNIKA=o1.PESEL
 JOIN OSOBY o2 on i.FUNKCJONARIUSZ=o2.PESEL;
 
 CREATE OR REPLACE
-VIEW perpsektywa_uczestnicy_w_zdarzeniu AS SELECT
+VIEW perspektywa_uczestnicy_w_zdarzeniu AS SELECT
   id_uczestnika,
   zdarzenie,
   PESEL,
@@ -338,7 +338,7 @@ FROM Uczestnicy_Zdarzenia
 JOIN OSOBY on PESEL_UCZESTNIKA = PESEL;
 
 CREATE OR REPLACE
-VIEW perpsektywa_interwencje_w_zdarzeniu AS SELECT
+VIEW perspektywa_interwencje_w_zdarzeniu AS SELECT
   id_interwencji,
   zdarzenie,
   funkcjonariusz as PESEL,
@@ -346,6 +346,24 @@ VIEW perpsektywa_interwencje_w_zdarzeniu AS SELECT
   data_i_czas_interwencji
 FROM Interwencje
 JOIN OSOBY on funkcjonariusz = pesel;
+
+
+CREATE OR REPLACE TRIGGER wyzwalacz_uczestnicy_w_zdarzeniu_update
+    INSTEAD OF UPDATE ON perspektywa_uczestnicy_w_zdarzeniu
+    FOR EACH ROW
+BEGIN
+  update Uczestnicy_Zdarzenia
+  set rola = :NEW.rola
+  where id_uczestnika = :NEW.id_uczestnika;
+END;
+
+CREATE OR REPLACE TRIGGER wyzwalacz_uczestnicy_w_zdarzeniu_delete
+    INSTEAD OF DELETE ON perspektywa_uczestnicy_w_zdarzeniu
+    FOR EACH ROW
+BEGIN
+  DELETE Uczestnicy_Zdarzenia
+  WHERE id_uczestnika = :OLD.id_uczestnika;
+END;
 
 CREATE OR REPLACE TRIGGER wyzwalacz_funkcjonariusze_update
     INSTEAD OF UPDATE ON perspektywa_funkcjonariusze
