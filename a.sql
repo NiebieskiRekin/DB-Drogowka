@@ -149,6 +149,17 @@ CREATE SEQUENCE "SEKWENCJA_ID_UCZESTNIKA_ZDARZENIA" MINVALUE 1 INCREMENT BY 1 ST
 
 CREATE SEQUENCE "SEKWENCJA_NR_MANDATU"  INCREMENT BY 57 START WITH 1000000000;
 
+CREATE OR REPLACE
+VIEW perspektywa_udzial_form_wymiaru_kary(forma_wymiaru_kary, ile) AS SELECT 
+  CASE typ
+    WHEN 'a' THEN 'aresztowania'
+    WHEN 'p' THEN 'pouczenia'
+    WHEN 'm' THEN 'mandaty'
+  END,
+  COUNT(typ)
+FROM formy_wymiaru_kary
+GROUP BY typ;
+
 
 CREATE OR REPLACE
 VIEW perspektywa_czestosc_zdarzen_w_ciagu_roku(dzien_w_roku, liczba_zdarzen) AS SELECT
