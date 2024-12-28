@@ -150,6 +150,14 @@ CREATE SEQUENCE "SEKWENCJA_ID_UCZESTNIKA_ZDARZENIA" MINVALUE 1 INCREMENT BY 1 ST
 CREATE SEQUENCE "SEKWENCJA_NR_MANDATU"  INCREMENT BY 57 START WITH 1000000000;
 
 CREATE OR REPLACE
+VIEW perspektywa_czestosc_wykroczen(wykroczenie, ile) AS SELECT
+  nazwa,
+  COUNT(nazwa)
+FROM mandaty m
+JOIN wykroczenia w on m.wykroczenie=w.id_wykroczenia
+GROUP BY id_wykroczenia;
+
+CREATE OR REPLACE
 VIEW perspektywa_udzial_form_wymiaru_kary(forma_wymiaru_kary, ile) AS SELECT 
   CASE typ
     WHEN 'a' THEN 'aresztowania'
