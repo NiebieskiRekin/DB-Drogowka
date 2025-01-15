@@ -33,8 +33,7 @@ CREATE TABLE OSOBY(
 CREATE TABLE OSOBY_POJAZDY(
 	vin char(17) NOT NULL REFERENCES pojazdy(vin),
 	pesel char(11) NOT NULL REFERENCES osoby(pesel),
-  PRIMARY KEY(PESEL,
-VIN)
+  PRIMARY KEY(PESEL,VIN)
 );
 
 CREATE TABLE PRAWA_JAZDY(
@@ -149,13 +148,39 @@ CREATE SEQUENCE "SEKWENCJA_ID_UCZESTNIKA_ZDARZENIA" MINVALUE 1 INCREMENT BY 1 ST
 
 CREATE SEQUENCE "SEKWENCJA_NR_MANDATU"  INCREMENT BY 57 START WITH 1000000000;
 
-CREATE OR REPLACE
-VIEW perspektywa_czestosc_wykroczen(wykroczenie, ile) AS SELECT
-  nazwa,
-  COUNT(nazwa)
+CREATE OR REPLACE  VIEW "PERSPEKTYWA_ARESZTOWANIA_PRZEPROWADZONE_PRZEZ_DANEGO_FUNKCJONARIUSZA" ("OD_KIEDY", "DO_KIEDY", "CZY_W_ZAWIESZENIU", "ID_INTERWENCJI", "DATA_I_CZAS_INTERWENCJI", "FUNKCJONARIUSZ", "ZDARZENIE", "ROLA", "PESEL", "IMIE", "NAZWISKO", "ID_UCZESTNIKA") AS 
+select a.od_kiedy, a.do_kiedy, a.czy_w_zawieszeniu, a.id_interwencji, i.data_i_czas_interwencji, i.funkcjonariusz, i.zdarzenie, u.rola, o.pesel, o.imie, o.nazwisko, a.id_uczestnika 
+from ((aresztowania a left join interwencje i on a.id_interwencji=i.id_interwencji)  
+left join uczestnicy_zdarzenia u on a.id_uczestnika=u.id_uczestnika) left join osoby o on u.pesel_uczestnika=o.pesel;
+
+CREATE OR REPLACE VIEW "PERSPEKTYWA_CZESTOSC_WYKROCZEN_PO_ID" ("ID_WYKROCZENIA", "ILE") AS 
+SELECT
+wykroczenie,
+COUNT(wykroczenie)
 FROM mandaty m
-JOIN wykroczenia w on m.wykroczenie=w.id_wykroczenia
-GROUP BY id_wykroczenia;
+GROUP BY wykroczenie;
+
+CREATE OR REPLACE VIEW "PERSPEKTYWA_MANDAY_WYSTAWIONE_PRZEZ_DANEGO_POLICJANTA" ("NR_SERII", "KWOTA", "PUNKTY_KARNE", "OPIS", "WYKROCZENIE", "ID_INTERWENCJI", "DATA_I_CZAS_INTERWENCJI", "FUNKCJONARIUSZ", "ZDARZENIE", "ROLA", "PESEL", "IMIE", "NAZWISKO", "ID_UCZESTNIKA") AS 
+select m.nr_serii, m.kwota, m.punkty_karne, m.opis, m.wykroczenie, m.id_interwencji, i.data_i_czas_interwencji, i.funkcjonariusz, i.zdarzenie, u.rola, o.pesel, o.imie, o.nazwisko,u.id_uczestnika 
+from ((mandaty m left join interwencje i on m.id_interwencji=i.id_interwencji)  
+left join uczestnicy_zdarzenia u on m.id_uczestnika=u.id_uczestnika) left join osoby o on u.pesel_uczestnika=o.pesel;
+
+CREATE OR REPLACE VIEW "PERSPEKTYWA_FUNKCJONARIUSZE_W_ZDARZENIU" ("PESEL", "IMIE", "NAZWISKO", "NR_ODZNAKI", "STOPIEN", "DATA_I_CZAS_INTERWENCJI", "ID_ZDARZENIA") AS 
+select f.PESEL, imie, nazwisko, nr_odznaki, stopien, data_i_czas_interwencji, id_zdarzenia 
+from ((zdarzenia z join interwencje i on z.id_zdarzenia=i.zdarzenie) join funkcjonariusze f on i.funkcjonariusz=f.pesel) join osoby o on f.pesel=o.pesel;
+
+
+
+CREATE OR REPLACE VIEW "PERSPEKTYWA_CZESTOSC_ZDARZEN_W_CIAGU_ROKU" ("DZIEN_W_ROKU", "LICZBA_ZDARZEN") AS 
+SELECT
+TO_NUMBER(TO_CHAR(data_zdarzenia, 'DDD')),
+COUNT(id_zdarzenia)
+FROM zdarzenia
+GROUP BY  TO_NUMBER(TO_CHAR(data_zdarzenia, 'DDD'));
+
+CREATE OR REPLACE VIEW "PERSPEKTYWA_FUNKCJONARIUSZE_W_ZDARZENIU" ("PESEL", "IMIE", "NAZWISKO", "NR_ODZNAKI", "STOPIEN", "DATA_I_CZAS_INTERWENCJI", "ID_ZDARZENIA") AS 
+select f.PESEL, imie, nazwisko, nr_odznaki, stopien, data_i_czas_interwencji, id_zdarzenia 
+from ((zdarzenia z join interwencje i on z.id_zdarzenia=i.zdarzenie) join funkcjonariusze f on i.funkcjonariusz=f.pesel) join osoby o on f.pesel=o.pesel;
 
 CREATE OR REPLACE
 VIEW perspektywa_udzial_form_wymiaru_kary(forma_wymiaru_kary, ile) AS SELECT 
@@ -167,14 +192,6 @@ VIEW perspektywa_udzial_form_wymiaru_kary(forma_wymiaru_kary, ile) AS SELECT
   COUNT(typ)
 FROM formy_wymiaru_kary
 GROUP BY typ;
-
-
-CREATE OR REPLACE
-VIEW perspektywa_czestosc_zdarzen_w_ciagu_roku(dzien_w_roku, liczba_zdarzen) AS SELECT
-  TO_NUMBER(TO_CHAR(data_zdarzenia, 'DDD')),
-  COUNT(id_zdarzenia)
-FROM zdarzenia
-GROUP BY  TO_NUMBER(TO_CHAR(data_zdarzenia, 'DDD'));
 
 CREATE OR REPLACE
 VIEW perspektywa_czestosc_zdarzen_w_zaleznosci_od_miesiaca(miesiac, liczba_zdarzen) AS SELECT
